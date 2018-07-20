@@ -5,5 +5,162 @@
 }
 $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-porsche-adidas-ultra-boost-04_jidaoi.jpg";
 
+.__porfolio-wrapper {
+  margin: 0;
+  padding: 0;
+  .home {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    .home--background {
+      .background {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        > rect {
+          fill: #1a1e2ce6;
+          -webkit-mask: url(#background-mask);
+          mask: url(#background-mask);
+        }
+        mask {
+          rect {
+            fill: #ffffff;
+          }
+          text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 8em;
+            @include bp-desktop-sm {
+              font-size: 12em;
+            }
+          }
+        }
+      }
+      .background-video {
+        //@include bp-ip4 {
+        //  width: auto;
+        //  height: auto;
+        //}
+        //@include bp-desktop-sm {
+        //  width: 100%;
+        //  height: 100%;
+        //}
+      }
+    }
+    .home__content {
+      position: absolute;
+      color: #ffffff;
+      z-index: 1;
+      padding: 0 10vw;
+      height: 100%;
+      width: 100%;
+      .navigation {
+        height: 15vh;
+        @include flexbox();
+        @include align-items(center);
+        #nav-icon {
+          width: 30px;
+          height: 30px;
+          position: relative;
+          cursor: pointer;
+          span {
+            display: block;
+            position: relative;
+            height: 3px;
+            width: 100%;
+            background: #ffffff;
+            left: 0;
+            margin-top: 6px;
+            &:nth-of-type(1) {
+              margin-top: 0;
+            }
+            &:before {
+              content: '';
+              position: absolute;
+              height: 3px;
+              width: 0;
+              background-color: #dd3154;
+            }
+            &:nth-of-type(1) {
+              &:before {
+                transition: width 0.2s ease-out 0.4s;
+              }
+            }
+            &:nth-of-type(2) {
+              &:before {
+                transition: width 0.2s ease-out 0.2s;
+              }
+            }
+            &:nth-of-type(3) {
+              &:before {
+                transition: width 0.2s ease-out 0s;
+              }
+            }
+          }
+          &:hover {
+            span {
+              &:nth-of-type(1) {
+                &:before {
+                  transition: width 0.2s ease-out 0s;
+                  width: 80%;
+                }
+              }
+              &:nth-of-type(2) {
+                &:before {
+                  transition: width 0.2s ease-out 0.2s;
+                  width: 60%;
+                }
+              }
+              &:nth-of-type(3) {
+                &:before {
+                  transition: width 0.2s ease-out 0.4s;
+                  width: 40%;
+                }
+              }
+            }
+          }
+          &.open {
+          }
+        }
+        .nav-logo {
+          width: 100px;
+          margin-left: auto;
+        }
+      }
+      .description {
+        height: 75vh;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        h1 {
+          font-family: 'Megrim', cursive;
+          font-size: 1.5rem;
+          @include bp-desktop-sm {
+            font-size: 2.5rem;
+          }
+          padding-top: 10vh;
+          word-spacing: 10px;
+        }
+      }
+      .scrolling {
+        height: 10vh;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+        h4 {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
 
-
+@include keyframes(move-color) {
+  0% {
+    background-position: 0 3px;
+  }
+  100% {
+    background-position: 24px 3px;
+  }
+}
