@@ -24,7 +24,7 @@
   <![endif]-->
   <div class="container-fluid __porfolio-wrapper">
     <section class="home">
-      <div class="home__content">
+      <div class="home--content">
         <nav class="navigation">
           <div id='nav-icon'>
             <span></span>
@@ -38,8 +38,16 @@
         <div class="description">
           <h1>WEB . MOBILE . ART</h1>
         </div>
-        <div class="scrolling">
-
+        <div class="scroll-down">
+          <svg class="scroll-down--line" width="1">
+            <defs>
+              <mask id="scroll-down-mask" x="0" y="0" width="100%" height="100%" >
+                <rect x="0" y="0" width="100%" height="100%"></rect>
+                <line x1="0" y1="0" x2="0" y2="8"</line>
+              </mask>
+            </defs>
+            <rect width="100%" height="100%"></rect>
+          </svg>
         </div>
       </div>
       <div class="home--background">
@@ -47,16 +55,7 @@
           <defs>
             <mask id="background-mask" x="0" y="0" width="100%" height="100%" >
               <rect x="0" y="0" width="100%" height="100%"></rect>
-              <text
-                x="50%" y="50%"
-                text-anchor="middle"
-                font-weight="900"
-                stroke-width="15"
-                stroke="#000000"
-                letter-spacing="8"
-              >
-                T.T.D
-              </text>
+              <text x="50%" y="50%" text-anchor="middle" font-weight="900" stroke="#000000" letter-spacing="8">T.T.D</text>
             </mask>
           </defs>
           <rect width="100%" height="100%"></rect>
@@ -71,7 +70,30 @@
       </div>
     </section>
     <section class="main-content">
-      other parts
+      <section class="greeting">
+        <div class="greeting--content">
+          <div class="greeting-box">
+            <div class="greeting-text">
+              <h2>It's great to meet you</h2>
+              <div class="seperater"></div>
+              <p>I'm a design minded front-end developer with a passion for building engaging, perfect experiences. </p>
+            </div>
+          </div>
+          <div class="overlay-background"></div>
+          <div class="overlay-text">
+            T.T.D
+          </div>
+        </div>
+      </section>
+      <section class="banner">
+        <div class="banner--below-layer">
+          <div class="banner--content">
+            <div class="content-box">
+              <h1>PORFOLIO</h1>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   </div>
   <!-- Add your site or application content here -->

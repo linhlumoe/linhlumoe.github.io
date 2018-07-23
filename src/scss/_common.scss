@@ -29,25 +29,24 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           }
           text {
             font-family: 'Oswald', sans-serif;
-            font-size: 8em;
+            font-size: 7em;
+            stroke: "#000000";
+            stroke-width: 8;
+            letter-spacing: 8;
+            @include bp-tablet-vertical {
+              font-size: 10em;
+              stroke-width: 12;
+            }
             @include bp-desktop-sm {
               font-size: 12em;
+              stroke-width: 15;
+              letter-spacing: 12px;
             }
           }
         }
       }
-      .background-video {
-        //@include bp-ip4 {
-        //  width: auto;
-        //  height: auto;
-        //}
-        //@include bp-desktop-sm {
-        //  width: 100%;
-        //  height: 100%;
-        //}
-      }
     }
-    .home__content {
+    .home--content {
       position: absolute;
       color: #ffffff;
       z-index: 1;
@@ -142,25 +141,273 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           word-spacing: 10px;
         }
       }
-      .scrolling {
+      .scroll-down {
         height: 10vh;
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
-        @include flex-direction(column);
-        h4 {
-          font-weight: 300;
+        .scroll-down--line {
+          height: 10vh;
+          > rect {
+            fill: #ffffff;
+            -webkit-mask: url(#scroll-down-mask);
+            mask: url(#scroll-down-mask);
+          }
+          mask {
+            rect {
+              fill: #ffffff;
+            }
+            line {
+              animation: scroll-down 2s linear infinite;
+              stroke: #000000;
+              stroke-width: 5;
+            }
+          }
+        }
+      }
+    }
+  
+  }
+  .main-content {
+    margin: 0 6vw;
+    @include bp-desktop-sm {
+      margin: 0 10vw;
+    }
+    background-color: #1b1c26;
+    .greeting {
+      padding-top: 15vh;
+      .greeting--content {
+        height: 80vh;
+        background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
+        background-size: cover;
+        position: relative;
+        width: 104%;
+        margin-left: -2%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-desktop-sm {
+          width: 102%;
+          margin-left: -1%; 
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          border-top: 1.8vw solid #949494;
+          border-left: 1.8vw solid transparent;
+          @include bp-ip6-plus {
+            border-top: 1.9vw solid #949494;
+            border-left: 1.9vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 0.8vw solid #949494;
+            border-left: 0.8vw solid transparent;
+          }
+        }
+        .greeting-box {
+          font-family: 'Montserrat', sans-serif;
+          background-color: #ffffffe0;
+          position: absolute;
+          z-index: 1;
+          width: 85vw;
+          height: 50vh;
+          right: -2%;
+          bottom: -3%;
+          @include bp-tablet-vertical {
+            height: 46vh;
+          }
+          @include bp-desktop-sm {
+            height: 50vh;
+            width: 60vw;
+            right: -5%;
+            bottom: -5%;
+          }
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          .greeting-text {
+            padding-top: 12vh;
+            padding-left: 10vw;
+            height: 100%;
+            @include bp-desktop-sm {
+              padding-top: 14vh;
+              padding-left: 12vw;
+            }
+            h2 {
+              text-transform: uppercase;
+              font-weight: 600;
+              color: #3d506e;
+              padding-bottom: 5px;
+              font-size: 1.5rem;
+              @include bp-ip6 {
+                font-size: 1.7rem;
+              }
+              @include bp-tablet-vertical {
+                font-size: 2rem;
+              }
+              @include bp-desktop-sm {
+                font-size: 2.2rem;
+              } 
+            }
+            .seperater {
+              height: 2px;
+              background-color: #db324f;
+              margin-left: 10vw;
+              @include bp-tablet-vertical {
+                margin-left: 50px;
+              }
+            }
+            p {
+              padding-top: 10px;
+              padding-right: 5px;
+              font-size: 14px;
+              @include bp-ip6 {
+                font-size: 18px;
+              }
+              @include bp-tablet-vertical {
+                padding-top: 20px;
+                line-height: 1.8;
+                font-size: 24px;
+                padding-right: 10vw;
+              }
+              @include bp-desktop-lg {
+                padding-right: 20vw;
+              }
+            }
+          }
+          &:after {
+            content: '';
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #b8b8b8;
+            border-right: 3.75vw solid transparent;
+            @include bp-desktop-sm {
+              border-right: 4.85vw solid transparent;
+            }
+          }
+        }
+        .overlay-background {
+          height: 100%;
+          background-color: #1a1e2ce6;
+        }
+        .overlay-text {
+          width: 100%;
+          height: 100%;
+          background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-size: cover;
+          position: absolute;
+          top: 0;
+          z-index: 1;
+          font-size: 6em;
+          font-weight: 900;
+          font-family: 'Oswald', sans-serif;
+          text-align: center;
+          padding-top: 15vh;
+          -webkit-text-stroke: 8px transparent;
+          letter-spacing: 10px;
+          text-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
+          @include bp-ip6 {
+            padding-top: 22vh;
+          }
+          @include bp-tablet-vertical {
+            font-size: 10em;
+            padding-top: 25vh;
+            -webkit-text-stroke: 12px transparent;
+          }
+          @include bp-desktop-sm {
+            padding-top: 18vh;
+          }
+          @include bp-desktop-lg {
+            padding-top: 23vh;
+          }
+        }
+      }
+    }
+    .banner {
+      padding: 40vh 0;
+      @include bp-desktop-sm {
+        padding: 55vh 0;
+      }
+      .banner--below-layer {
+        position: relative;
+        background-color: #ffffff;
+        height: 30vh;
+        width: 104%;
+        margin-left: -2%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        &:after {
+          content: '';
+          top: 100%;
+          position: absolute;
+          border-top: 1.8vw solid #949494;
+          border-left: 1.8vw solid transparent;
+          @include bp-ip6-plus {
+            border-top: 1.9vw solid #949494;
+            border-left: 1.9vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.6vw solid #949494;
+            border-left: 1.6vw solid transparent;
+          }
+        }
+        .banner--content {
+          position: absolute;
+          background-color: #fac02d;
+          height: 120%;
+          top: -10%;
+          right: -2%;
+          width: 70vw;
+          font-weight: 900;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          @include bp-desktop-sm {
+            height: 140%;
+            top: -20%;
+            right: -2%;
+            width: 40vw;
+          }
+          .content-box {
+            padding: 3px 15px;
+            border-bottom: 1px solid #ffffff;
+            border-top: 1px solid #ffffff;
+            h1 {
+              font-family: 'Oswald', sans-serif;
+              font-size: 3em;
+              color: #ffffff;
+              padding: 10px;
+              border-top: 1px solid #ffffff;
+              border-bottom: 1px solid #ffffff;
+              margin: 0;
+              @include bp-tablet-vertical {
+                font-size: 5em;
+              }
+            }
+            &:after {
+              content: '';
+              top: 100%;
+              right: 0;
+              position: absolute;
+              border-top: 2vw solid #826417;
+              border-right: 3.75vw solid transparent;
+              @include bp-desktop-sm {
+                border-right: 3.2vw solid transparent;
+              }
+              @include bp-desktop-md {
+                border-right: 3.3vw solid transparent;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
-@include keyframes(move-color) {
+@include keyframes(scroll-down) {
   0% {
-    background-position: 0 3px;
+    transform: translateY(0);
   }
   100% {
-    background-position: 24px 3px;
+    transform: translateY(100%);
   }
 }
