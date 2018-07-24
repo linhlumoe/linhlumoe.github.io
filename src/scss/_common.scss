@@ -1,5 +1,8 @@
 @import "mixins";
 
+body {
+  font-family: 'Oswald', sans-serif;
+}
 .button {
   cursor: pointer;
 }
@@ -28,7 +31,6 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
             fill: #ffffff;
           }
           text {
-            font-family: 'Oswald', sans-serif;
             font-size: 7em;
             stroke: "#000000";
             stroke-width: 8;
@@ -166,7 +168,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         }
       }
     }
-  
+
   }
   .main-content {
     margin: 0 6vw;
@@ -177,26 +179,36 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
     .greeting {
       padding-top: 15vh;
       .greeting--content {
-        height: 80vh;
+        height: 60vh;
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
         position: relative;
         width: 104%;
         margin-left: -2%;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          height: 80vh;
+        }
         @include bp-desktop-sm {
           width: 102%;
-          margin-left: -1%; 
+          margin-left: -1%;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          border-top: 1.8vw solid #949494;
+          border-right: 1.8vw solid transparent;
+          bottom: -1.8vw;
+          right: 0;
+          @include bp-tablet-vertical {
+            visibility: hidden;
+          }
         }
         &:after {
           content: '';
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-left: 1.8vw solid transparent;
-          @include bp-ip6-plus {
-            border-top: 1.9vw solid #949494;
-            border-left: 1.9vw solid transparent;
-          }
+          border-top: 1.9vw solid #949494;
+          border-left: 1.9vw solid transparent;
           @include bp-desktop-sm {
             border-top: 0.8vw solid #949494;
             border-left: 0.8vw solid transparent;
@@ -207,18 +219,20 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           background-color: #ffffffe0;
           position: absolute;
           z-index: 1;
-          width: 85vw;
           height: 50vh;
+          width: 104%;
           right: -2%;
-          bottom: -3%;
+          bottom: 5vh;
           @include bp-tablet-vertical {
-            height: 46vh;
+            height: 50vh;
+            width: 70vw;
+            right: -2%;
+            bottom: -5%;
           }
           @include bp-desktop-sm {
             height: 50vh;
             width: 60vw;
             right: -5%;
-            bottom: -5%;
           }
           @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
           .greeting-text {
@@ -243,7 +257,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
               }
               @include bp-desktop-sm {
                 font-size: 2.2rem;
-              } 
+              }
             }
             .seperater {
               height: 2px;
@@ -271,12 +285,26 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
               }
             }
           }
+          &:before {
+            content: '';
+            left: 0;
+            bottom: -2.5%;
+            position: absolute;
+            border-top: 2vw solid #b8b8b8;
+            border-left: 1.85vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
           &:after {
             content: '';
             right: 0;
             position: absolute;
             border-top: 2vw solid #b8b8b8;
-            border-right: 3.75vw solid transparent;
+            border-right: 1.85vw solid transparent;
+            @include bp-tablet-vertical {
+              border-right: 3.5vw solid transparent;
+            }
             @include bp-desktop-sm {
               border-right: 4.85vw solid transparent;
             }
@@ -301,16 +329,14 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           font-weight: 900;
           font-family: 'Oswald', sans-serif;
           text-align: center;
-          padding-top: 15vh;
           -webkit-text-stroke: 8px transparent;
           letter-spacing: 10px;
           text-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
-          @include bp-ip6 {
-            padding-top: 22vh;
-          }
+          visibility: hidden;
           @include bp-tablet-vertical {
+            visibility: visible;
             font-size: 10em;
-            padding-top: 25vh;
+            padding-top: 22vh;
             -webkit-text-stroke: 12px transparent;
           }
           @include bp-desktop-sm {
@@ -323,9 +349,9 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
       }
     }
     .banner {
-      padding: 40vh 0;
+      padding-top: 30vh;
       @include bp-desktop-sm {
-        padding: 55vh 0;
+        padding-top: 55vh;
       }
       .banner--below-layer {
         position: relative;
@@ -360,6 +386,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           @include flexbox();
           @include align-items(center);
           @include justify-content(center);
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
           @include bp-desktop-sm {
             height: 140%;
             top: -20%;
@@ -367,11 +394,10 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
             width: 40vw;
           }
           .content-box {
-            padding: 3px 15px;
+            padding: 3px 20px;
             border-bottom: 1px solid #ffffff;
             border-top: 1px solid #ffffff;
             h1 {
-              font-family: 'Oswald', sans-serif;
               font-size: 3em;
               color: #ffffff;
               padding: 10px;
@@ -394,6 +420,549 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
               }
               @include bp-desktop-md {
                 border-right: 3.3vw solid transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+    .introduce {
+      padding-top: 30vh;
+      @include bp-desktop-sm {
+        padding-top: 55vh;
+      }
+      .introduce--below-layer {
+        position: relative;
+        background-color: #ffffff;
+        height: 100vh;
+        width: 104%;
+        margin-left: -2%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          height: 55vh;
+        }
+        @include bp-desktop-sm {
+          height: 65vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
+          position: absolute;
+          border-top: 2vw solid #838383;
+          border-left: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            visibility: hidden;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #838383;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #838383;
+            border-right: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #838383;
+            border-right: 1.6vw solid transparent;
+          }
+        }
+        .introduce--image {
+          height: 45vh;
+          width: 104%;
+          background-color: #959595;
+          position: absolute;
+          top: 3vh;
+          left: -2%;
+          z-index: 1;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          @include bp-tablet-vertical {
+            height: 35vh;
+            width: 35vh;
+            top: 45%;
+          }
+          @include bp-desktop-sm {
+            height: 55vh;
+            width: 55vh;
+            top: 25%;
+            left: -4%;
+          }
+          @include bp-desktop-md {
+            top: 10%;
+            height: 55vh;
+            width: 55vh;
+          }
+          @media only screen and (min-width : 1366px) {
+            height: 65vh;
+            width: 65vh;
+          }
+          @include bp-desktop-lg {
+            height: 65vh;
+            width: 65vh;
+          }
+          &:after {
+            content: '';
+            top: 100%;
+            left: 0;
+            position: absolute;
+            border-top: 2vw solid #808080;
+            border-left: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              border-top: 2vw solid #808080;
+              border-left: 3.7vw solid transparent;
+            }
+            @include bp-desktop-sm {
+              border-top: 2vw solid #808080;
+              border-left: 5vw solid transparent;
+            }
+          }
+          &:before {
+            content: '';
+            top: 100%;
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #808080;
+            border-right: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
+        }
+        .introduce--text {
+          height: 45vh;
+          width: 104%;
+          background-color: #262e38;
+          position: absolute;
+          bottom: 3vh;
+          right: -2%;
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          @include bp-tablet-vertical {
+            width: 60vw;
+            bottom: 25%;
+          }
+          @include bp-desktop-sm {
+            height: 55vh;
+            bottom: 25%;
+            width: 60vw;
+            right: -4%;
+          }
+          &:after {
+            content: '';
+            top: 100%;
+            left: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-left: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
+          &:before {
+            content: '';
+            top: 100%;
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-right: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 2vw solid transparent;
+            }
+            @include bp-desktop-sm {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 3.3vw solid transparent;
+            }
+          }
+          .content {
+            color: #c0c7d1;
+            padding: 15px;
+            @include bp-tablet-vertical {
+              padding-top: 12vh;
+              padding-left: 15vw;
+            }
+            h1 {
+              font-weight: 900;
+              @include bp-tablet-vertical {
+                font-size: 3rem;
+              }
+              @include bp-desktop-sm {
+                font-size: 3.5rem;
+              }
+            }
+            .content--seperater {
+              height: 3px;
+              background-color: #db324f;
+              margin-left: 10vw;
+              margin-top: 15px;
+              margin-bottom: 15px;
+              @include bp-tablet-vertical {
+                margin-left: 50px;
+              }
+            }
+            p {
+              text-align: justify;
+              font-family: 'Cormorant', serif;
+              @include bp-tablet-vertical {
+                padding-right: 5vw;
+                text-align: left;
+              }
+              @include bp-desktop-sm {
+                font-size: 18px;
+              }
+              @include bp-desktop-md {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .addition {
+      padding: 30vh 0;
+      @include bp-desktop-sm {
+        padding: 55vh 0;
+      }
+      .addition--below-layer {
+        position: relative;
+        background-color: #f4a024;
+        height: 100vh;
+        width: 104%;
+        margin-left: -2%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          height: 55vh;
+        }
+        @include bp-desktop-sm {
+          height: 65vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
+          position: absolute;
+          border-top: 2vw solid #848484;
+          border-left: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #848484;
+            border-left: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #848484;
+            border-left: 1.6vw solid transparent;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #848484;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #848484;
+            border-right: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #848484;
+            border-right: 1.6vw solid transparent;
+          }
+        }
+        .addition--image {
+          height: 45vh;
+          width: 104%;
+          background-color: #444444;
+          position: absolute;
+          top: 3vh;
+          left: -2%;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          @include bp-tablet-vertical {
+            width: 70vw;
+            top: 0;
+          }
+          @include bp-desktop-sm {
+            height: 55vh;
+            bottom: 25%;
+            width: 60vw;
+            left: -4%;
+          }
+          &:after {
+            content: '';
+            top: 100%;
+            left: 0;
+            position: absolute;
+            border-top: 2vw solid #484848;
+            border-left: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              border-top: 2vw solid #484848;
+              border-left: 2vw solid transparent;
+            }
+            @include bp-desktop-sm {
+              border-top: 2vw solid #484848;
+              border-left: 3.3vw solid transparent;
+            }
+          }
+          &:before {
+            content: '';
+            top: 100%;
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #484848;
+            border-right: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
+        }
+        .addition--text {
+          height: 45vh;
+          width: 104%;
+          background-color: #ffffff;
+          position: absolute;
+          bottom: 3vh;
+          right: -2%;
+          z-index: 1;
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          @include bp-tablet-vertical {
+            top: -10%;
+            height: 35vh;
+            width: 35vh;
+          }
+          @include bp-desktop-sm {
+            height: 55vh;
+            width: 55vh;
+            right: -4%;
+          }
+          @include bp-desktop-md {
+            height: 55vh;
+            width: 55vh;
+          }
+          @media only screen and (min-width : 1366px) {
+            height: 65vh;
+            width: 65vh;
+          }
+          @include bp-desktop-lg {
+            height: 65vh;
+            width: 65vh;
+          }
+          &:after {
+            content: '';
+            top: 100%;
+            left: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-left: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
+          &:before {
+            content: '';
+            top: 100%;
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-right: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 2vw solid transparent;
+            }
+            @include bp-desktop-sm {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 3.3vw solid transparent;
+            }
+          }
+          .content {
+            padding: 15px;
+            @include bp-tablet-vertical {
+              padding-top: 5vw;
+              padding-left: 5vw;
+            }
+            h1 {
+              color: #dd3154;
+              font-weight: 900;
+              @include bp-tablet-vertical {
+                font-size: 3rem;
+              }
+              @include bp-desktop-sm {
+                font-size: 3.5rem;
+              }
+            }
+            .content--seperater {
+              height: 3px;
+              background-color: #000000;
+              margin-left: 12vw;
+              margin-top: 15px;
+              margin-bottom: 15px;
+              @include bp-tablet-vertical {
+                margin-left: 50px;
+              }
+            }
+            p {
+              color: #212121;
+              text-align: justify;
+              font-family: 'Cormorant', serif;
+              @include bp-tablet-vertical {
+                padding-right: 5vw;
+                text-align: left;
+              }
+              @include bp-desktop-sm {
+                font-size: 18px;
+              }
+              @include bp-desktop-md {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      padding-bottom: 10vh;
+      .footer--below-layer {
+        position: relative;
+        background-color: #ffffff;
+        height: 60vh;
+        width: 104%;
+        margin-left: -2%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          height: 55vh;
+        }
+        @include bp-desktop-sm {
+          height: 65vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
+          position: absolute;
+          border-top: 2vw solid #848484;
+          border-left: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #848484;
+            border-left: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #848484;
+            border-left: 1.6vw solid transparent;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #848484;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #848484;
+            border-right: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #848484;
+            border-right: 1.6vw solid transparent;
+          }
+        }
+        .footer--content {
+          height: 50vh;
+          width: 104%;
+          background-color: #262e38;
+          position: absolute;
+          bottom: 5vh;
+          right: -2%;
+          color: #acacac;
+          z-index: 1;
+          padding-top: 50px;
+          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          @include bp-tablet-vertical {
+            bottom: -10%;
+            width: 80vw;
+          }
+          @include bp-desktop-sm {
+            width: 70vw;
+            right: -4%;
+          }
+          &:after {
+            content: '';
+            top: 100%;
+            left: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-left: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              visibility: hidden;
+            }
+          }
+          &:before {
+            content: '';
+            top: 100%;
+            right: 0;
+            position: absolute;
+            border-top: 2vw solid #3e4c5d;
+            border-right: 1.9vw solid transparent;
+            @include bp-tablet-vertical {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 3.6vw solid transparent;
+            }
+            @include bp-desktop-sm {
+              border-top: 2vw solid #3e4c5d;
+              border-right: 5vw solid transparent;
+            }
+          }
+          li {
+            list-style-type: none;
+            font-family: 'Cormorant', serif;
+            @include bp-desktop-sm {
+              font-size: 18px;
+            }
+          }
+          .content-box {
+            @include flexbox();
+            @include align-items(baseline);
+            @include justify-content(space-evenly);
+            padding: 0 20px;
+            .logo {
+              width: 50px;
+              @include bp-desktop-md {
+                width: 80px;
+              }
+            }
+            .list-text {
+              text-align: right;
+              h6 {
+                position: relative;
+                &:before {
+                  position: absolute;
+                  content: '';
+                  width: 30px;
+                  height: 1px;
+                  background-color: #acacac;
+                  top: 50%;
+                }
+              }
+              &.menu {
+                h6 {
+                  &:before {
+                    right: 50%;
+                  }
+                }
+              }
+              &.contact {
+                h6 {
+                  &:before {
+                    right: 40%;
+                  }
+                }
               }
             }
           }
