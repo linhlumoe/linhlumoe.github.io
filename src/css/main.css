@@ -2934,7 +2934,7 @@ body {
             top: 100%;
             left: 0;
             position: absolute;
-            border-top: 2vw solid #3e4c5d;
+            border-top: 2vw solid #7d7d7d;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:after {
@@ -2944,15 +2944,15 @@ body {
             top: 100%;
             right: 0;
             position: absolute;
-            border-top: 2vw solid #3e4c5d;
+            border-top: 2vw solid #7d7d7d;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
-                border-top: 2vw solid #3e4c5d;
+                border-top: 2vw solid #7d7d7d;
                 border-right: 2vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
-                border-top: 2vw solid #3e4c5d;
+                border-top: 2vw solid #7d7d7d;
                 border-right: 3.3vw solid transparent; } }
           .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content {
             padding: 15px; }
@@ -3133,6 +3133,22 @@ body {
                 right: 50%; }
               .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text.contact h6:before {
                 right: 40%; }
+
+.__loader-wrapper {
+  margin: 0;
+  padding: 0;
+  background-color: #1b1c26;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99; }
+  .__loader-wrapper .logo-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .__loader-wrapper .logo-letter text {
+      font-size: 10em; }
 
 @-webkit-keyframes scroll-down {
   0% {
