@@ -2160,46 +2160,46 @@ body {
 .button {
   cursor: pointer; }
 
-.__porfolio-wrapper {
+.__portfolio-wrapper {
   margin: 0;
   padding: 0; }
-  .__porfolio-wrapper .home {
+  .__portfolio-wrapper .home {
     height: 100vh;
     width: 100%;
     overflow: hidden; }
-    .__porfolio-wrapper .home .home--background .background {
+    .__portfolio-wrapper .home .home--background .background {
       width: 100%;
       height: 100%;
       overflow: hidden;
       position: absolute; }
-      .__porfolio-wrapper .home .home--background .background > rect {
+      .__portfolio-wrapper .home .home--background .background > rect {
         fill: #1a1e2ce6;
         -webkit-mask: url(#background-mask);
         mask: url(#background-mask); }
-      .__porfolio-wrapper .home .home--background .background mask rect {
+      .__portfolio-wrapper .home .home--background .background mask rect {
         fill: #ffffff; }
-      .__porfolio-wrapper .home .home--background .background mask text {
+      .__portfolio-wrapper .home .home--background .background mask text {
         font-size: 7em;
         stroke: "#000000";
         stroke-width: 8;
         letter-spacing: 8; }
         @media only screen and (min-width: 768px) {
-          .__porfolio-wrapper .home .home--background .background mask text {
+          .__portfolio-wrapper .home .home--background .background mask text {
             font-size: 10em;
             stroke-width: 12; } }
         @media only screen and (min-width: 1024px) {
-          .__porfolio-wrapper .home .home--background .background mask text {
+          .__portfolio-wrapper .home .home--background .background mask text {
             font-size: 12em;
             stroke-width: 15;
             letter-spacing: 12px; } }
-    .__porfolio-wrapper .home .home--content {
+    .__portfolio-wrapper .home .home--content {
       position: absolute;
       color: #ffffff;
       z-index: 1;
       padding: 0 10vw;
       height: 100%;
       width: 100%; }
-      .__porfolio-wrapper .home .home--content .navigation {
+      .__portfolio-wrapper .home .home--content .navigation {
         height: 15vh;
         display: -webkit-box;
         display: -moz-box;
@@ -2210,12 +2210,12 @@ body {
         -moz-align-items: center;
         -ms-align-items: center;
         align-items: center; }
-        .__porfolio-wrapper .home .home--content .navigation #nav-icon {
+        .__portfolio-wrapper .home .home--content .navigation #nav-icon {
           width: 30px;
           height: 30px;
           position: relative;
           cursor: pointer; }
-          .__porfolio-wrapper .home .home--content .navigation #nav-icon span {
+          .__portfolio-wrapper .home .home--content .navigation #nav-icon span {
             display: block;
             position: relative;
             height: 3px;
@@ -2223,33 +2223,33 @@ body {
             background: #ffffff;
             left: 0;
             margin-top: 6px; }
-            .__porfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(1) {
+            .__portfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(1) {
               margin-top: 0; }
-            .__porfolio-wrapper .home .home--content .navigation #nav-icon span:before {
+            .__portfolio-wrapper .home .home--content .navigation #nav-icon span:before {
               content: '';
               position: absolute;
               height: 3px;
               width: 0;
               background-color: #dd3154; }
-            .__porfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(1):before {
+            .__portfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(1):before {
               transition: width 0.2s ease-out 0.4s; }
-            .__porfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(2):before {
+            .__portfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(2):before {
               transition: width 0.2s ease-out 0.2s; }
-            .__porfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(3):before {
+            .__portfolio-wrapper .home .home--content .navigation #nav-icon span:nth-of-type(3):before {
               transition: width 0.2s ease-out 0s; }
-          .__porfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(1):before {
+          .__portfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(1):before {
             transition: width 0.2s ease-out 0s;
             width: 80%; }
-          .__porfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(2):before {
+          .__portfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(2):before {
             transition: width 0.2s ease-out 0.2s;
             width: 60%; }
-          .__porfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(3):before {
+          .__portfolio-wrapper .home .home--content .navigation #nav-icon:hover span:nth-of-type(3):before {
             transition: width 0.2s ease-out 0.4s;
             width: 40%; }
-        .__porfolio-wrapper .home .home--content .navigation .nav-logo {
+        .__portfolio-wrapper .home .home--content .navigation .nav-logo {
           width: 100px;
           margin-left: auto; }
-      .__porfolio-wrapper .home .home--content .description {
+      .__portfolio-wrapper .home .home--content .description {
         height: 75vh;
         display: -webkit-box;
         display: -moz-box;
@@ -2265,15 +2265,15 @@ body {
         -ms-justify-content: center;
         justify-content: center;
         -ms-flex-pack: center; }
-        .__porfolio-wrapper .home .home--content .description h1 {
+        .__portfolio-wrapper .home .home--content .description h1 {
           font-family: 'Megrim', cursive;
           font-size: 1.5rem;
           padding-top: 10vh;
           word-spacing: 10px; }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .home .home--content .description h1 {
+            .__portfolio-wrapper .home .home--content .description h1 {
               font-size: 2.5rem; } }
-      .__porfolio-wrapper .home .home--content .scroll-down {
+      .__portfolio-wrapper .home .home--content .scroll-down {
         height: 10vh;
         display: -webkit-box;
         display: -moz-box;
@@ -2289,27 +2289,27 @@ body {
         -ms-justify-content: center;
         justify-content: center;
         -ms-flex-pack: center; }
-        .__porfolio-wrapper .home .home--content .scroll-down .scroll-down--line {
+        .__portfolio-wrapper .home .home--content .scroll-down .scroll-down--line {
           height: 10vh; }
-          .__porfolio-wrapper .home .home--content .scroll-down .scroll-down--line > rect {
+          .__portfolio-wrapper .home .home--content .scroll-down .scroll-down--line > rect {
             fill: #ffffff;
             -webkit-mask: url(#scroll-down-mask);
             mask: url(#scroll-down-mask); }
-          .__porfolio-wrapper .home .home--content .scroll-down .scroll-down--line mask rect {
+          .__portfolio-wrapper .home .home--content .scroll-down .scroll-down--line mask rect {
             fill: #ffffff; }
-          .__porfolio-wrapper .home .home--content .scroll-down .scroll-down--line mask line {
+          .__portfolio-wrapper .home .home--content .scroll-down .scroll-down--line mask line {
             animation: scroll-down 2s linear infinite;
             stroke: #000000;
             stroke-width: 5; }
-  .__porfolio-wrapper .main-content {
+  .__portfolio-wrapper .main-content {
     margin: 0 6vw;
     background-color: #1b1c26; }
     @media only screen and (min-width: 1024px) {
-      .__porfolio-wrapper .main-content {
+      .__portfolio-wrapper .main-content {
         margin: 0 10vw; } }
-    .__porfolio-wrapper .main-content .greeting {
+    .__portfolio-wrapper .main-content .greeting {
       padding-top: 15vh; }
-      .__porfolio-wrapper .main-content .greeting .greeting--content {
+      .__portfolio-wrapper .main-content .greeting .greeting--content {
         height: 60vh;
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
@@ -2323,13 +2323,13 @@ body {
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
-          .__porfolio-wrapper .main-content .greeting .greeting--content {
+          .__portfolio-wrapper .main-content .greeting .greeting--content {
             height: 80vh; } }
         @media only screen and (min-width: 1024px) {
-          .__porfolio-wrapper .main-content .greeting .greeting--content {
+          .__portfolio-wrapper .main-content .greeting .greeting--content {
             width: 102%;
             margin-left: -1%; } }
-        .__porfolio-wrapper .main-content .greeting .greeting--content:before {
+        .__portfolio-wrapper .main-content .greeting .greeting--content:before {
           content: '';
           position: absolute;
           border-top: 1.8vw solid #949494;
@@ -2337,18 +2337,18 @@ body {
           bottom: -1.8vw;
           right: 0; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content:before {
+            .__portfolio-wrapper .main-content .greeting .greeting--content:before {
               visibility: hidden; } }
-        .__porfolio-wrapper .main-content .greeting .greeting--content:after {
+        .__portfolio-wrapper .main-content .greeting .greeting--content:after {
           content: '';
           position: absolute;
           border-top: 1.9vw solid #949494;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content:after {
+            .__portfolio-wrapper .main-content .greeting .greeting--content:after {
               border-top: 0.8vw solid #949494;
               border-left: 0.8vw solid transparent; } }
-        .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
+        .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
           font-family: 'Montserrat', sans-serif;
           background-color: #ffffffe0;
           position: absolute;
@@ -2364,63 +2364,63 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
               height: 50vh;
               width: 70vw;
               right: -2%;
               bottom: -5%; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box {
               height: 50vh;
               width: 60vw;
               right: -5%; } }
-          .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text {
+          .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text {
             padding-top: 12vh;
             padding-left: 10vw;
             height: 100%; }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text {
+              .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text {
                 padding-top: 14vh;
                 padding-left: 12vw; } }
-            .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
               text-transform: uppercase;
               font-weight: 600;
               color: #3d506e;
               padding-bottom: 5px;
               font-size: 1.5rem; }
               @media only screen and (min-width: 321px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
                   font-size: 1.7rem; } }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
                   font-size: 2rem; } }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text h2 {
                   font-size: 2.2rem; } }
-            .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text .seperater {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text .seperater {
               height: 2px;
               background-color: #db324f;
               margin-left: 10vw; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text .seperater {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text .seperater {
                   margin-left: 50px; } }
-            .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
               padding-top: 10px;
               padding-right: 5px;
               font-size: 14px; }
               @media only screen and (min-width: 321px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
                   font-size: 18px; } }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
                   padding-top: 20px;
                   line-height: 1.8;
                   font-size: 24px;
                   padding-right: 10vw; } }
               @media only screen and (min-width: 1440px) {
-                .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
+                .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box .greeting-text p {
                   padding-right: 20vw; } }
-          .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box:before {
+          .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box:before {
             content: '';
             left: 0;
             bottom: -2.5%;
@@ -2428,24 +2428,24 @@ body {
             border-top: 2vw solid #b8b8b8;
             border-left: 1.85vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box:before {
+              .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box:before {
                 visibility: hidden; } }
-          .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
+          .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
             content: '';
             right: 0;
             position: absolute;
             border-top: 2vw solid #b8b8b8;
             border-right: 1.85vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
+              .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
                 border-right: 3.5vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
+              .__portfolio-wrapper .main-content .greeting .greeting--content .greeting-box:after {
                 border-right: 4.85vw solid transparent; } }
-        .__porfolio-wrapper .main-content .greeting .greeting--content .overlay-background {
+        .__portfolio-wrapper .main-content .greeting .greeting--content .overlay-background {
           height: 100%;
           background-color: #1a1e2ce6; }
-        .__porfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
+        .__portfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
           width: 100%;
           height: 100%;
           background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
@@ -2465,23 +2465,23 @@ body {
           text-shadow: 0px 30px 80px rgba(0, 0, 0, 0.2);
           visibility: hidden; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
               visibility: visible;
               font-size: 10em;
               padding-top: 22vh;
               -webkit-text-stroke: 12px transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
               padding-top: 18vh; } }
           @media only screen and (min-width: 1440px) {
-            .__porfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
+            .__portfolio-wrapper .main-content .greeting .greeting--content .overlay-text {
               padding-top: 23vh; } }
-    .__porfolio-wrapper .main-content .banner {
+    .__portfolio-wrapper .main-content .banner {
       padding-top: 30vh; }
       @media only screen and (min-width: 1024px) {
-        .__porfolio-wrapper .main-content .banner {
+        .__portfolio-wrapper .main-content .banner {
           padding-top: 55vh; } }
-      .__porfolio-wrapper .main-content .banner .banner--below-layer {
+      .__portfolio-wrapper .main-content .banner .banner--below-layer {
         position: relative;
         background-color: #ffffff;
         height: 30vh;
@@ -2493,21 +2493,21 @@ body {
         -ms-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
-        .__porfolio-wrapper .main-content .banner .banner--below-layer:after {
+        .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
           content: '';
           top: 100%;
           position: absolute;
           border-top: 1.8vw solid #949494;
           border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 376px) and (max-width: 414px) {
-            .__porfolio-wrapper .main-content .banner .banner--below-layer:after {
+            .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
               border-top: 1.9vw solid #949494;
               border-left: 1.9vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .banner .banner--below-layer:after {
+            .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
               border-top: 1.6vw solid #949494;
               border-left: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content {
+        .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content {
           position: absolute;
           background-color: #fac02d;
           height: 120%;
@@ -2536,16 +2536,16 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content {
+            .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content {
               height: 140%;
               top: -20%;
               right: -2%;
               width: 40vw; } }
-          .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box {
+          .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box {
             padding: 3px 20px;
             border-bottom: 1px solid #ffffff;
             border-top: 1px solid #ffffff; }
-            .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box h1 {
+            .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box h1 {
               font-size: 3em;
               color: #ffffff;
               padding: 10px;
@@ -2553,9 +2553,9 @@ body {
               border-bottom: 1px solid #ffffff;
               margin: 0; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box h1 {
+                .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box h1 {
                   font-size: 5em; } }
-            .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
+            .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
               content: '';
               top: 100%;
               right: 0;
@@ -2563,17 +2563,17 @@ body {
               border-top: 2vw solid #826417;
               border-right: 3.75vw solid transparent; }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
+                .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
                   border-right: 3.2vw solid transparent; } }
               @media only screen and (min-width: 1280px) {
-                .__porfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
+                .__portfolio-wrapper .main-content .banner .banner--below-layer .banner--content .content-box:after {
                   border-right: 3.3vw solid transparent; } }
-    .__porfolio-wrapper .main-content .introduce {
+    .__portfolio-wrapper .main-content .introduce {
       padding-top: 30vh; }
       @media only screen and (min-width: 1024px) {
-        .__porfolio-wrapper .main-content .introduce {
+        .__portfolio-wrapper .main-content .introduce {
           padding-top: 55vh; } }
-      .__porfolio-wrapper .main-content .introduce .introduce--below-layer {
+      .__portfolio-wrapper .main-content .introduce .introduce--below-layer {
         position: relative;
         background-color: #ffffff;
         height: 100vh;
@@ -2586,12 +2586,12 @@ body {
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer {
             height: 55vh; } }
         @media only screen and (min-width: 1024px) {
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer {
             height: 65vh; } }
-        .__porfolio-wrapper .main-content .introduce .introduce--below-layer:after {
+        .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
           content: '';
           top: 100%;
           left: 0;
@@ -2599,9 +2599,9 @@ body {
           border-top: 2vw solid #838383;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer:after {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
               visibility: hidden; } }
-        .__porfolio-wrapper .main-content .introduce .introduce--below-layer:before {
+        .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
           content: '';
           top: 100%;
           right: 0;
@@ -2609,14 +2609,14 @@ body {
           border-top: 2vw solid #838383;
           border-right: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer:before {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
               border-top: 2vw solid #838383;
               border-right: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer:before {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
               border-top: 1.3vw solid #838383;
               border-right: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+        .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
           height: 45vh;
           width: 104%;
           background-color: #959595;
@@ -2645,30 +2645,30 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
               height: 35vh;
               width: 35vh;
               top: 45%; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
               height: 55vh;
               width: 55vh;
               top: 25%;
               left: -4%; } }
           @media only screen and (min-width: 1280px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
               top: 10%;
               height: 55vh;
               width: 55vh; } }
           @media only screen and (min-width: 1366px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
               height: 65vh;
               width: 65vh; } }
           @media only screen and (min-width: 1440px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image {
               height: 65vh;
               width: 65vh; } }
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
             content: '';
             top: 100%;
             left: 0;
@@ -2676,14 +2676,14 @@ body {
             border-top: 2vw solid #808080;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
                 border-top: 2vw solid #808080;
                 border-left: 3.7vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:after {
                 border-top: 2vw solid #808080;
                 border-left: 5vw solid transparent; } }
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:before {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:before {
             content: '';
             top: 100%;
             right: 0;
@@ -2691,9 +2691,9 @@ body {
             border-top: 2vw solid #808080;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:before {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--image:before {
                 visibility: hidden; } }
-        .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
+        .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
           height: 45vh;
           width: 104%;
           background-color: #262e38;
@@ -2707,16 +2707,16 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
               width: 60vw;
               bottom: 25%; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text {
               height: 55vh;
               bottom: 25%;
               width: 60vw;
               right: -4%; } }
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:after {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:after {
             content: '';
             top: 100%;
             left: 0;
@@ -2724,9 +2724,9 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:after {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:after {
                 visibility: hidden; } }
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
             content: '';
             top: 100%;
             right: 0;
@@ -2734,56 +2734,56 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 2vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 3.3vw solid transparent; } }
-          .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content {
+          .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content {
             color: #c0c7d1;
             padding: 15px; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content {
+              .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content {
                 padding-top: 12vh;
                 padding-left: 15vw; } }
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
               font-weight: 900; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
                   font-size: 3rem; } }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content h1 {
                   font-size: 3.5rem; } }
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content .content--seperater {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content .content--seperater {
               height: 3px;
               background-color: #db324f;
               margin-left: 10vw;
               margin-top: 15px;
               margin-bottom: 15px; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content .content--seperater {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content .content--seperater {
                   margin-left: 50px; } }
-            .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
+            .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
               text-align: justify;
               font-family: 'Cormorant', serif; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
                   padding-right: 5vw;
                   text-align: left; } }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
                   font-size: 18px; } }
               @media only screen and (min-width: 1280px) {
-                .__porfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
+                .__portfolio-wrapper .main-content .introduce .introduce--below-layer .introduce--text .content p {
                   font-size: 20px; } }
-    .__porfolio-wrapper .main-content .addition {
+    .__portfolio-wrapper .main-content .addition {
       padding: 30vh 0; }
       @media only screen and (min-width: 1024px) {
-        .__porfolio-wrapper .main-content .addition {
+        .__portfolio-wrapper .main-content .addition {
           padding: 55vh 0; } }
-      .__porfolio-wrapper .main-content .addition .addition--below-layer {
+      .__portfolio-wrapper .main-content .addition .addition--below-layer {
         position: relative;
         background-color: #f4a024;
         height: 100vh;
@@ -2796,12 +2796,12 @@ body {
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
-          .__porfolio-wrapper .main-content .addition .addition--below-layer {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer {
             height: 55vh; } }
         @media only screen and (min-width: 1024px) {
-          .__porfolio-wrapper .main-content .addition .addition--below-layer {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer {
             height: 65vh; } }
-        .__porfolio-wrapper .main-content .addition .addition--below-layer:after {
+        .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
           content: '';
           top: 100%;
           left: 0;
@@ -2809,14 +2809,14 @@ body {
           border-top: 2vw solid #848484;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer:after {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
               border-top: 2vw solid #848484;
               border-left: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer:after {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
               border-top: 1.3vw solid #848484;
               border-left: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .addition .addition--below-layer:before {
+        .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
           content: '';
           top: 100%;
           right: 0;
@@ -2824,14 +2824,14 @@ body {
           border-top: 2vw solid #848484;
           border-right: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer:before {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
               border-top: 2vw solid #848484;
               border-right: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer:before {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
               border-top: 1.3vw solid #848484;
               border-right: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
+        .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
           height: 45vh;
           width: 104%;
           background-color: #444444;
@@ -2859,16 +2859,16 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
               width: 70vw;
               top: 0; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image {
               height: 55vh;
               bottom: 25%;
               width: 60vw;
               left: -4%; } }
-          .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
             content: '';
             top: 100%;
             left: 0;
@@ -2876,14 +2876,14 @@ body {
             border-top: 2vw solid #484848;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
                 border-top: 2vw solid #484848;
                 border-left: 2vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image:after {
                 border-top: 2vw solid #484848;
                 border-left: 3.3vw solid transparent; } }
-          .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image:before {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image:before {
             content: '';
             top: 100%;
             right: 0;
@@ -2891,9 +2891,9 @@ body {
             border-top: 2vw solid #484848;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--image:before {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--image:before {
                 visibility: hidden; } }
-        .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+        .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
           height: 45vh;
           width: 104%;
           background-color: #ffffff;
@@ -2908,28 +2908,28 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
               top: -10%;
               height: 35vh;
               width: 35vh; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
               height: 55vh;
               width: 55vh;
               right: -4%; } }
           @media only screen and (min-width: 1280px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
               height: 55vh;
               width: 55vh; } }
           @media only screen and (min-width: 1366px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
               height: 65vh;
               width: 65vh; } }
           @media only screen and (min-width: 1440px) {
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text {
               height: 65vh;
               width: 65vh; } }
-          .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text:after {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:after {
             content: '';
             top: 100%;
             left: 0;
@@ -2937,9 +2937,9 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text:after {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:after {
                 visibility: hidden; } }
-          .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
             content: '';
             top: 100%;
             right: 0;
@@ -2947,54 +2947,54 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 2vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 3.3vw solid transparent; } }
-          .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content {
+          .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content {
             padding: 15px; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content {
+              .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content {
                 padding-top: 5vw;
                 padding-left: 5vw; } }
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
               color: #dd3154;
               font-weight: 900; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
                   font-size: 3rem; } }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content h1 {
                   font-size: 3.5rem; } }
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content .content--seperater {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content .content--seperater {
               height: 3px;
               background-color: #000000;
               margin-left: 12vw;
               margin-top: 15px;
               margin-bottom: 15px; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content .content--seperater {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content .content--seperater {
                   margin-left: 50px; } }
-            .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
+            .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
               color: #212121;
               text-align: justify;
               font-family: 'Cormorant', serif; }
               @media only screen and (min-width: 768px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
                   padding-right: 5vw;
                   text-align: left; } }
               @media only screen and (min-width: 1024px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
                   font-size: 18px; } }
               @media only screen and (min-width: 1280px) {
-                .__porfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
+                .__portfolio-wrapper .main-content .addition .addition--below-layer .addition--text .content p {
                   font-size: 20px; } }
-    .__porfolio-wrapper .main-content .footer {
+    .__portfolio-wrapper .main-content .footer {
       padding-bottom: 10vh; }
-      .__porfolio-wrapper .main-content .footer .footer--below-layer {
+      .__portfolio-wrapper .main-content .footer .footer--below-layer {
         position: relative;
         background-color: #ffffff;
         height: 60vh;
@@ -3007,12 +3007,12 @@ body {
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
-          .__porfolio-wrapper .main-content .footer .footer--below-layer {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer {
             height: 55vh; } }
         @media only screen and (min-width: 1024px) {
-          .__porfolio-wrapper .main-content .footer .footer--below-layer {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer {
             height: 65vh; } }
-        .__porfolio-wrapper .main-content .footer .footer--below-layer:after {
+        .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
           content: '';
           top: 100%;
           left: 0;
@@ -3020,14 +3020,14 @@ body {
           border-top: 2vw solid #848484;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer:after {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
               border-top: 2vw solid #848484;
               border-left: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer:after {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
               border-top: 1.3vw solid #848484;
               border-left: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .footer .footer--below-layer:before {
+        .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
           content: '';
           top: 100%;
           right: 0;
@@ -3035,14 +3035,14 @@ body {
           border-top: 2vw solid #848484;
           border-right: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer:before {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
               border-top: 2vw solid #848484;
               border-right: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer:before {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
               border-top: 1.3vw solid #848484;
               border-right: 1.6vw solid transparent; } }
-        .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
+        .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
           height: 50vh;
           width: 104%;
           background-color: #262e38;
@@ -3059,14 +3059,14 @@ body {
           -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
           @media only screen and (min-width: 768px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
               bottom: -10%;
               width: 80vw; } }
           @media only screen and (min-width: 1024px) {
-            .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content {
               width: 70vw;
               right: -4%; } }
-          .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content:after {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content:after {
             content: '';
             top: 100%;
             left: 0;
@@ -3074,9 +3074,9 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-left: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content:after {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content:after {
                 visibility: hidden; } }
-          .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
             content: '';
             top: 100%;
             right: 0;
@@ -3084,20 +3084,20 @@ body {
             border-top: 2vw solid #3e4c5d;
             border-right: 1.9vw solid transparent; }
             @media only screen and (min-width: 768px) {
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 3.6vw solid transparent; } }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content:before {
                 border-top: 2vw solid #3e4c5d;
                 border-right: 5vw solid transparent; } }
-          .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content li {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content li {
             list-style-type: none;
             font-family: 'Cormorant', serif; }
             @media only screen and (min-width: 1024px) {
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content li {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content li {
                 font-size: 18px; } }
-          .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box {
+          .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box {
             display: -webkit-box;
             display: -moz-box;
             display: -ms-flexbox;
@@ -3113,25 +3113,25 @@ body {
             justify-content: space-evenly;
             -ms-flex-pack: space-evenly;
             padding: 0 20px; }
-            .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .logo {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .logo {
               width: 50px; }
               @media only screen and (min-width: 1280px) {
-                .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .logo {
+                .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .logo {
                   width: 80px; } }
-            .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text {
+            .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text {
               text-align: right; }
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text h6 {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text h6 {
                 position: relative; }
-                .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text h6:before {
+                .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text h6:before {
                   position: absolute;
                   content: '';
                   width: 30px;
                   height: 1px;
                   background-color: #acacac;
                   top: 50%; }
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text.menu h6:before {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text.menu h6:before {
                 right: 50%; }
-              .__porfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text.contact h6:before {
+              .__portfolio-wrapper .main-content .footer .footer--below-layer .footer--content .content-box .list-text.contact h6:before {
                 right: 40%; }
 
 @-webkit-keyframes scroll-down {
