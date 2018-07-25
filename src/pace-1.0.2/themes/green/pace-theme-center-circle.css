@@ -1,4 +1,10 @@
-/* This is a compiled file, you should be editing the file in the templates directory */
+This is a compiled file, you should be editing the file in the templates directory
+.pace-done {
+  background-color: #1b1c26;
+  /* opacity: 0.8; */
+  /* visibility: hidden; */
+}
+
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -40,7 +46,7 @@
   line-height: 6rem;
   font-size: 2rem;
   border-radius: 50%;
-  background: rgba(34, 223, 128, 0.8);
+  background: #dd3154;
   color: #fff;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 100;

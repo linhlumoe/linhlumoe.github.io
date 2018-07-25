@@ -245,13 +245,14 @@
         this.el = document.createElement('div');
         this.el.className = "pace pace-active";
         document.body.className = document.body.className.replace(/pace-done/g, '');
-        document.body.className += ' pace-running';
+        document.body.className += 'pace-running';
         this.el.innerHTML = '<div class="pace-progress">\n  <div class="pace-progress-inner"></div>\n</div>\n<div class="pace-activity"></div>';
         if (targetElement.firstChild != null) {
           targetElement.insertBefore(this.el, targetElement.firstChild);
         } else {
           targetElement.appendChild(this.el);
         }
+        document.querySelector('.__portfolio-wrapper').style.display = 'none';
       }
       return this.el;
     };
@@ -262,6 +263,7 @@
       el.className = el.className.replace('pace-active', '');
       el.className += ' pace-inactive';
       document.body.className = document.body.className.replace('pace-running', '');
+      document.querySelector('.__portfolio-wrapper').style.display = 'block';
       return document.body.className += ' pace-done';
     };
 

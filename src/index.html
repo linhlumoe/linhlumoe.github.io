@@ -21,14 +21,6 @@
 </head>
 
 <body>
-  <!--<div class="container-fluid __loader-wrapper">-->
-    <!--<div class="loader-box">-->
-      <!--<div class="bar">-->
-        <!--<div class="circle"></div>-->
-        <!--<p>Loading</p>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -149,7 +141,6 @@
                   <li>Contact</li>
                 </ul>
               </div>
-
               <div class="list-text contact">
                 <h6>CONTACT</h6>
                 <ul>
@@ -168,15 +159,16 @@
     </section>
   </div>
   <!-- Add your site or application content here -->
-  <script src="pace-1.0.2/pace.js" data-pace-options='{ "element": false, "document": false }' type="application/javascript"></script>
+  <script src="pace-1.0.2/pace.js" type="application/javascript"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
   <script>
     $.ajax({
-      url: "https://exchange.bitcoin/api/trades?since=5",
+      url: "https://api.indix.com/v2/categories?app_key=PDHdkFXeXDxaGavOBWqXqG7l9ymUpEya",
       context: document.body,
       success: function(){
         console.log('leu leu')
