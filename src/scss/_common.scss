@@ -22,7 +22,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         overflow: hidden;
         position: absolute;
         opacity: 0;
-        @include animation(scale 1s .5s forwards);
+        @include animation(scale .5s .2s forwards);
         > rect {
           fill: #1a1e2ce6;
           -webkit-mask: url(#background-mask);
@@ -59,7 +59,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
       height: 100%;
       width: 100%;
       opacity: 0;
-      @include animation(scale 1s 1s forwards);
+      @include animation(scale .5s .3s forwards);
       .navigation {
         height: 15vh;
         @include flexbox();
@@ -977,54 +977,6 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
   }
 }
 
-.__loader-wrapper {
-  margin: 0;
-  padding: 0;
-  background-color: #1b1c26;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  //@include flexbox();
-  //@include justify-content(center);
-  //@include align-items(center);
-  .loader-box {
-    width: 100vw;
-    height: 100px;
-    @include flexbox();
-    //@include justify-content(center);
-    @include align-items(flex-end);
-    overflow-y: hidden;
-    .bar {
-      position: relative;
-      height: 2px;
-      width: 90vw;
-      background: #dd3154;
-      bottom: 0;
-    }
-    .circle {
-      position: absolute;
-      top: -30px;
-      margin-left: -30px;
-      height: 60px;
-      width: 60px;
-      left: 0;
-      background: #dd3154;
-      border-radius: 30%;
-      @include animation(move 5s forwards);
-    }
-    p {
-      position: absolute;
-      top: -35px;
-      right: -85px;
-      text-transform: uppercase;
-      color: #1b1c26;
-      font-weight: bold;
-      font-size: 24px;
-    }
-  }
-}
-
 @include keyframes(scroll-down) {
   0% {
     transform: translateY(0);
@@ -1086,6 +1038,35 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
   100% {
     right: 100%;
   }
+}
+
+.slide .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.intro {
+  background: #305a5b;
+}
+
+.parallax {
+  background: url(../img/background-city.png) 50% 0;
+}
+
+.slidein {
+  background: #5b3030;
+}
+
+.slidein2 {
+  background: #304b5b;
+}
+
+.slidein2 .row {
+  justify-content: space-around;
 }
 
 @include keyframes(scale) {
