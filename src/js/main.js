@@ -3,75 +3,52 @@ $(function() {
   var controller = new ScrollMagic.Controller();
 
   // Parallax background
+  var homeFadeOut = TweenMax.to("#home", 2, { scale: 0.8 });
   new ScrollMagic.Scene({
-    triggerElement: "#home--background",
-    triggerHook: "onEnter",
-  })
-    .duration('200%')
-    .setTween("#background-video", {
-      backgroundPosition: "80% 100%",
-      ease: Linear.easeNone
-    })
-    //.addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
-
-  // Slide in
-  new ScrollMagic.Scene({
-    triggerElement: "#slidein",
+    triggerElement: "#home",
     triggerHook: "onLeave",
+    offset: "200"
   })
-    .setPin("#slidein")
-    //.addIndicators() // add indicators (requires plugin)
+    .duration('1000')
+    .setTween(homeFadeOut)
     .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: "#slidein2",
-    triggerHook: "onLeave",
-  })
-    .setPin("#slidein2")
-    //.addIndicators() // add indicators (requires plugin)
-    .addTo(controller);
-
-  //Moving divs
-  var fromLeftTimeline = new TimelineMax();
-  var fromLeftFrom = TweenMax.from("#opacity", 1, {
-    y: 500
-  });
-  var fromLeftTo = TweenMax.to("#opacity", 1, {
-    y: 0
-  });
-  fromLeftTimeline
-    .add(fromLeftFrom)
-    .add(fromLeftTo);
-
-  var fromBottomTimeline = new TimelineMax();
-  var fromBottomFrom = TweenMax.from("#bottom", 1, {
-    y: 500
-  });
-  var fromBottomTo = TweenMax.to("#bottom", 1, {
-    y: 0
-  });
-  fromBottomTimeline
-    .add(fromBottomFrom)
-    .add(fromBottomTo);
+  // Greeting
+  var greetingBackgroundTimeline = new TimelineMax()
+    .add(TweenMax.from("#greeting--background", 1, { y: 400 }))
+    .add(TweenMax.to("#greeting--background", 1, { y: 0 }));  
 
   new ScrollMagic.Scene({
-    triggerElement: "#slidein2",
-    offset: 100,
+    triggerElement: "#greeting",
+    offset: 120
   })
-    .setTween(fromLeftTimeline)
+    .setTween(greetingBackgroundTimeline)
     .duration(400)
-    //    .reverse(false)
-    //.addIndicators() // add indicators (requires plugin)
     .addTo(controller);
 
+  var greetingBoxTimeline = new TimelineMax()
+    .add(TweenMax.from("#greeting--box", 1, { y: 1000 }))
+    .add(TweenMax.to("#greeting--box", 1, { y: 0 }));
+
   new ScrollMagic.Scene({
-    triggerElement: "#slidein2",
-    offset: 100
+    triggerElement: "#greeting",
+    offset: 180
   })
-    .setTween(fromBottomTimeline)
-    .duration(800)
-    //    .reverse(false)
-    //.addIndicators() // add indicators (requires plugin)
+    .setTween(greetingBoxTimeline)
+    .duration(900)
     .addTo(controller);
+
+  var greetingOverlayTextTimeline = new TimelineMax()
+    .add(TweenMax.from("#overlay--text", 1, { y: 800 }))
+    .add(TweenMax.to("#overlay-text", 1, { y: 0 }));
+
+  new ScrollMagic.Scene({
+    triggerElement: "#greeting",
+    offset: 130
+  })
+    .setTween(greetingOverlayTextTimeline)
+    .duration(800)
+    .addTo(controller);
+    
+  // 
 });
