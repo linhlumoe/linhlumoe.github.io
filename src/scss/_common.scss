@@ -390,8 +390,8 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         position: absolute;
         background-color: #fac02d;
         height: 35vh;
-        top: -2.5vh;
-        right: -2%;
+        bottom: -2.5vh;
+        right: -4%;
         width: 70vw;
         font-weight: 900;
         @include flexbox();
@@ -401,6 +401,8 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         @include bp-desktop-sm {
           right: -4%;
           width: 40vw;
+          height: 40vh;
+          bottom: -5vh;
         }
         .content-box {
           padding: 3px 20px;
@@ -439,8 +441,8 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
       @include bp-desktop-sm {
         padding-top: 55vh;
       }
+      position: relative;
       .introduce--below-layer {
-        position: relative;
         background-color: #ffffff;
         height: 100vh;
         width: 104%;
@@ -455,18 +457,23 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         &:after {
           content: '';
           top: 100%;
-          left: 0;
+          right: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
           border-left: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            visibility: hidden;
+            border-top: 2vw solid #838383;
+            border-left: 1.8vw solid transparent;
+          }
+          @include bp-desktop-sm {
+            border-top: 1.3vw solid #838383;
+            border-left: 1.6vw solid transparent;
           }
         }
         &:before {
           content: '';
           top: 100%;
-          right: 0;
+          left: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
           border-right: 1.9vw solid transparent;
@@ -479,166 +486,164 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
             border-right: 1.6vw solid transparent;
           }
         }
-        .introduce--image {
-          height: 45vh;
-          width: 104%;
-          background-color: #959595;
+      }
+      .introduce--image {
+        height: 45vh;
+        width: 108%;
+        background-color: #959595;
+        position: absolute;
+        bottom: 52vh;
+        left: -4%;
+        z-index: 1;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          height: 35vh;
+          width: 35vh;
+          bottom: -5vh;
+        }
+        @include bp-desktop-sm {
+          height: 55vh;
+          width: 55vh;
+          left: -6%;
+        }
+        @include bp-desktop-md {
+          height: 55vh;
+          width: 55vh;
+        }
+        @media only screen and (min-width : 1366px) {
+          height: 65vh;
+          width: 65vh;
+        }
+        @include bp-desktop-lg {
+          height: 65vh;
+          width: 65vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
           position: absolute;
-          top: 3vh;
-          left: -2%;
-          z-index: 1;
-          @include flexbox();
-          @include align-items(center);
-          @include justify-content(center);
-          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          border-top: 2vw solid #808080;
+          border-left: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            height: 35vh;
-            width: 35vh;
-            top: 45%;
+            border-top: 2vw solid #808080;
+            border-left: 3.7vw solid transparent;
           }
           @include bp-desktop-sm {
-            height: 55vh;
-            width: 55vh;
-            top: 25%;
-            left: -4%;
-          }
-          @include bp-desktop-md {
-            top: 10%;
-            height: 55vh;
-            width: 55vh;
-          }
-          @media only screen and (min-width : 1366px) {
-            height: 65vh;
-            width: 65vh;
-          }
-          @include bp-desktop-lg {
-            height: 65vh;
-            width: 65vh;
-          }
-          &:after {
-            content: '';
-            top: 100%;
-            left: 0;
-            position: absolute;
             border-top: 2vw solid #808080;
-            border-left: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              border-top: 2vw solid #808080;
-              border-left: 3.7vw solid transparent;
-            }
-            @include bp-desktop-sm {
-              border-top: 2vw solid #808080;
-              border-left: 5vw solid transparent;
-            }
-          }
-          &:before {
-            content: '';
-            top: 100%;
-            right: 0;
-            position: absolute;
-            border-top: 2vw solid #808080;
-            border-right: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              visibility: hidden;
-            }
+            border-left: 4.85vw solid transparent;
           }
         }
-        .introduce--text {
-          height: 45vh;
-          width: 104%;
-          background-color: #262e38;
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
           position: absolute;
-          bottom: 3vh;
-          right: -2%;
-          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          border-top: 2vw solid #808080;
+          border-right: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            width: 60vw;
-            bottom: 25%;
+            visibility: hidden;
+          }
+        }
+      }
+      .introduce--text {
+        height: 45vh;
+        width: 108%;
+        background-color: #262e38;
+        position: absolute;
+        bottom: 3vh;
+        right: -4%;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          width: 60vw;
+          bottom: 20%;
+        }
+        @include bp-desktop-sm {
+          height: 55vh;
+          bottom: 15%;
+          width: 60vw;
+          right: -6%;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
+          position: absolute;
+          border-top: 2vw solid #3e4c5d;
+          border-left: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            visibility: hidden;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #3e4c5d;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #3e4c5d;
+            border-right: 2vw solid transparent;
           }
           @include bp-desktop-sm {
-            height: 55vh;
-            bottom: 25%;
-            width: 60vw;
-            right: -4%;
-          }
-          &:after {
-            content: '';
-            top: 100%;
-            left: 0;
-            position: absolute;
             border-top: 2vw solid #3e4c5d;
-            border-left: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              visibility: hidden;
-            }
+            border-right: 3.3vw solid transparent;
           }
-          &:before {
-            content: '';
-            top: 100%;
-            right: 0;
-            position: absolute;
-            border-top: 2vw solid #3e4c5d;
-            border-right: 1.9vw solid transparent;
+        }
+        .content {
+          color: #c0c7d1;
+          padding: 15px;
+          @include bp-tablet-vertical {
+            padding-top: 12vh;
+            padding-left: 15vw;
+          }
+          h1 {
+            font-weight: 900;
             @include bp-tablet-vertical {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 2vw solid transparent;
+              font-size: 3rem;
             }
             @include bp-desktop-sm {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 3.3vw solid transparent;
+              font-size: 3.5rem;
             }
           }
-          .content {
-            color: #c0c7d1;
-            padding: 15px;
+          .content--seperater {
+            height: 3px;
+            background-color: #db324f;
+            margin-left: 10vw;
+            margin-top: 15px;
+            margin-bottom: 15px;
             @include bp-tablet-vertical {
-              padding-top: 12vh;
-              padding-left: 15vw;
+              margin-left: 50px;
             }
-            h1 {
-              font-weight: 900;
-              @include bp-tablet-vertical {
-                font-size: 3rem;
-              }
-              @include bp-desktop-sm {
-                font-size: 3.5rem;
-              }
+          }
+          p {
+            text-align: justify;
+            font-family: 'Cormorant', serif;
+            @include bp-tablet-vertical {
+              padding-right: 5vw;
+              text-align: left;
             }
-            .content--seperater {
-              height: 3px;
-              background-color: #db324f;
-              margin-left: 10vw;
-              margin-top: 15px;
-              margin-bottom: 15px;
-              @include bp-tablet-vertical {
-                margin-left: 50px;
-              }
+            @include bp-desktop-sm {
+              font-size: 18px;
             }
-            p {
-              text-align: justify;
-              font-family: 'Cormorant', serif;
-              @include bp-tablet-vertical {
-                padding-right: 5vw;
-                text-align: left;
-              }
-              @include bp-desktop-sm {
-                font-size: 18px;
-              }
-              @include bp-desktop-md {
-                font-size: 20px;
-              }
+            @include bp-desktop-md {
+              font-size: 20px;
             }
           }
         }
       }
     }
     .addition {
-      padding: 30vh 0;
+      padding-top: 30vh;
       @include bp-desktop-sm {
-        padding: 55vh 0;
+        padding-top: 55vh;
       }
+      position: relative;
       .addition--below-layer {
-        position: relative;
         background-color: #f4a024;
         height: 100vh;
         width: 104%;
@@ -653,7 +658,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         &:after {
           content: '';
           top: 100%;
-          left: 0;
+          right: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
           border-left: 1.9vw solid transparent;
@@ -669,7 +674,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
         &:before {
           content: '';
           top: 100%;
-          right: 0;
+          left: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
           border-right: 1.9vw solid transparent;
@@ -682,162 +687,169 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
             border-right: 1.6vw solid transparent;
           }
         }
-        .addition--image {
-          height: 45vh;
-          width: 104%;
-          background-color: #444444;
+      }
+      .addition--image {
+        height: 45vh;
+        width: 108%;
+        background-color: #444444;
+        position: absolute;
+        bottom: 52vh;
+        left: -4%;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          width: 70vw;
+          bottom: 10vh;
+        }
+        @include bp-desktop-sm {
+          height: 55vh;
+          width: 60vw;
+          left: -6%;
+        }
+        @include bp-desktop-lg {
+          height: 60vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
           position: absolute;
-          top: 3vh;
-          left: -2%;
-          @include flexbox();
-          @include align-items(center);
-          @include justify-content(center);
-          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          border-top: 2vw solid #484848;
+          border-left: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            width: 70vw;
-            top: 0;
+            border-top: 2vw solid #484848;
+            border-left: 2vw solid transparent;
           }
           @include bp-desktop-sm {
-            height: 55vh;
-            bottom: 25%;
-            width: 60vw;
-            left: -4%;
-          }
-          &:after {
-            content: '';
-            top: 100%;
-            left: 0;
-            position: absolute;
             border-top: 2vw solid #484848;
-            border-left: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              border-top: 2vw solid #484848;
-              border-left: 2vw solid transparent;
-            }
-            @include bp-desktop-sm {
-              border-top: 2vw solid #484848;
-              border-left: 3.3vw solid transparent;
-            }
-          }
-          &:before {
-            content: '';
-            top: 100%;
-            right: 0;
-            position: absolute;
-            border-top: 2vw solid #484848;
-            border-right: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              visibility: hidden;
-            }
+            border-left: 3.3vw solid transparent;
           }
         }
-        .addition--text {
-          height: 45vh;
-          width: 104%;
-          background-color: #ffffff;
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
           position: absolute;
-          bottom: 3vh;
-          right: -2%;
-          z-index: 1;
-          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          border-top: 2vw solid #484848;
+          border-right: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            top: -10%;
-            height: 35vh;
-            width: 35vh;
+            visibility: hidden;
+          }
+        }
+      }
+      .addition--text {
+        height: 45vh;
+        width: 108%;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: 3vh;
+        right: -4%;
+        z-index: 1;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          bottom: 25vh;
+          height: 35vh;
+          width: 35vh;
+        }
+        @include bp-desktop-sm {
+          bottom: 15vh;
+          height: 55vh;
+          width: 55vh;
+          right: -6%;
+        }
+        @include bp-desktop-md {
+          height: 55vh;
+          width: 55vh;
+        }
+        @media only screen and (min-width : 1366px) {
+          height: 65vh;
+          width: 65vh;
+        }
+        @include bp-desktop-lg {
+          height: 65vh;
+          width: 65vh;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
+          position: absolute;
+          border-top: 2vw solid #7d7d7d;
+          border-left: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            visibility: hidden;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #7d7d7d;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #7d7d7d;
+            border-right: 2vw solid transparent;
           }
           @include bp-desktop-sm {
-            height: 55vh;
-            width: 55vh;
-            right: -4%;
-          }
-          @include bp-desktop-md {
-            height: 55vh;
-            width: 55vh;
-          }
-          @media only screen and (min-width : 1366px) {
-            height: 65vh;
-            width: 65vh;
-          }
-          @include bp-desktop-lg {
-            height: 65vh;
-            width: 65vh;
-          }
-          &:after {
-            content: '';
-            top: 100%;
-            left: 0;
-            position: absolute;
             border-top: 2vw solid #7d7d7d;
-            border-left: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              visibility: hidden;
-            }
+            border-right: 3.3vw solid transparent;
           }
-          &:before {
-            content: '';
-            top: 100%;
-            right: 0;
-            position: absolute;
-            border-top: 2vw solid #7d7d7d;
-            border-right: 1.9vw solid transparent;
+        }
+        .content {
+          padding: 15px;
+          @include bp-tablet-vertical {
+            padding-top: 5vw;
+            padding-left: 5vw;
+          }
+          h1 {
+            color: #dd3154;
+            font-weight: 900;
             @include bp-tablet-vertical {
-              border-top: 2vw solid #7d7d7d;
-              border-right: 2vw solid transparent;
+              font-size: 3rem;
             }
             @include bp-desktop-sm {
-              border-top: 2vw solid #7d7d7d;
-              border-right: 3.3vw solid transparent;
+              font-size: 3.5rem;
             }
           }
-          .content {
-            padding: 15px;
+          .content--seperater {
+            height: 3px;
+            background-color: #000000;
+            margin-left: 12vw;
+            margin-top: 15px;
+            margin-bottom: 15px;
             @include bp-tablet-vertical {
-              padding-top: 5vw;
-              padding-left: 5vw;
+              margin-left: 50px;
             }
-            h1 {
-              color: #dd3154;
-              font-weight: 900;
-              @include bp-tablet-vertical {
-                font-size: 3rem;
-              }
-              @include bp-desktop-sm {
-                font-size: 3.5rem;
-              }
+          }
+          p {
+            color: #212121;
+            text-align: justify;
+            font-family: 'Cormorant', serif;
+            @include bp-tablet-vertical {
+              padding-right: 5vw;
+              text-align: left;
             }
-            .content--seperater {
-              height: 3px;
-              background-color: #000000;
-              margin-left: 12vw;
-              margin-top: 15px;
-              margin-bottom: 15px;
-              @include bp-tablet-vertical {
-                margin-left: 50px;
-              }
+            @include bp-desktop-sm {
+              font-size: 18px;
             }
-            p {
-              color: #212121;
-              text-align: justify;
-              font-family: 'Cormorant', serif;
-              @include bp-tablet-vertical {
-                padding-right: 5vw;
-                text-align: left;
-              }
-              @include bp-desktop-sm {
-                font-size: 18px;
-              }
-              @include bp-desktop-md {
-                font-size: 20px;
-              }
+            @include bp-desktop-md {
+              font-size: 20px;
             }
           }
         }
       }
     }
     .footer {
+      padding-top: 30vh;
       padding-bottom: 10vh;
+      @include bp-tablet-vertical {
+        padding-top: 55vh;
+      }
+      position: relative;
       .footer--below-layer {
-        position: relative;
         background-color: #ffffff;
         height: 60vh;
         width: 104%;
@@ -881,95 +893,95 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
             border-right: 1.6vw solid transparent;
           }
         }
-        .footer--content {
-          height: 50vh;
-          width: 104%;
-          background-color: #262e38;
+      }
+      .footer--content {
+        height: 50vh;
+        width: 104%;
+        background-color: #262e38;
+        position: absolute;
+        bottom: 5vh;
+        right: -2%;
+        color: #acacac;
+        z-index: 1;
+        padding-top: 50px;
+        @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          bottom: -10%;
+          width: 80vw;
+        }
+        @include bp-desktop-sm {
+          width: 70vw;
+          right: -4%;
+        }
+        &:after {
+          content: '';
+          top: 100%;
+          left: 0;
           position: absolute;
-          bottom: 5vh;
-          right: -2%;
-          color: #acacac;
-          z-index: 1;
-          padding-top: 50px;
-          @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+          border-top: 2vw solid #3e4c5d;
+          border-left: 1.9vw solid transparent;
           @include bp-tablet-vertical {
-            bottom: -10%;
-            width: 80vw;
+            visibility: hidden;
+          }
+        }
+        &:before {
+          content: '';
+          top: 100%;
+          right: 0;
+          position: absolute;
+          border-top: 2vw solid #3e4c5d;
+          border-right: 1.9vw solid transparent;
+          @include bp-tablet-vertical {
+            border-top: 2vw solid #3e4c5d;
+            border-right: 3.6vw solid transparent;
           }
           @include bp-desktop-sm {
-            width: 70vw;
-            right: -4%;
-          }
-          &:after {
-            content: '';
-            top: 100%;
-            left: 0;
-            position: absolute;
             border-top: 2vw solid #3e4c5d;
-            border-left: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              visibility: hidden;
+            border-right: 5vw solid transparent;
+          }
+        }
+        li {
+          list-style-type: none;
+          font-family: 'Cormorant', serif;
+          @include bp-desktop-sm {
+            font-size: 18px;
+          }
+        }
+        .content-box {
+          @include flexbox();
+          @include align-items(baseline);
+          @include justify-content(space-evenly);
+          padding: 0 20px;
+          .logo {
+            width: 50px;
+            @include bp-desktop-md {
+              width: 80px;
             }
           }
-          &:before {
-            content: '';
-            top: 100%;
-            right: 0;
-            position: absolute;
-            border-top: 2vw solid #3e4c5d;
-            border-right: 1.9vw solid transparent;
-            @include bp-tablet-vertical {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 3.6vw solid transparent;
-            }
-            @include bp-desktop-sm {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 5vw solid transparent;
-            }
-          }
-          li {
-            list-style-type: none;
-            font-family: 'Cormorant', serif;
-            @include bp-desktop-sm {
-              font-size: 18px;
-            }
-          }
-          .content-box {
-            @include flexbox();
-            @include align-items(baseline);
-            @include justify-content(space-evenly);
-            padding: 0 20px;
-            .logo {
-              width: 50px;
-              @include bp-desktop-md {
-                width: 80px;
+          .list-text {
+            text-align: right;
+            h6 {
+              position: relative;
+              &:before {
+                position: absolute;
+                content: '';
+                width: 30px;
+                height: 1px;
+                background-color: #acacac;
+                top: 50%;
               }
             }
-            .list-text {
-              text-align: right;
+            &.menu {
               h6 {
-                position: relative;
                 &:before {
-                  position: absolute;
-                  content: '';
-                  width: 30px;
-                  height: 1px;
-                  background-color: #acacac;
-                  top: 50%;
+                  right: 50%;
                 }
               }
-              &.menu {
-                h6 {
-                  &:before {
-                    right: 50%;
-                  }
-                }
-              }
-              &.contact {
-                h6 {
-                  &:before {
-                    right: 40%;
-                  }
+            }
+            &.contact {
+              h6 {
+                &:before {
+                  right: 40%;
                 }
               }
             }

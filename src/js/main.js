@@ -7,9 +7,9 @@ $(function() {
   new ScrollMagic.Scene({
     triggerElement: "#home",
     triggerHook: "onLeave",
-    offset: "200"
+    offset: "400"
   })
-    .duration('1000')
+    .duration('600')
     .setTween(homeFadeOut)
     .addTo(controller);
 
@@ -32,7 +32,7 @@ $(function() {
 
   new ScrollMagic.Scene({
     triggerElement: "#greeting",
-    offset: 180
+    offset: 160
   })
     .setTween(greetingBoxTimeline)
     .duration(900)
