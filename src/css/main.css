@@ -2293,7 +2293,7 @@ body {
             width: 100px;
             margin-left: auto; }
         .__portfolio-wrapper .main-content .home .home--content .description {
-          height: 65vh;
+          height: 75vh;
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -2308,9 +2308,6 @@ body {
           -ms-justify-content: center;
           justify-content: center;
           -ms-flex-pack: center; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .home .home--content .description {
-              height: 75vh; } }
           .__portfolio-wrapper .main-content .home .home--content .description h1 {
             font-family: 'Megrim', cursive;
             font-size: 1.5rem;
@@ -2607,7 +2604,7 @@ body {
             right: 0;
             position: absolute;
             border-top: 2vw solid #826417;
-            border-right: 3.7vw solid transparent; }
+            border-right: 3.5vw solid transparent; }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .banner .banner--content .content-box:after {
                 border-right: 3.2vw solid transparent; } }

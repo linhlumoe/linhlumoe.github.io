@@ -161,13 +161,10 @@ body {
           }
         }
         .description {
-          height: 65vh;
+          height: 75vh;
           @include flexbox();
           @include align-items(center);
           @include justify-content(center);
-          @include bp-tablet-vertical {
-            height: 75vh;
-          }
           h1 {
             font-family: 'Megrim', cursive;
             font-size: 1.5rem;
@@ -451,7 +448,7 @@ body {
             right: 0;
             position: absolute;
             border-top: 2vw solid #826417;
-            border-right: 3.7vw solid transparent;
+            border-right: 3.5vw solid transparent;
             @include bp-desktop-sm {
               border-right: 3.2vw solid transparent;
             }
