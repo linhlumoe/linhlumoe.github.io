@@ -23,31 +23,35 @@ body {
     }
     background-color: #1b1c26;
     .home {
-      width: calc(100% + 300px);
+      width: calc(100% + 50px);
       overflow: hidden;
       margin-left: -25px;
       @include bp-tablet-vertical {
+        width: calc(100% + 70px);
         margin-left: -35px;
       }
       @include bp-desktop-sm {
+        width: calc(100% + 300px);
         margin-left: -150px;
       }
       @include bp-desktop-ultra {
+        width: calc(100% + 400px);
         margin-left: -200px;
       }
       .home--background {
-        height: 100vh;
-        background: url('../img/background-city.png') center center;
-        background-size: cover;
-        width: 100%;
-        overflow: hidden;
-        @include bp-desktop-sm {
-          background: none;
+        img {
+          height: 100vh;
+          overflow: hidden;
+          @include bp-desktop-sm {
+            display: none;
+          }
         }
+
         video {
           display: none;
           @include bp-desktop-sm {
             display: block;
+            height: 100vh;
           }
         }
         svg.background {
