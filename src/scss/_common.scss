@@ -52,6 +52,7 @@ body {
           @include bp-desktop-sm {
             display: block;
             height: 100vh;
+            width: 100%;
           }
         }
         svg.background {
