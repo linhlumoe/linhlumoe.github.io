@@ -2185,8 +2185,6 @@ body {
           margin-left: -200px; } }
       .__portfolio-wrapper .main-content .home .home--background {
         height: 100vh;
-        background: url("../img/background-city.png") center center;
-        background-size: cover;
         width: 100%;
         overflow: hidden; }
         @media only screen and (min-width: 1024px) {

@@ -32,8 +32,8 @@ body {
       }
       .home--background {
         height: 100vh;
-        background: url('../img/background-city.png') center center;
-        background-size: cover;
+        //background: url('../img/background-city.png') center center;
+        //background-size: cover;
         width: 100%;
         overflow: hidden;
         @include bp-desktop-sm {
