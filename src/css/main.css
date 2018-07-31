@@ -2214,8 +2214,14 @@ body {
             .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
               stroke-width: 15;
               font-size: 12rem; } }
-        .__portfolio-wrapper .main-content .home .home--background svg.background video {
-          height: 100vh; }
+      .__portfolio-wrapper .main-content .home .home--background video {
+        display: none; }
+        @media only screen and (min-width: 1024px) {
+          .__portfolio-wrapper .main-content .home .home--background video {
+            display: block; } }
+      @media only screen and (min-width: 1024px) {
+        .__portfolio-wrapper .main-content .home .home--background img {
+          display: none; } }
       .__portfolio-wrapper .main-content .home .home--content {
         position: absolute;
         color: #ffffff;
@@ -2625,7 +2631,7 @@ body {
           right: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
               border-top: 2vw solid #838383;
@@ -2640,7 +2646,7 @@ body {
           left: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
               border-top: 2vw solid #838383;
@@ -2838,7 +2844,7 @@ body {
           right: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
               border-top: 2vw solid #848484;
@@ -2853,7 +2859,7 @@ body {
           left: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
               border-top: 2vw solid #848484;
@@ -3055,7 +3061,7 @@ body {
           right: 100%;
           position: absolute;
           border-top: 1vh solid #848484;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
               border-top: 1.5vh solid #848484;
@@ -3070,7 +3076,7 @@ body {
           left: 100%;
           position: absolute;
           border-top: 1vh solid #848484;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
               display: none; } }

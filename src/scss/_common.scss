@@ -63,11 +63,18 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
               }
             }
           }
-          video {
-            height: 100vh;
+        }
+        video {
+          display: none;
+          @include bp-desktop-sm {
+            display: block;
           }
         }
-
+        img {
+          @include bp-desktop-sm {
+            display: none;
+          }
+        }
       }
       .home--content {
         position: absolute;
@@ -471,7 +478,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           right: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
-          border-left: 1.9vw solid transparent;
+          border-left: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             border-top: 2vw solid #838383;
             border-left: 1.8vw solid transparent;
@@ -487,7 +494,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           left: 100%;
           position: absolute;
           border-top: 2vw solid #838383;
-          border-right: 1.9vw solid transparent;
+          border-right: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             border-top: 2vw solid #838383;
             border-right: 1.8vw solid transparent;
@@ -672,7 +679,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           right: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
-          border-left: 1.9vw solid transparent;
+          border-left: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             border-top: 2vw solid #848484;
             border-left: 1.8vw solid transparent;
@@ -688,7 +695,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           left: 100%;
           position: absolute;
           border-top: 2vw solid #848484;
-          border-right: 1.9vw solid transparent;
+          border-right: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             border-top: 2vw solid #848484;
             border-right: 1.8vw solid transparent;
@@ -877,7 +884,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           right: 100%;
           position: absolute;
           border-top: 1vh solid #848484;
-          border-left: 1.9vw solid transparent;
+          border-left: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             border-top: 1.5vh solid #848484;
             border-left: 1.8vw solid transparent;
@@ -893,7 +900,7 @@ $background-url: "https://www.sirpierre.se/wp-content/uploads/2016/04/white-pors
           left: 100%;
           position: absolute;
           border-top: 1vh solid #848484;
-          border-right: 1.9vw solid transparent;
+          border-right: 1.8vw solid transparent;
           @include bp-tablet-vertical {
             display: none;
           }
