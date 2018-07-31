@@ -2177,54 +2177,54 @@ body {
       @media only screen and (min-width: 1024px) {
         .__portfolio-wrapper .main-content .home {
           margin-left: -10vw; } }
-      .__portfolio-wrapper .main-content .home .home--background svg.background {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: absolute;
-        opacity: 0;
-        -webkit-animation: scale 0.5s 0.2s forwards;
-        -khtml-animation: scale 0.5s 0.2s forwards;
-        -moz-animation: scale 0.5s 0.2s forwards;
-        -ms-animation: scale 0.5s 0.2s forwards;
-        -o-animation: scale 0.5s 0.2s forwards;
-        animation: scale 0.5s 0.2s forwards; }
-        .__portfolio-wrapper .main-content .home .home--background svg.background > rect {
-          fill: #1a1e2ce6;
-          -webkit-mask: url(#background-mask);
-          mask: url(#background-mask); }
-        .__portfolio-wrapper .main-content .home .home--background svg.background mask rect {
-          fill: #ffffff; }
-        .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-          font-size: 7rem;
-          stroke: #000000;
-          stroke-width: 8;
-          letter-spacing: 8; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              font-size: 10rem;
-              stroke-width: 12; } }
+      .__portfolio-wrapper .main-content .home .home--background {
+        background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
+        background-size: cover; }
+        @media only screen and (min-width: 1024px) {
+          .__portfolio-wrapper .main-content .home .home--background {
+            background: none; } }
+        .__portfolio-wrapper .main-content .home .home--background svg.background {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          position: absolute;
+          opacity: 0;
+          -webkit-animation: scale 0.5s 0.2s forwards;
+          -khtml-animation: scale 0.5s 0.2s forwards;
+          -moz-animation: scale 0.5s 0.2s forwards;
+          -ms-animation: scale 0.5s 0.2s forwards;
+          -o-animation: scale 0.5s 0.2s forwards;
+          animation: scale 0.5s 0.2s forwards; }
+          .__portfolio-wrapper .main-content .home .home--background svg.background > rect {
+            fill: #1a1e2ce6;
+            -webkit-mask: url(#background-mask);
+            mask: url(#background-mask); }
+          .__portfolio-wrapper .main-content .home .home--background svg.background mask rect {
+            fill: #ffffff; }
+          .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+            font-size: 7rem;
+            stroke: #000000;
+            stroke-width: 8;
+            letter-spacing: 8; }
+            @media only screen and (min-width: 768px) {
+              .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+                font-size: 10rem;
+                stroke-width: 12; } }
+            @media only screen and (min-width: 1024px) {
+              .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+                letter-spacing: 12px; } }
+            @media only screen and (min-width: 1280px) {
+              .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+                stroke-width: 15; } }
+            @media only screen and (min-width: 1920px) {
+              .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+                stroke-width: 15;
+                font-size: 12rem; } }
+        .__portfolio-wrapper .main-content .home .home--background video {
+          display: none; }
           @media only screen and (min-width: 1024px) {
-            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              letter-spacing: 12px; } }
-          @media only screen and (min-width: 1280px) {
-            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              stroke-width: 15; } }
-          @media only screen and (min-width: 1920px) {
-            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              stroke-width: 15;
-              font-size: 12rem; } }
-      .__portfolio-wrapper .main-content .home .home--background video {
-        display: none; }
-        @media only screen and (min-width: 1024px) {
-          .__portfolio-wrapper .main-content .home .home--background video {
-            display: block; } }
-      .__portfolio-wrapper .main-content .home .home--background img {
-        width: 100%;
-        height: 100%; }
-        @media only screen and (min-width: 1024px) {
-          .__portfolio-wrapper .main-content .home .home--background img {
-            display: none; } }
+            .__portfolio-wrapper .main-content .home .home--background video {
+              display: block; } }
       .__portfolio-wrapper .main-content .home .home--content {
         position: absolute;
         color: #ffffff;
