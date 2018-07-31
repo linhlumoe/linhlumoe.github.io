@@ -2176,8 +2176,7 @@ body {
       .__portfolio-wrapper .main-content {
         margin: 0 200px; } }
     .__portfolio-wrapper .main-content .home {
-      height: 100vh;
-      width: 100vw;
+      width: calc(100% + 300px);
       overflow: hidden;
       margin-left: -25px; }
       @media only screen and (min-width: 768px) {
@@ -2191,6 +2190,8 @@ body {
           margin-left: -200px; } }
       .__portfolio-wrapper .main-content .home .home--background {
         height: 100vh;
+        background: url("../img/background-city.png") center center;
+        background-size: cover;
         width: 100%;
         overflow: hidden; }
         @media only screen and (min-width: 1024px) {
@@ -2238,11 +2239,6 @@ body {
               .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
                 stroke-width: 15;
                 font-size: 12rem; } }
-        .__portfolio-wrapper .main-content .home .home--background .leuleu {
-          background: url(../img/background-city.png) center center;
-          background-size: cover;
-          width: 100%;
-          height: 100%; }
       .__portfolio-wrapper .main-content .home .home--content {
         position: absolute;
         color: #ffffff;
@@ -2257,7 +2253,7 @@ body {
         -o-animation: scale 0.5s 0.3s ease-in forwards;
         animation: scale 0.5s 0.3s ease-in forwards; }
         .__portfolio-wrapper .main-content .home .home--content .navigation {
-          padding: 30px 15px;
+          padding: 30px;
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -2385,8 +2381,8 @@ body {
             height: 80vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .greeting .greeting--background {
-            width: calc(100% + 40px);
-            margin-left: -20px; } }
+            width: calc(100% + 50px);
+            margin-left: -25px; } }
         .__portfolio-wrapper .main-content .greeting .greeting--background:before {
           content: '';
           position: absolute;
@@ -2405,7 +2401,7 @@ body {
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .greeting .greeting--background:after {
               border-top: 20px solid #949494;
-              border-left: 20px solid transparent; } }
+              border-left: 25px solid transparent; } }
         .__portfolio-wrapper .main-content .greeting .greeting--background .overlay-background {
           height: 100%;
           background-color: #1a1e2ce6; }
@@ -2561,8 +2557,8 @@ body {
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .banner .banner--below-layer {
-            width: calc(100% + 40px);
-            margin-left: -20px; } }
+            width: calc(100% + 50px);
+            margin-left: -25px; } }
         .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
           content: '';
           top: 100%;
@@ -2572,7 +2568,7 @@ body {
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
               border-top: 20px solid #949494;
-              border-left: 20px solid transparent; } }
+              border-left: 25px solid transparent; } }
       .__portfolio-wrapper .main-content .banner .banner--content {
         position: absolute;
         background-color: #fac02d;
@@ -2644,8 +2640,8 @@ body {
       .__portfolio-wrapper .main-content .introduce .introduce--below-layer {
         background-color: #ffffff;
         height: 100vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2657,44 +2653,38 @@ body {
             height: 55vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .introduce .introduce--below-layer {
-            height: 65vh; } }
+            height: 65vh;
+            width: calc(100% + 50px);
+            margin-left: -25px; } }
         .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
           content: '';
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 2vw solid #838383;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
-              border-top: 2vw solid #838383;
-              border-left: 1.8vw solid transparent; } }
+          border-top: 10px solid #838383;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--below-layer:after {
-              border-top: 1.3vw solid #838383;
-              border-left: 1.6vw solid transparent; } }
+              border-top: 20px solid #838383;
+              border-left: 25px solid transparent; } }
         .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
           content: '';
           top: 100%;
           left: 100%;
           position: absolute;
-          border-top: 2vw solid #838383;
-          border-right: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
-              border-top: 2vw solid #838383;
-              border-right: 1.8vw solid transparent; } }
+          border-top: 10px solid #838383;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--below-layer:before {
-              border-top: 1.3vw solid #838383;
-              border-right: 1.6vw solid transparent; } }
+              border-top: 20px solid #838383;
+              border-right: 25px solid transparent; } }
       .__portfolio-wrapper .main-content .introduce .introduce--image {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        left: -20px;
         background-color: #959595;
         position: absolute;
         bottom: 52vh;
-        left: -4%;
         z-index: 1;
         display: -webkit-box;
         display: -moz-box;
@@ -2723,9 +2713,9 @@ body {
             bottom: -5vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .introduce .introduce--image {
-            height: 55vh;
-            width: 55vh;
-            left: -6%; } }
+            height: 50vh;
+            width: 50vh;
+            left: -50px; } }
         @media only screen and (min-width: 1280px) {
           .__portfolio-wrapper .main-content .introduce .introduce--image {
             height: 55vh;
@@ -2743,33 +2733,29 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #808080;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image:after {
-              border-top: 2vw solid #808080;
-              border-left: 3.7vw solid transparent; } }
+          border-top: 10px solid #808080;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:after {
-              border-top: 2vw solid #808080;
-              border-left: 4.8vw solid transparent; } }
+              border-top: 25px solid #808080;
+              border-left: 50px solid transparent; } }
         .__portfolio-wrapper .main-content .introduce .introduce--image:before {
           content: '';
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #808080;
-          border-right: 1.8vw solid transparent; }
+          border-top: 10px solid #808080;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:before {
               visibility: hidden; } }
       .__portfolio-wrapper .main-content .introduce .introduce--text {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #262e38;
         position: absolute;
         bottom: 3vh;
-        right: -4%;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2785,14 +2771,14 @@ body {
             height: 55vh;
             bottom: 15%;
             width: 60vw;
-            right: -6%; } }
+            right: -80px; } }
         .__portfolio-wrapper .main-content .introduce .introduce--text:after {
           content: '';
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
-          border-left: 1.8vw solid transparent; }
+          border-top: 10px solid #3e4c5d;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text:after {
               visibility: hidden; } }
@@ -2801,16 +2787,12 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
-          border-right: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--text:before {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 2vw solid transparent; } }
+          border-top: 10px solid #3e4c5d;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text:before {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 3.2vw solid transparent; } }
+              border-top: 30px solid #3e4c5d;
+              border-right: 55px solid transparent; } }
         .__portfolio-wrapper .main-content .introduce .introduce--text .content {
           color: #c0c7d1;
           padding: 15px; }
@@ -2857,8 +2839,8 @@ body {
       .__portfolio-wrapper .main-content .addition .addition--below-layer {
         background-color: #f4a024;
         height: 100vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2870,44 +2852,38 @@ body {
             height: 55vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .addition .addition--below-layer {
-            height: 65vh; } }
+            height: 65vh;
+            width: calc(100% + 50px);
+            margin-left: -25px; } }
         .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
           content: '';
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
-              border-top: 2vw solid #848484;
-              border-left: 1.8vw solid transparent; } }
+          border-top: 10px solid #848484;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .addition .addition--below-layer:after {
-              border-top: 1.3vw solid #848484;
-              border-left: 1.6vw solid transparent; } }
+              border-top: 20px solid #848484;
+              border-left: 25px solid transparent; } }
         .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
           content: '';
           top: 100%;
           left: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
-          border-right: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
-              border-top: 2vw solid #848484;
-              border-right: 1.8vw solid transparent; } }
+          border-top: 10px solid #848484;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .addition .addition--below-layer:before {
-              border-top: 1.3vw solid #848484;
-              border-right: 1.6vw solid transparent; } }
+              border-top: 20px solid #848484;
+              border-right: 25px solid transparent; } }
       .__portfolio-wrapper .main-content .addition .addition--image {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #444444;
         position: absolute;
         bottom: 52vh;
-        left: -4%;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -2936,7 +2912,7 @@ body {
           .__portfolio-wrapper .main-content .addition .addition--image {
             height: 55vh;
             width: 60vw;
-            left: -6%; } }
+            left: -60px; } }
         @media only screen and (min-width: 1440px) {
           .__portfolio-wrapper .main-content .addition .addition--image {
             height: 60vh; } }
@@ -2945,33 +2921,29 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #484848;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .addition .addition--image:after {
-              border-top: 2vw solid #484848;
-              border-left: 2vw solid transparent; } }
+          border-top: 10px solid #484848;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .addition .addition--image:after {
-              border-top: 2vw solid #484848;
-              border-left: 3.3vw solid transparent; } }
+              border-top: 20px solid #484848;
+              border-left: 35px solid transparent; } }
         .__portfolio-wrapper .main-content .addition .addition--image:before {
           content: '';
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #484848;
-          border-right: 1.8vw solid transparent; }
+          border-top: 10px solid #484848;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--image:before {
               visibility: hidden; } }
       .__portfolio-wrapper .main-content .addition .addition--text {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #ffffff;
         position: absolute;
         bottom: 3vh;
-        right: -4%;
         z-index: 1;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2989,7 +2961,7 @@ body {
             bottom: 15vh;
             height: 55vh;
             width: 55vh;
-            right: -6%; } }
+            right: -70px; } }
         @media only screen and (min-width: 1280px) {
           .__portfolio-wrapper .main-content .addition .addition--text {
             height: 55vh;
@@ -3007,8 +2979,8 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #7d7d7d;
-          border-left: 1.8vw solid transparent; }
+          border-top: 10px solid #7d7d7d;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--text:after {
               visibility: hidden; } }
@@ -3017,16 +2989,12 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #7d7d7d;
-          border-right: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .addition .addition--text:before {
-              border-top: 2vw solid #7d7d7d;
-              border-right: 2vw solid transparent; } }
+          border-top: 10px solid #7d7d7d;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .addition .addition--text:before {
-              border-top: 2vw solid #7d7d7d;
-              border-right: 3.3vw solid transparent; } }
+              border-top: 25px solid #7d7d7d;
+              border-right: 45px solid transparent; } }
         .__portfolio-wrapper .main-content .addition .addition--text .content {
           padding: 15px; }
           @media only screen and (min-width: 768px) {
@@ -3074,8 +3042,8 @@ body {
       .__portfolio-wrapper .main-content .footer .footer--below-layer {
         background-color: #ffffff;
         height: 60vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -3093,33 +3061,29 @@ body {
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 1vh solid #848484;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
-              border-top: 1.5vh solid #848484;
-              border-left: 1.8vw solid transparent; } }
+          border-top: 10px solid #848484;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
-              border-top: 1.3vw solid #848484;
-              border-left: 1.6vw solid transparent; } }
+              border-top: 20px solid #848484;
+              border-left: 25px solid transparent; } }
         .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
           content: '';
           top: 90vh;
           left: 100%;
           position: absolute;
-          border-top: 1vh solid #848484;
-          border-right: 1.8vw solid transparent; }
+          border-top: 10px solid #848484;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
               display: none; } }
       .__portfolio-wrapper .main-content .footer .footer--content {
         height: 50vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #262e38;
         position: absolute;
         bottom: 5vh;
-        right: -4%;
         color: #acacac;
         z-index: 1;
         padding-top: 50px;
@@ -3136,7 +3100,7 @@ body {
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .footer .footer--content {
             width: 70vw;
-            right: -6%; } }
+            right: -50px; } }
         @media only screen and (min-width: 1440px) {
           .__portfolio-wrapper .main-content .footer .footer--content {
             width: 75vw;
@@ -3146,8 +3110,8 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 1vh solid #3e4c5d;
-          border-left: 1.8vw solid transparent; }
+          border-top: 10px solid #3e4c5d;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--content:after {
               visibility: hidden; } }
@@ -3156,16 +3120,12 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 1vh solid #3e4c5d;
-          border-right: 1.8vw solid transparent; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .footer .footer--content:before {
-              border-top: 2vh solid #3e4c5d;
-              border-right: 3.6vw solid transparent; } }
+          border-top: 10px solid #3e4c5d;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--content:before {
-              border-top: 3.5vh solid #3e4c5d;
-              border-right: 4.85vw solid transparent; } }
+              border-top: 25px solid #3e4c5d;
+              border-right: 50px solid transparent; } }
         .__portfolio-wrapper .main-content .footer .footer--content li {
           list-style-type: none;
           font-family: 'Cormorant', serif; }
@@ -3209,13 +3169,10 @@ body {
             .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text.contact h6:before {
               right: 40%; }
     .__portfolio-wrapper .main-content .no-content {
-      padding-top: 1.5vh; }
-      @media only screen and (min-width: 768px) {
-        .__portfolio-wrapper .main-content .no-content {
-          padding-top: 7vh; } }
+      padding-top: 10px; }
       @media only screen and (min-width: 1024px) {
         .__portfolio-wrapper .main-content .no-content {
-          padding-top: 8.5vh; } }
+          padding-top: calc(5vh + 25px); } }
 
 @-webkit-keyframes scroll-down {
   0% {

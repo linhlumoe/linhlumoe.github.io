@@ -23,8 +23,7 @@ body {
     }
     background-color: #1b1c26;
     .home {
-      height: 100vh;
-      width: 100vw;
+      width: calc(100% + 300px);
       overflow: hidden;
       margin-left: -25px;
       @include bp-tablet-vertical {
@@ -38,8 +37,8 @@ body {
       }
       .home--background {
         height: 100vh;
-        //background: url('../img/background-city.png') center center;
-        //background-size: cover;
+        background: url('../img/background-city.png') center center;
+        background-size: cover;
         width: 100%;
         overflow: hidden;
         @include bp-desktop-sm {
@@ -89,12 +88,6 @@ body {
             }
           }
         }
-        .leuleu {
-          background: url(../img/background-city.png) center center;
-          background-size: cover;
-          width: 100%;
-          height: 100%;
-        }
       }
       .home--content {
         position: absolute;
@@ -105,7 +98,7 @@ body {
         opacity: 0;
         @include animation(scale .5s .3s ease-in forwards);
         .navigation {
-          padding: 30px 15px;
+          padding: 30px;
           @include flexbox();
           @include align-items(center);
           #nav-icon {
@@ -240,8 +233,8 @@ body {
         margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-desktop-sm {
-          width: calc(100% + 40px);
-          margin-left: -20px;
+          width: calc(100% + 50px);
+          margin-left: -25px;
         }
         &:before {
           content: '';
@@ -261,7 +254,7 @@ body {
           border-left: 10px solid transparent;
           @include bp-desktop-sm {
             border-top: 20px solid #949494;
-            border-left: 20px solid transparent;
+            border-left: 25px solid transparent;
           }
         }
         .overlay-background {
@@ -419,8 +412,8 @@ body {
         margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-desktop-sm {
-          width: calc(100% + 40px);
-          margin-left: -20px;
+          width: calc(100% + 50px);
+          margin-left: -25px;
         }
         &:after {
           content: '';
@@ -430,7 +423,7 @@ body {
           border-left: 10px solid transparent;
           @include bp-desktop-sm {
             border-top: 20px solid #949494;
-            border-left: 20px solid transparent;
+            border-left: 25px solid transparent;
           }
         }
 
@@ -495,29 +488,27 @@ body {
       .introduce--below-layer {
         background-color: #ffffff;
         height: 100vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
           height: 55vh;
         }
         @include bp-desktop-sm {
           height: 65vh;
+          width: calc(100% + 50px);
+          margin-left: -25px;
         }
         &:after {
           content: '';
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 2vw solid #838383;
-          border-left: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #838383;
-            border-left: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #838383;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.3vw solid #838383;
-            border-left: 1.6vw solid transparent;
+            border-top: 20px solid #838383;
+            border-left: 25px solid transparent;
           }
         }
         &:before {
@@ -525,25 +516,21 @@ body {
           top: 100%;
           left: 100%;
           position: absolute;
-          border-top: 2vw solid #838383;
-          border-right: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #838383;
-            border-right: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #838383;
+          border-right: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.3vw solid #838383;
-            border-right: 1.6vw solid transparent;
+            border-top: 20px solid #838383;
+            border-right: 25px solid transparent;
           }
         }
       }
       .introduce--image {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        left: -20px;
         background-color: #959595;
         position: absolute;
         bottom: 52vh;
-        left: -4%;
         z-index: 1;
         @include flexbox();
         @include align-items(center);
@@ -555,9 +542,9 @@ body {
           bottom: -5vh;
         }
         @include bp-desktop-sm {
-          height: 55vh;
-          width: 55vh;
-          left: -6%;
+          height: 50vh;
+          width: 50vh;
+          left: -50px;
         }
         @include bp-desktop-md {
           height: 55vh;
@@ -576,15 +563,11 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #808080;
-          border-left: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #808080;
-            border-left: 3.7vw solid transparent;
-          }
+          border-top: 10px solid #808080;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 2vw solid #808080;
-            border-left: 4.8vw solid transparent;
+            border-top: 25px solid #808080;
+            border-left: 50px solid transparent;
           }
         }
         &:before {
@@ -592,8 +575,8 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #808080;
-          border-right: 1.8vw solid transparent;
+          border-top: 10px solid #808080;
+          border-right: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -601,11 +584,11 @@ body {
       }
       .introduce--text {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #262e38;
         position: absolute;
         bottom: 3vh;
-        right: -4%;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
           width: 60vw;
@@ -615,15 +598,15 @@ body {
           height: 55vh;
           bottom: 15%;
           width: 60vw;
-          right: -6%;
+          right: -80px;
         }
         &:after {
           content: '';
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
-          border-left: 1.8vw solid transparent;
+          border-top: 10px solid #3e4c5d;
+          border-left: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -633,15 +616,11 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
-          border-right: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #3e4c5d;
-            border-right: 2vw solid transparent;
-          }
+          border-top: 10px solid #3e4c5d;
+          border-right: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 2vw solid #3e4c5d;
-            border-right: 3.2vw solid transparent;
+            border-top: 30px solid #3e4c5d;
+            border-right: 55px solid transparent;
           }
         }
         .content {
@@ -696,29 +675,27 @@ body {
       .addition--below-layer {
         background-color: #f4a024;
         height: 100vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
           height: 55vh;
         }
         @include bp-desktop-sm {
           height: 65vh;
+          width: calc(100% + 50px);
+          margin-left: -25px;
         }
         &:after {
           content: '';
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
-          border-left: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #848484;
-            border-left: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #848484;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.3vw solid #848484;
-            border-left: 1.6vw solid transparent;
+            border-top: 20px solid #848484;
+            border-left: 25px solid transparent;
           }
         }
         &:before {
@@ -726,25 +703,21 @@ body {
           top: 100%;
           left: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
-          border-right: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #848484;
-            border-right: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #848484;
+          border-right: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.3vw solid #848484;
-            border-right: 1.6vw solid transparent;
+            border-top: 20px solid #848484;
+            border-right: 25px solid transparent;
           }
         }
       }
       .addition--image {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #444444;
         position: absolute;
         bottom: 52vh;
-        left: -4%;
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
@@ -756,7 +729,7 @@ body {
         @include bp-desktop-sm {
           height: 55vh;
           width: 60vw;
-          left: -6%;
+          left: -60px;
         }
         @include bp-desktop-lg {
           height: 60vh;
@@ -766,15 +739,11 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #484848;
-          border-left: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #484848;
-            border-left: 2vw solid transparent;
-          }
+          border-top: 10px solid #484848;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 2vw solid #484848;
-            border-left: 3.3vw solid transparent;
+            border-top: 20px solid #484848;
+            border-left: 35px solid transparent;
           }
         }
         &:before {
@@ -782,8 +751,8 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #484848;
-          border-right: 1.8vw solid transparent;
+          border-top: 10px solid #484848;
+          border-right: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -791,11 +760,11 @@ body {
       }
       .addition--text {
         height: 45vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #ffffff;
         position: absolute;
         bottom: 3vh;
-        right: -4%;
         z-index: 1;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
@@ -807,7 +776,7 @@ body {
           bottom: 15vh;
           height: 55vh;
           width: 55vh;
-          right: -6%;
+          right: -70px;
         }
         @include bp-desktop-md {
           height: 55vh;
@@ -826,8 +795,8 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #7d7d7d;
-          border-left: 1.8vw solid transparent;
+          border-top: 10px solid #7d7d7d;
+          border-left: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -837,15 +806,11 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #7d7d7d;
-          border-right: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vw solid #7d7d7d;
-            border-right: 2vw solid transparent;
-          }
+          border-top: 10px solid #7d7d7d;
+          border-right: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 2vw solid #7d7d7d;
-            border-right: 3.3vw solid transparent;
+            border-top: 25px solid #7d7d7d;
+            border-right: 45px solid transparent;
           }
         }
         .content {
@@ -901,8 +866,8 @@ body {
       .footer--below-layer {
         background-color: #ffffff;
         height: 60vh;
-        width: 104%;
-        margin-left: -2%;
+        width: calc(100% + 20px);
+        margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
           height: 55vh;
@@ -915,15 +880,11 @@ body {
           top: 100%;
           right: 100%;
           position: absolute;
-          border-top: 1vh solid #848484;
-          border-left: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 1.5vh solid #848484;
-            border-left: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #848484;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.3vw solid #848484;
-            border-left: 1.6vw solid transparent;
+            border-top: 20px solid #848484;
+            border-left: 25px solid transparent;
           }
         }
         &:before {
@@ -931,8 +892,8 @@ body {
           top: 90vh;
           left: 100%;
           position: absolute;
-          border-top: 1vh solid #848484;
-          border-right: 1.8vw solid transparent;
+          border-top: 10px solid #848484;
+          border-right: 10px solid transparent;
           @include bp-tablet-vertical {
             display: none;
           }
@@ -940,11 +901,11 @@ body {
       }
       .footer--content {
         height: 50vh;
-        width: 108%;
+        width: calc(100% + 40px);
+        right: -20px;
         background-color: #262e38;
         position: absolute;
         bottom: 5vh;
-        right: -4%;
         color: #acacac;
         z-index: 1;
         padding-top: 50px;
@@ -955,7 +916,7 @@ body {
         }
         @include bp-desktop-sm {
           width: 70vw;
-          right: -6%;
+          right: -50px;
         }
         @include bp-desktop-lg {
           width: 75vw;
@@ -966,8 +927,8 @@ body {
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 1vh solid #3e4c5d;
-          border-left: 1.8vw solid transparent;
+          border-top: 10px solid #3e4c5d;
+          border-left: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -977,15 +938,11 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 1vh solid #3e4c5d;
-          border-right: 1.8vw solid transparent;
-          @include bp-tablet-vertical {
-            border-top: 2vh solid #3e4c5d;
-            border-right: 3.6vw solid transparent;
-          }
+          border-top: 10px solid #3e4c5d;
+          border-right: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 3.5vh solid #3e4c5d;
-            border-right: 4.85vw solid transparent;
+            border-top: 25px solid #3e4c5d;
+            border-right: 50px solid transparent;
           }
         }
         li {
@@ -1038,12 +995,9 @@ body {
       }
     }
     .no-content {
-      padding-top: 1.5vh;
-      @include bp-tablet-vertical {
-        padding-top: 7vh;
-      }
+      padding-top: 10px;
       @include bp-desktop-sm {
-        padding-top: 8.5vh;
+        padding-top: calc(5vh + 25px);
       }
     }
   }
