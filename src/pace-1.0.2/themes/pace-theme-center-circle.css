@@ -1,8 +1,6 @@
-This is a compiled file, you should be editing the file in the templates directory
-.pace-done {
-  background-color: #1b1c26;
-  /* opacity: 0.8; */
-  /* visibility: hidden; */
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace-running {
+  background: #1b1c27;
 }
 
 .pace {
@@ -13,32 +11,46 @@ This is a compiled file, you should be editing the file in the templates directo
   -moz-user-select: none;
   user-select: none;
 
-  -webkit-perspective: 12rem;
-  -moz-perspective: 12rem;
-  -ms-perspective: 12rem;
-  -o-perspective: 12rem;
-  perspective: 12rem;
-
   z-index: 2000;
   position: fixed;
-  height: 6rem;
-  width: 6rem;
+  /*height: 6rem;*/
+  /*width: 6rem;*/
   margin: auto;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .pace.pace-inactive .pace-progress {
   display: none;
 }
 
+.pace.pace-inactive .pace-activity {
+  display: none;
+}
+
 .pace .pace-progress {
-  position: fixed;
   z-index: 2000;
   display: block;
-  position: absolute;
   left: 0;
   top: 0;
   height: 6rem;
@@ -51,18 +63,6 @@ This is a compiled file, you should be editing the file in the templates directo
   font-family: "Helvetica Neue", sans-serif;
   font-weight: 100;
   text-align: center;
-
-  -webkit-animation: pace-theme-center-circle-spin linear infinite 2s;
-  -moz-animation: pace-theme-center-circle-spin linear infinite 2s;
-  -ms-animation: pace-theme-center-circle-spin linear infinite 2s;
-  -o-animation: pace-theme-center-circle-spin linear infinite 2s;
-  animation: pace-theme-center-circle-spin linear infinite 2s;
-
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
 
 .pace .pace-progress:after {
@@ -70,27 +70,8 @@ This is a compiled file, you should be editing the file in the templates directo
   display: block;
 }
 
-@-webkit-keyframes pace-theme-center-circle-spin {
-  from { -webkit-transform: rotateY(0deg) }
-  to { -webkit-transform: rotateY(360deg) }
-}
-
-@-moz-keyframes pace-theme-center-circle-spin {
-  from { -moz-transform: rotateY(0deg) }
-  to { -moz-transform: rotateY(360deg) }
-}
-
-@-ms-keyframes pace-theme-center-circle-spin {
-  from { -ms-transform: rotateY(0deg) }
-  to { -ms-transform: rotateY(360deg) }
-}
-
-@-o-keyframes pace-theme-center-circle-spin {
-  from { -o-transform: rotateY(0deg) }
-  to { -o-transform: rotateY(360deg) }
-}
-
-@keyframes pace-theme-center-circle-spin {
-  from { transform: rotateY(0deg) }
-  to { transform: rotateY(360deg) }
+.pace .pace-activity {
+  height: 2px;
+  background: #dd3154;
+  position: absolute;
 }

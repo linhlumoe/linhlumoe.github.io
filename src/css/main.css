@@ -2196,19 +2196,26 @@ body {
         .__portfolio-wrapper .main-content .home .home--background svg.background mask rect {
           fill: #ffffff; }
         .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-          font-size: 7em;
+          font-size: 7rem;
           stroke: #000000;
           stroke-width: 8;
           letter-spacing: 8; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              font-size: 10em;
+              font-size: 10rem;
               stroke-width: 12; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
-              font-size: 12em;
-              stroke-width: 15;
               letter-spacing: 12px; } }
+          @media only screen and (min-width: 1280px) {
+            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+              stroke-width: 15; } }
+          @media only screen and (min-width: 1920px) {
+            .__portfolio-wrapper .main-content .home .home--background svg.background mask text {
+              stroke-width: 15;
+              font-size: 12rem; } }
+        .__portfolio-wrapper .main-content .home .home--background svg.background video {
+          height: 100vh; }
       .__portfolio-wrapper .main-content .home .home--content {
         position: absolute;
         color: #ffffff;
@@ -2353,7 +2360,7 @@ body {
           border-top: 1.8vw solid #949494;
           border-right: 1.8vw solid transparent;
           bottom: -1.8vw;
-          right: 0; }
+          left: 100%; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .greeting .greeting--background:before {
               visibility: hidden; } }
@@ -2464,15 +2471,16 @@ body {
             .__portfolio-wrapper .main-content .greeting .greeting--box:after {
               border-right: 4vw solid transparent; } }
       .__portfolio-wrapper .main-content .greeting .overlay--text {
-        width: 100%;
-        height: 100%;
+        width: 104%;
+        left: -2%;
+        height: 60vh;
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         background-clip: text;
         background-size: cover;
         position: absolute;
-        top: 0;
+        bottom: 0;
         z-index: 1;
         font-size: 6em;
         font-weight: 900;
@@ -2484,16 +2492,21 @@ body {
         visibility: hidden; }
         @media only screen and (min-width: 768px) {
           .__portfolio-wrapper .main-content .greeting .overlay--text {
+            height: 80vh; } }
+        @media only screen and (min-width: 768px) {
+          .__portfolio-wrapper .main-content .greeting .overlay--text {
             visibility: visible;
-            font-size: 10em;
-            padding-top: 38vh;
+            font-size: 9em;
+            padding-top: 24vh;
             -webkit-text-stroke: 12px transparent; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .greeting .overlay--text {
-            padding-top: 30vh; } }
-        @media only screen and (min-width: 1440px) {
+            font-size: 8em;
+            padding-top: 22vh; } }
+        @media only screen and (min-width: 1920px) {
           .__portfolio-wrapper .main-content .greeting .overlay--text {
-            padding-top: 40vh; } }
+            font-size: 12em;
+            padding-top: 20vh; } }
     .__portfolio-wrapper .main-content .banner {
       padding-top: 30vh;
       position: relative; }
@@ -2583,9 +2596,6 @@ body {
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .banner .banner--content .content-box:after {
                 border-right: 3.2vw solid transparent; } }
-            @media only screen and (min-width: 1280px) {
-              .__portfolio-wrapper .main-content .banner .banner--content .content-box:after {
-                border-right: 3.3vw solid transparent; } }
     .__portfolio-wrapper .main-content .introduce {
       padding-top: 30vh;
       position: relative; }
@@ -2703,7 +2713,7 @@ body {
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:after {
               border-top: 2vw solid #808080;
-              border-left: 4.85vw solid transparent; } }
+              border-left: 4.8vw solid transparent; } }
         .__portfolio-wrapper .main-content .introduce .introduce--image:before {
           content: '';
           top: 100%;
@@ -2761,7 +2771,7 @@ body {
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text:before {
               border-top: 2vw solid #3e4c5d;
-              border-right: 3.3vw solid transparent; } }
+              border-right: 3.2vw solid transparent; } }
         .__portfolio-wrapper .main-content .introduce .introduce--text .content {
           color: #c0c7d1;
           padding: 15px; }
@@ -3018,7 +3028,6 @@ body {
                 font-size: 20px; } }
     .__portfolio-wrapper .main-content .footer {
       padding-top: 30vh;
-      padding-bottom: 10vh;
       position: relative; }
       @media only screen and (min-width: 768px) {
         .__portfolio-wrapper .main-content .footer {
@@ -3043,13 +3052,13 @@ body {
         .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
           content: '';
           top: 100%;
-          left: 0;
+          right: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
+          border-top: 1vh solid #848484;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
-              border-top: 2vw solid #848484;
+              border-top: 1.5vh solid #848484;
               border-left: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:after {
@@ -3057,26 +3066,21 @@ body {
               border-left: 1.6vw solid transparent; } }
         .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
           content: '';
-          top: 100%;
-          right: 0;
+          top: 90vh;
+          left: 100%;
           position: absolute;
-          border-top: 2vw solid #848484;
+          border-top: 1vh solid #848484;
           border-right: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
-              border-top: 2vw solid #848484;
-              border-right: 1.8vw solid transparent; } }
-          @media only screen and (min-width: 1024px) {
-            .__portfolio-wrapper .main-content .footer .footer--below-layer:before {
-              border-top: 1.3vw solid #848484;
-              border-right: 1.6vw solid transparent; } }
+              display: none; } }
       .__portfolio-wrapper .main-content .footer .footer--content {
         height: 50vh;
-        width: 104%;
+        width: 108%;
         background-color: #262e38;
         position: absolute;
         bottom: 5vh;
-        right: -2%;
+        right: -4%;
         color: #acacac;
         z-index: 1;
         padding-top: 50px;
@@ -3088,18 +3092,22 @@ body {
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
         @media only screen and (min-width: 768px) {
           .__portfolio-wrapper .main-content .footer .footer--content {
-            bottom: -10%;
-            width: 80vw; } }
+            width: 80vw;
+            bottom: -5vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .footer .footer--content {
             width: 70vw;
-            right: -4%; } }
+            right: -6%; } }
+        @media only screen and (min-width: 1440px) {
+          .__portfolio-wrapper .main-content .footer .footer--content {
+            width: 75vw;
+            height: 55vh; } }
         .__portfolio-wrapper .main-content .footer .footer--content:after {
           content: '';
           top: 100%;
           left: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
+          border-top: 1vh solid #3e4c5d;
           border-left: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--content:after {
@@ -3109,16 +3117,16 @@ body {
           top: 100%;
           right: 0;
           position: absolute;
-          border-top: 2vw solid #3e4c5d;
+          border-top: 1vh solid #3e4c5d;
           border-right: 1.9vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--content:before {
-              border-top: 2vw solid #3e4c5d;
+              border-top: 2vh solid #3e4c5d;
               border-right: 3.6vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--content:before {
-              border-top: 2vw solid #3e4c5d;
-              border-right: 5vw solid transparent; } }
+              border-top: 3.5vh solid #3e4c5d;
+              border-right: 4.85vw solid transparent; } }
         .__portfolio-wrapper .main-content .footer .footer--content li {
           list-style-type: none;
           font-family: 'Cormorant', serif; }
@@ -3161,6 +3169,14 @@ body {
               right: 50%; }
             .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text.contact h6:before {
               right: 40%; }
+    .__portfolio-wrapper .main-content .no-content {
+      padding-top: 1vh; }
+      @media only screen and (min-width: 768px) {
+        .__portfolio-wrapper .main-content .no-content {
+          padding-top: 7vh; } }
+      @media only screen and (min-width: 1024px) {
+        .__portfolio-wrapper .main-content .no-content {
+          padding-top: 8.5vh; } }
 
 @-webkit-keyframes scroll-down {
   0% {
@@ -3381,29 +3397,6 @@ body {
     height: 180px; }
   100% {
     right: 100%; } }
-
-.slide .row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: white;
-  text-align: center; }
-
-.intro {
-  background: #305a5b; }
-
-.parallax {
-  background: url(../img/background-city.png) 50% 0; }
-
-.slidein {
-  background: #5b3030; }
-
-.slidein2 {
-  background: #304b5b; }
-
-.slidein2 .row {
-  justify-content: space-around; }
 
 @-webkit-keyframes scale {
   from {

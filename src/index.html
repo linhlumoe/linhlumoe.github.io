@@ -16,15 +16,15 @@
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">
-  <link href="pace-1.0.2/themes/pace-theme-center-circle.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link href="pace-1.0.2/themes/pace-theme-center-circle.css" rel="stylesheet">
 </head>
 
 <body>
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <!--<![endif]&ndash;&gt;-->
-  <div class="container-fluid __portfolio-wrapper main-content">
+  <div class="container-fluid __portfolio-wrapper">
     <div class="main-content" id="main-content">
       <section class="home" id="home">
           <div class="home--content">
@@ -71,7 +71,7 @@
           </div>
       </section>
       <section class="greeting" id="greeting">
-        <div class="greeting--background" id="greeting--background">   
+        <div class="greeting--background" id="greeting--background">
           <div class="overlay-background"></div>
         </div>
         <div class="greeting--box" id="greeting--box">
@@ -81,22 +81,22 @@
             <p>I'm a design minded front-end developer with a passion for building engaging, perfect experiences.</p>
           </div>
         </div>
-        <div class="overlay--text" id="overlay--text">T.T.D</div>
+        <div class="overlay--text" id="overlay--text">KYLIE</div>
       </section>
-      <section class="banner">
-        <div class="banner--below-layer"></div>
-        <div class="banner--content">
+      <section class="banner" id="banner">
+        <div class="banner--below-layer" id="banner--below-layer"></div>
+        <div class="banner--content" id="banner--content">
           <div class="content-box">
-            <h1>PORFOLIO</h1>
+            <h1>PORTFOLIO</h1>
           </div>
         </div>
       </section>
-      <section class="introduce">
-        <div class="introduce--below-layer"></div>
-        <div class="introduce--image">
+      <section class="introduce" id="introduce">
+        <div class="introduce--below-layer" id="introduce--below-layer"></div>
+        <div class="introduce--image" id="introduce--image">
           <h1>YOUR IMAGE HERE</h1>
         </div>
-        <div class="introduce--text">
+        <div class="introduce--text" id="introduce--text">
           <div class="content">
             <h1>LOREM IPSUMS</h1>
             <div class="content--seperater"></div>
@@ -104,12 +104,12 @@
           </div>
         </div>
       </section>
-      <section class="addition">
-        <div class="addition--below-layer"></div>
-        <div class="addition--image">
+      <section class="addition" id="addition">
+        <div class="addition--below-layer" id="addition--below-layer"></div>
+        <div class="addition--image" id="addition--image">
           <h1>YOUR IMAGE HERE</h1>
         </div>
-        <div class="addition--text">
+        <div class="addition--text" id="addition--text">
           <div class="content">
             <h1>LOREM IPSUMS</h1>
             <div class="content--seperater"></div>
@@ -117,9 +117,9 @@
           </div>
         </div>
       </section>
-      <section class="footer">
-        <div class="footer--below-layer"></div>
-        <div class="footer--content">
+      <section class="footer" id="footer">
+        <div class="footer--below-layer" id="footer--below-layer"></div>
+        <div class="footer--content" id="footer--content">
           <div class="content-box">
             <div class="logo">
               <img src="img/ttd-logo.png" alt="ttd" width="100%" />
@@ -129,7 +129,7 @@
               <h6>MENU</h6>
               <ul>
                 <li>Home</li>
-                <li>Porfolio</li>
+                <li>Portfolio</li>
                 <li>About us</li>
                 <li>Contact</li>
               </ul>
@@ -139,7 +139,7 @@
               <ul>
                 <li>39 Nguyen Thi Dieu</li>
                 <li>District 3, HCMC</li>
-                <li>Phone: (+84) 908123456</li>
+                <li>Phone: (+84) 908 462 985</li>
               </ul>
             </div>
           </div>
@@ -148,7 +148,8 @@
           </div>
         </div>
       </section>
-    </section>
+      <section class="no-content"></section>
+    </div>
   </div>
   <!-- Add your site or application content here -->
   <script src="pace-1.0.2/pace.js" type="application/javascript"></script>
@@ -164,13 +165,13 @@
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // $.ajax({
-    //   url: "https://api.indix.com/v2/categories?app_key=PDHdkFXeXDxaGavOBWqXqG7l9ymUpEya",
-    //   context: document.body,
-    //   success: function(){
-    //     console.log('leu leu')
-    //   }
-    // });
+    $.ajax({
+      url: "https://api.indix.com/v2/categories?app_key=PDHdkFXeXDxaGavOBWqXqG7l9ymUpEya",
+      context: document.body,
+      success: function(){
+        console.log('leu leu')
+      }
+    });
   </script>
 </body>
 
