@@ -2180,8 +2180,6 @@ body {
       .__portfolio-wrapper .main-content .home .home--background {
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
-        width: 100%;
-        height: 100%;
         overflow: hidden; }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .home .home--background {
@@ -2197,12 +2195,12 @@ body {
           overflow: hidden;
           position: absolute;
           opacity: 0;
-          -webkit-animation: scale 0.5s 0.2s forwards;
-          -khtml-animation: scale 0.5s 0.2s forwards;
-          -moz-animation: scale 0.5s 0.2s forwards;
-          -ms-animation: scale 0.5s 0.2s forwards;
-          -o-animation: scale 0.5s 0.2s forwards;
-          animation: scale 0.5s 0.2s forwards; }
+          -webkit-animation: scale 0.5s 0.2s ease-in forwards;
+          -khtml-animation: scale 0.5s 0.2s ease-in forwards;
+          -moz-animation: scale 0.5s 0.2s ease-in forwards;
+          -ms-animation: scale 0.5s 0.2s ease-in forwards;
+          -o-animation: scale 0.5s 0.2s ease-in forwards;
+          animation: scale 0.5s 0.2s ease-in forwards; }
           .__portfolio-wrapper .main-content .home .home--background svg.background > rect {
             fill: #1a1e2ce6;
             -webkit-mask: url(#background-mask);
@@ -2233,15 +2231,14 @@ body {
         color: #ffffff;
         z-index: 1;
         padding: 0 10vw;
-        height: 100%;
         width: 100%;
         opacity: 0;
-        -webkit-animation: scale 0.5s 0.3s forwards;
-        -khtml-animation: scale 0.5s 0.3s forwards;
-        -moz-animation: scale 0.5s 0.3s forwards;
-        -ms-animation: scale 0.5s 0.3s forwards;
-        -o-animation: scale 0.5s 0.3s forwards;
-        animation: scale 0.5s 0.3s forwards; }
+        -webkit-animation: scale 0.5s 0.3s ease-in forwards;
+        -khtml-animation: scale 0.5s 0.3s ease-in forwards;
+        -moz-animation: scale 0.5s 0.3s ease-in forwards;
+        -ms-animation: scale 0.5s 0.3s ease-in forwards;
+        -o-animation: scale 0.5s 0.3s ease-in forwards;
+        animation: scale 0.5s 0.3s ease-in forwards; }
         .__portfolio-wrapper .main-content .home .home--content .navigation {
           height: 15vh;
           display: -webkit-box;
@@ -2379,8 +2376,8 @@ body {
         .__portfolio-wrapper .main-content .greeting .greeting--background:after {
           content: '';
           position: absolute;
-          border-top: 1.9vw solid #949494;
-          border-left: 1.9vw solid transparent; }
+          border-top: 1.8vw solid #949494;
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .greeting .greeting--background:after {
               border-top: 0.8vw solid #949494;
@@ -2544,8 +2541,8 @@ body {
           border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 376px) and (max-width: 414px) {
             .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
-              border-top: 1.9vw solid #949494;
-              border-left: 1.9vw solid transparent; } }
+              border-top: 1.8vw solid #949494;
+              border-left: 1.8vw solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
               border-top: 1.6vw solid #949494;
@@ -2604,7 +2601,7 @@ body {
             right: 0;
             position: absolute;
             border-top: 2vw solid #826417;
-            border-right: 3.75vw solid transparent; }
+            border-right: 3.7vw solid transparent; }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .banner .banner--content .content-box:after {
                 border-right: 3.2vw solid transparent; } }
@@ -2717,7 +2714,7 @@ body {
           left: 0;
           position: absolute;
           border-top: 2vw solid #808080;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:after {
               border-top: 2vw solid #808080;
@@ -2732,7 +2729,7 @@ body {
           right: 0;
           position: absolute;
           border-top: 2vw solid #808080;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:before {
               visibility: hidden; } }
@@ -2765,7 +2762,7 @@ body {
           left: 0;
           position: absolute;
           border-top: 2vw solid #3e4c5d;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text:after {
               visibility: hidden; } }
@@ -2775,7 +2772,7 @@ body {
           right: 0;
           position: absolute;
           border-top: 2vw solid #3e4c5d;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text:before {
               border-top: 2vw solid #3e4c5d;
@@ -2919,7 +2916,7 @@ body {
           left: 0;
           position: absolute;
           border-top: 2vw solid #484848;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--image:after {
               border-top: 2vw solid #484848;
@@ -2934,7 +2931,7 @@ body {
           right: 0;
           position: absolute;
           border-top: 2vw solid #484848;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--image:before {
               visibility: hidden; } }
@@ -2981,7 +2978,7 @@ body {
           left: 0;
           position: absolute;
           border-top: 2vw solid #7d7d7d;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--text:after {
               visibility: hidden; } }
@@ -2991,7 +2988,7 @@ body {
           right: 0;
           position: absolute;
           border-top: 2vw solid #7d7d7d;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .addition .addition--text:before {
               border-top: 2vw solid #7d7d7d;
@@ -3120,7 +3117,7 @@ body {
           left: 0;
           position: absolute;
           border-top: 1vh solid #3e4c5d;
-          border-left: 1.9vw solid transparent; }
+          border-left: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--content:after {
               visibility: hidden; } }
@@ -3130,7 +3127,7 @@ body {
           right: 0;
           position: absolute;
           border-top: 1vh solid #3e4c5d;
-          border-right: 1.9vw solid transparent; }
+          border-right: 1.8vw solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .footer .footer--content:before {
               border-top: 2vh solid #3e4c5d;
@@ -3182,7 +3179,7 @@ body {
             .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text.contact h6:before {
               right: 40%; }
     .__portfolio-wrapper .main-content .no-content {
-      padding-top: 1vh; }
+      padding-top: 1.5vh; }
       @media only screen and (min-width: 768px) {
         .__portfolio-wrapper .main-content .no-content {
           padding-top: 7vh; } }
