@@ -319,7 +319,7 @@ body {
         &:before {
           content: '';
           left: 0;
-          bottom: -2.5%;
+          top: 100%;
           position: absolute;
           border-top: 2vw solid #b8b8b8;
           border-left: 1.85vw solid transparent;
