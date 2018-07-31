@@ -88,7 +88,7 @@ body {
         opacity: 0;
         @include animation(scale .5s .3s ease-in forwards);
         .navigation {
-          height: 15vh;
+          padding: 30px 0;
           @include flexbox();
           @include align-items(center);
           #nav-icon {
@@ -161,7 +161,13 @@ body {
           }
         }
         .description {
-          height: 75vh;
+          //height: 75vh;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          transform: translateY(-50%);
+          top: 50%;
+          margin-top: 36px;
           @include flexbox();
           @include align-items(center);
           @include justify-content(center);
@@ -171,12 +177,15 @@ body {
             @include bp-desktop-sm {
               font-size: 2.5rem;
             }
-            padding-top: 10vh;
+            //padding-top: 10vh;
             word-spacing: 10px;
           }
         }
         .scroll-down {
-          height: 10vh;
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: 0;
           @include flexbox();
           @include align-items(center);
           @include justify-content(center);
