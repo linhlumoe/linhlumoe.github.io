@@ -27,6 +27,7 @@ body {
       .home--background {
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
+        width: 100%;
         overflow: hidden;
         @include bp-desktop-sm {
           background: none;
