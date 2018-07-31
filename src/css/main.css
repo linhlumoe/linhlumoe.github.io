@@ -2181,6 +2181,7 @@ body {
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
         width: 100%;
+        height: 100%;
         overflow: hidden; }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .home .home--background {
@@ -2232,6 +2233,7 @@ body {
         color: #ffffff;
         z-index: 1;
         padding: 0 10vw;
+        height: 100%;
         width: 100%;
         opacity: 0;
         -webkit-animation: scale 0.5s 0.3s ease-in forwards;
