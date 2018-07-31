@@ -12,6 +12,9 @@ body {
   padding: 0;
   .main-content {
     margin: 0 25px;
+    @include bp-tablet-vertical {
+      margin: 0 35px;
+    }
     @include bp-desktop-sm {
       margin: 0 150px;
     }
@@ -24,8 +27,11 @@ body {
       width: 100vw;
       overflow: hidden;
       margin-left: -25px;
+      @include bp-tablet-vertical {
+        margin-left: -35px;
+      }
       @include bp-desktop-sm {
-        margin-left: -100px;
+        margin-left: -150px;
       }
       @include bp-desktop-ultra {
         margin-left: -200px;
@@ -230,19 +236,19 @@ body {
         }
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
-        width: 345px;
+        width: calc(100% + 20px);
         margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-desktop-sm {
-          width: 102%;
-          margin-left: -1%;
+          width: calc(100% + 40px);
+          margin-left: -20px;
         }
         &:before {
           content: '';
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-right: 1.8vw solid transparent;
-          bottom: -1.8vw;
+          border-top: 10px solid #949494;
+          border-right: 10px solid transparent;
+          bottom: -10px;
           left: 100%;
           @include bp-tablet-vertical {
             visibility: hidden;
@@ -251,11 +257,11 @@ body {
         &:after {
           content: '';
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-left: 1.8vw solid transparent;
+          border-top: 10px solid #949494;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 0.8vw solid #949494;
-            border-left: 0.8vw solid transparent;
+            border-top: 20px solid #949494;
+            border-left: 20px solid transparent;
           }
         }
         .overlay-background {
@@ -269,19 +275,19 @@ body {
         position: absolute;
         z-index: 1;
         height: 50vh;
-        width: 365px;
+        width: calc(100% + 40px);
         right: -20px;
         bottom: 5vh;
         @include bp-tablet-vertical {
           height: 50vh;
           width: 80vw;
-          right: -4%;
+          right: -25px;
           bottom: -5%;
         }
         @include bp-desktop-sm {
           height: 50vh;
           width: 60vw;
-          right: -5%;
+          right: -50px;
         }
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         .greeting-text {
@@ -339,8 +345,8 @@ body {
           left: 0;
           top: 100%;
           position: absolute;
-          border-top: 2vw solid #b8b8b8;
-          border-left: 1.85vw solid transparent;
+          border-top: 10px solid #b8b8b8;
+          border-left: 10px solid transparent;
           @include bp-tablet-vertical {
             visibility: hidden;
           }
@@ -349,13 +355,15 @@ body {
           content: '';
           right: 0;
           position: absolute;
-          border-top: 2vw solid #b8b8b8;
-          border-right: 1.85vw solid transparent;
+          border-top: 10px solid #b8b8b8;
+          border-right: 10px solid transparent;
           @include bp-tablet-vertical {
-            border-right: 3.5vw solid transparent;
+            border-top: 15px solid #b8b8b8;
+            border-right: 25px solid transparent;
           }
           @include bp-desktop-sm {
-            border-right: 4vw solid transparent;
+            border-top: 25px solid #b8b8b8;
+            border-right: 50px solid transparent;
           }
         }
       }
@@ -407,22 +415,22 @@ body {
       .banner--below-layer {
         background-color: #ffffff;
         height: 30vh;
-        width: 345px;
+        width: calc(100% + 20px);
         margin-left: -10px;
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-desktop-sm {
+          width: calc(100% + 40px);
+          margin-left: -20px;
+        }
         &:after {
           content: '';
           top: 100%;
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-left: 1.8vw solid transparent;
-          @include bp-ip6-plus {
-            border-top: 1.8vw solid #949494;
-            border-left: 1.8vw solid transparent;
-          }
+          border-top: 10px solid #949494;
+          border-left: 10px solid transparent;
           @include bp-desktop-sm {
-            border-top: 1.6vw solid #949494;
-            border-left: 1.6vw solid transparent;
+            border-top: 20px solid #949494;
+            border-left: 20px solid transparent;
           }
         }
 
@@ -439,8 +447,11 @@ body {
         @include align-items(center);
         @include justify-content(center);
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
+        @include bp-tablet-vertical {
+          width: 60vw;
+        }
         @include bp-desktop-sm {
-          right: -4%;
+          right: -50px;
           width: 40vw;
           height: 40vh;
           bottom: -5vh;
@@ -465,10 +476,11 @@ body {
             top: 100%;
             right: 0;
             position: absolute;
-            border-top: 2vw solid #826417;
-            border-right: 3.5vw solid transparent;
+            border-top: 10px solid #826417;
+            border-right: 15px solid transparent;
             @include bp-desktop-sm {
-              border-right: 3.2vw solid transparent;
+              border-top: 25px solid #826417;
+              border-right: 50px solid transparent;
             }
           }
         }

@@ -2166,6 +2166,9 @@ body {
   .__portfolio-wrapper .main-content {
     margin: 0 25px;
     background-color: #1b1c26; }
+    @media only screen and (min-width: 768px) {
+      .__portfolio-wrapper .main-content {
+        margin: 0 35px; } }
     @media only screen and (min-width: 1024px) {
       .__portfolio-wrapper .main-content {
         margin: 0 150px; } }
@@ -2177,9 +2180,12 @@ body {
       width: 100vw;
       overflow: hidden;
       margin-left: -25px; }
+      @media only screen and (min-width: 768px) {
+        .__portfolio-wrapper .main-content .home {
+          margin-left: -35px; } }
       @media only screen and (min-width: 1024px) {
         .__portfolio-wrapper .main-content .home {
-          margin-left: -100px; } }
+          margin-left: -150px; } }
       @media only screen and (min-width: 1920px) {
         .__portfolio-wrapper .main-content .home {
           margin-left: -200px; } }
@@ -2366,7 +2372,7 @@ body {
         height: 60vh;
         background: url(http://res.cloudinary.com/dx0uzywra/image/upload/v1532335104/background-city_hbee6z.png) center center;
         background-size: cover;
-        width: 345px;
+        width: calc(100% + 20px);
         margin-left: -10px;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2379,14 +2385,14 @@ body {
             height: 80vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .greeting .greeting--background {
-            width: 102%;
-            margin-left: -1%; } }
+            width: calc(100% + 40px);
+            margin-left: -20px; } }
         .__portfolio-wrapper .main-content .greeting .greeting--background:before {
           content: '';
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-right: 1.8vw solid transparent;
-          bottom: -1.8vw;
+          border-top: 10px solid #949494;
+          border-right: 10px solid transparent;
+          bottom: -10px;
           left: 100%; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .greeting .greeting--background:before {
@@ -2394,12 +2400,12 @@ body {
         .__portfolio-wrapper .main-content .greeting .greeting--background:after {
           content: '';
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-left: 1.8vw solid transparent; }
+          border-top: 10px solid #949494;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .greeting .greeting--background:after {
-              border-top: 0.8vw solid #949494;
-              border-left: 0.8vw solid transparent; } }
+              border-top: 20px solid #949494;
+              border-left: 20px solid transparent; } }
         .__portfolio-wrapper .main-content .greeting .greeting--background .overlay-background {
           height: 100%;
           background-color: #1a1e2ce6; }
@@ -2409,7 +2415,7 @@ body {
         position: absolute;
         z-index: 1;
         height: 50vh;
-        width: 365px;
+        width: calc(100% + 40px);
         right: -20px;
         bottom: 5vh;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2422,13 +2428,13 @@ body {
           .__portfolio-wrapper .main-content .greeting .greeting--box {
             height: 50vh;
             width: 80vw;
-            right: -4%;
+            right: -25px;
             bottom: -5%; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .greeting .greeting--box {
             height: 50vh;
             width: 60vw;
-            right: -5%; } }
+            right: -50px; } }
         .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text {
           padding-top: 12vh;
           padding-left: 10vw;
@@ -2480,8 +2486,8 @@ body {
           left: 0;
           top: 100%;
           position: absolute;
-          border-top: 2vw solid #b8b8b8;
-          border-left: 1.85vw solid transparent; }
+          border-top: 10px solid #b8b8b8;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .greeting .greeting--box:before {
               visibility: hidden; } }
@@ -2489,14 +2495,16 @@ body {
           content: '';
           right: 0;
           position: absolute;
-          border-top: 2vw solid #b8b8b8;
-          border-right: 1.85vw solid transparent; }
+          border-top: 10px solid #b8b8b8;
+          border-right: 10px solid transparent; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .greeting .greeting--box:after {
-              border-right: 3.5vw solid transparent; } }
+              border-top: 15px solid #b8b8b8;
+              border-right: 25px solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .greeting .greeting--box:after {
-              border-right: 4vw solid transparent; } }
+              border-top: 25px solid #b8b8b8;
+              border-right: 50px solid transparent; } }
       .__portfolio-wrapper .main-content .greeting .overlay--text {
         width: 104%;
         left: -2%;
@@ -2543,7 +2551,7 @@ body {
       .__portfolio-wrapper .main-content .banner .banner--below-layer {
         background-color: #ffffff;
         height: 30vh;
-        width: 345px;
+        width: calc(100% + 20px);
         margin-left: -10px;
         -webkit-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -khtml-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
@@ -2551,20 +2559,20 @@ body {
         -ms-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
+        @media only screen and (min-width: 1024px) {
+          .__portfolio-wrapper .main-content .banner .banner--below-layer {
+            width: calc(100% + 40px);
+            margin-left: -20px; } }
         .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
           content: '';
           top: 100%;
           position: absolute;
-          border-top: 1.8vw solid #949494;
-          border-left: 1.8vw solid transparent; }
-          @media only screen and (min-width: 376px) and (max-width: 414px) {
-            .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
-              border-top: 1.8vw solid #949494;
-              border-left: 1.8vw solid transparent; } }
+          border-top: 10px solid #949494;
+          border-left: 10px solid transparent; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .banner .banner--below-layer:after {
-              border-top: 1.6vw solid #949494;
-              border-left: 1.6vw solid transparent; } }
+              border-top: 20px solid #949494;
+              border-left: 20px solid transparent; } }
       .__portfolio-wrapper .main-content .banner .banner--content {
         position: absolute;
         background-color: #fac02d;
@@ -2593,9 +2601,12 @@ body {
         -ms-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         -o-box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3);
         box-shadow: 1px 5px 95px 0px rgba(0, 0, 0, 0.3); }
+        @media only screen and (min-width: 768px) {
+          .__portfolio-wrapper .main-content .banner .banner--content {
+            width: 60vw; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .banner .banner--content {
-            right: -4%;
+            right: -50px;
             width: 40vw;
             height: 40vh;
             bottom: -5vh; } }
@@ -2618,11 +2629,12 @@ body {
             top: 100%;
             right: 0;
             position: absolute;
-            border-top: 2vw solid #826417;
-            border-right: 3.5vw solid transparent; }
+            border-top: 10px solid #826417;
+            border-right: 15px solid transparent; }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .banner .banner--content .content-box:after {
-                border-right: 3.2vw solid transparent; } }
+                border-top: 25px solid #826417;
+                border-right: 50px solid transparent; } }
     .__portfolio-wrapper .main-content .introduce {
       padding-top: 30vh;
       position: relative; }
