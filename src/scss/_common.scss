@@ -609,7 +609,7 @@ body {
         }
         @include bp-desktop-sm {
           height: 55vh;
-          bottom: 15%;
+          bottom: 15vh;
           width: 60vw;
           right: -80px;
         }
@@ -887,6 +887,8 @@ body {
         }
         @include bp-desktop-sm {
           height: 65vh;
+          width: calc(100% + 50px);
+          margin-left: -25px;
         }
         &:after {
           content: '';
