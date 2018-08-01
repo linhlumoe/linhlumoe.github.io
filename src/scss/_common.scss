@@ -12,6 +12,56 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  aside {
+    visibility: hidden;
+    @include bp-desktop-md {
+      visibility: visible;
+      width: 30px;
+      position: fixed;
+      z-index: 2001;
+      left: 45px;
+      top: 50%;
+      transform: translateY(-50%);
+      a {
+        .pink-dot {
+          width: 6px;
+          height: 6px;
+          background: rgba(0, 0, 0, 0.2);
+          border-radius: 50%;
+          position: relative;
+          margin-bottom: 12px;
+          &#footer-dot {
+            margin-bottom: 0;
+          }
+          &.active {
+            background: #dd3154;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              background: #dd315454;
+              border-radius: 50%;
+              left: -2px;
+              top: -2px;
+              @include animation(fade-out 1s infinite);
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              width: 14px;
+              height: 14px;
+              background: #dd315424;
+              border-radius: 50%;
+              left: -4px;
+              top: -4px;
+              @include animation(fade-out 1s infinite);
+            }
+          }
+        }
+      }
+    }
+  }
   .main-content {
     margin: 0 25px;
     @include bp-tablet-vertical {
@@ -126,7 +176,7 @@ body {
               width: 100%;
               background: #ffffff;
               left: 0;
-              margin-top: 6px;
+              margin-top: 7px;
               &:nth-of-type(1) {
                 margin-top: 0;
               }
@@ -152,6 +202,7 @@ body {
                   transition: width 0.2s ease-out 0s;
                 }
               }
+              @include transition(all .7s ease);
             }
             &:hover {
               span {
@@ -175,7 +226,30 @@ body {
                 }
               }
             }
-            &.open {
+            &.active {
+              span {
+                background-color: #dd3154;
+                &:before {
+                  width: 0;
+                }
+                &:nth-of-type(1) {
+                  -webkit-transform: translateY(10px) rotateZ(45deg);
+                  -moz-transform: translateY(10px) rotateZ(45deg);
+                  -ms-transform: translateY(10px) rotateZ(45deg);
+                  -o-transform: translateY(10px) rotateZ(45deg);
+                  transform: translateY(10px) rotateZ(45deg);
+                }
+                &:nth-of-type(2) {
+                  width: 0;
+                }
+                &:nth-of-type(3) {
+                  -webkit-transform: translateY(-10px) rotateZ(-45deg);
+                  -moz-transform: translateY(-10px) rotateZ(-45deg);
+                  -ms-transform: translateY(-10px) rotateZ(-45deg);
+                  -o-transform: translateY(-10px) rotateZ(-45deg);
+                  transform: translateY(-10px) rotateZ(-45deg);
+                }
+              }
             }
           }
           .nav-logo {
@@ -231,6 +305,22 @@ body {
         }
       }
 
+    }
+    .sidebar {
+      height: 100%;
+      width: 400px;
+      position: fixed;
+      margin-top: 200px;
+      z-index: 2003;
+      left: 0;
+      background-color: #ffffff;
+      &.move-to-right {
+        -webkit-transform: translateX(400px);
+        -moz-transform: translateX(400px);
+        -ms-transform: translateX(400px);
+        -o-transform: translateX(400px);
+        transform: translateX(400px);
+      }
     }
     .greeting {
       padding-top: 15vh;
@@ -1045,42 +1135,6 @@ body {
   }
 }
 
-@include keyframes(dash) {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@include keyframes(fill) {
-  0% {
-    fill: #ffffff;
-  }
-  to {
-    fill: url(#lg);
-  }
-}
-
-@include keyframes(move) {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: 100%;
-    -webkit-transform: rotate(450deg);
-    width: 180px;
-    height: 180px;
-  }
-  75% {
-    left: 100%;
-    -webkit-transform: rotate(450deg);
-    width: 180px;
-    height: 180px;
-  }
-  100% {
-    right: 100%;
-  }
-}
-
 @include keyframes(scale) {
   from {
     opacity: 0;
@@ -1089,5 +1143,16 @@ body {
   to {
     opacity: 1;
     @include transform(scale(1));
+  }
+}
+
+@include keyframes(fade-out) {
+  from {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+  to {
+    opacity: 0.1;
+    @include transform(scale(1.5));
   }
 }

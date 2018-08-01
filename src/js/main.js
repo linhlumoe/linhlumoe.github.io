@@ -1,21 +1,41 @@
 $(function() {
+  // Toggle sidebar
+  function toggleSidebar() {
+    $('#nav-icon').toggleClass('active');
+    $('.main-content').toggleClass('move-to-right');
+  }
+
+  $('#nav-icon').on('click tap', function() {
+    toggleSidebar();
+  });
+
+  $(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+      toggleSidebar();
+    }
+  });
+
   // Init Controller
   var controller = new ScrollMagic.Controller();
 
   var windowWidth = $(window).innerWidth();
-  if (windowWidth < 1366) controller.enabled(false);
+  if (windowWidth < 1280) controller.enabled(false);
 
   $(window).resize(function() {
     var sizeWidth = $(window).innerWidth();
-    if (sizeWidth < 1366) controller.enabled(false);
+    if (sizeWidth < 1280) controller.enabled(false);
   });
 
-  if (windowWidth >= 1366) {
+  if (windowWidth >= 1280) {
     // Home
-    var homeScale = TweenMax.to('#home', 2, { scaleX: 0.85, ease: Power3.easeOut, opacity: 0 });
+    new ScrollMagic.Scene({ triggerElement: '#home', triggerHook: 'onEnter', offset: '10' })
+      .duration(800)
+      .setClassToggle('#home-dot', 'active')
+      .addTo(controller);
+
     new ScrollMagic.Scene({ triggerElement: '#home', triggerHook: 'onLeave', offset: '400' })
       .duration(800)
-      .setTween(homeScale)
+      .setTween(TweenMax.to('#home', 2, { scaleX: 0.85, ease: Power3.easeOut, opacity: 0 }))
       .addTo(controller);
 
     // Greeting
@@ -25,6 +45,7 @@ $(function() {
     new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 20 })
       .setTween(greetingBackgroundTimeline)
       .duration(600)
+      .setClassToggle('#greeting-dot', 'active')
       .addTo(controller);
 
     var greetingBoxTimeline = new TimelineMax()
@@ -52,7 +73,8 @@ $(function() {
 
     new ScrollMagic.Scene({ triggerElement: '#banner', offset: 80 })
       .setTween(bannerBelowTimeline)
-      .duration(800)
+      .duration(600)
+      .setClassToggle('#banner-dot', 'active')
       .addTo(controller);
 
     var bannerContentTimeline = new TimelineMax()
@@ -61,7 +83,7 @@ $(function() {
 
     new ScrollMagic.Scene({ triggerElement: '#banner', offset: 100 })
       .setTween(bannerContentTimeline)
-      .duration(800)
+      .duration(600)
       .addTo(controller);
 
     // Introduce
@@ -72,6 +94,7 @@ $(function() {
     new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 100 })
       .setTween(introduceBelowTimeline)
       .duration(1000)
+      .setClassToggle('#introduce-dot', 'active')
       .addTo(controller);
 
     var introduceImageTimeline = new TimelineMax()
@@ -100,6 +123,7 @@ $(function() {
     new ScrollMagic.Scene({ triggerElement: '#addition', offset: 50 })
       .setTween(additionBelowTimeline)
       .duration(1000)
+      .setClassToggle('#addition-dot', 'active')
       .addTo(controller);
 
     var additionImageTimeline = new TimelineMax()
@@ -128,6 +152,7 @@ $(function() {
     new ScrollMagic.Scene({ triggerElement: '#footer', offset: 150 })
       .setTween(footerBelowTimeline)
       .duration(1000)
+      .setClassToggle('#footer-dot', 'active')
       .addTo(controller);
 
     var footerContentTimeline = new TimelineMax()
