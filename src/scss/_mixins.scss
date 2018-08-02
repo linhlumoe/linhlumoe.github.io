@@ -543,6 +543,16 @@
   @include css3-prefix('transform', 'translateY(-50%)');
 }
 
+/// Translate Y
+@mixin translateY($params: 50px) {
+  @include css3-prefix('transform', translateY($params));
+}
+
+/// Translate X
+@mixin translateX($params: 50px) {
+  @include css3-prefix('transform', translateX($params));
+}
+
 /// Absolute center inside an element
 
 @mixin center-inside-element() {

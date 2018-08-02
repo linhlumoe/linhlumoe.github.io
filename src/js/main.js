@@ -2,7 +2,9 @@ $(function() {
   // Toggle sidebar
   function toggleSidebar() {
     $('#nav-icon').toggleClass('active');
-    $('.main-content').toggleClass('move-to-right');
+    $('.sidebar').toggleClass('move-to-right');
+    $('.__portfolio-wrapper').toggleClass('disabled');
+    $('.sidebar-item').toggleClass('active');
   }
 
   $('#nav-icon').on('click tap', function() {
@@ -15,6 +17,9 @@ $(function() {
     }
   });
 
+  $('.sidebar-item').on('click', function () {
+    toggleSidebar();
+  });
   // Init Controller
   var controller = new ScrollMagic.Controller();
 
@@ -28,8 +33,8 @@ $(function() {
 
   if (windowWidth >= 1280) {
     // Home
-    new ScrollMagic.Scene({ triggerElement: '#home', triggerHook: 'onEnter', offset: '10' })
-      .duration(800)
+    new ScrollMagic.Scene({ triggerElement: '#home', offset: '10' })
+      .duration(600)
       .setClassToggle('#home-dot', 'active')
       .addTo(controller);
 

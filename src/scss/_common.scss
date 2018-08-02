@@ -3,6 +3,7 @@
 body {
   font-family: 'Oswald', sans-serif;
   height: 100%;
+  overflow-x: hidden;
 }
 .button {
   cursor: pointer;
@@ -12,14 +13,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  aside {
+  &.disabled {
+    position: fixed;
+  }
+  .markers {
     visibility: hidden;
     @include bp-desktop-md {
       visibility: visible;
-      width: 30px;
       position: fixed;
       z-index: 2001;
-      left: 45px;
+      right: 30px;
       top: 50%;
       transform: translateY(-50%);
       a {
@@ -74,6 +77,173 @@ body {
       margin: 0 200px;
     }
     background-color: #1b1c26;
+    @include transition(all .7s ease);
+    .nav-icon {
+      position: absolute;
+      z-index: 2500;
+      left: 30px;
+      top: 30px;
+      #nav-icon {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        @include transition(all .7s ease);
+        span {
+          display: block;
+          position: relative;
+          height: 3px;
+          width: 100%;
+          background: #ffffff;
+          left: 0;
+          margin-top: 7px;
+          &:nth-of-type(1) {
+            margin-top: 0;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 0;
+            background-color: #dd3154;
+          }
+          &:nth-of-type(1) {
+            &:before {
+              transition: width 0.2s ease-out 0.4s;
+            }
+          }
+          &:nth-of-type(2) {
+            &:before {
+              transition: width 0.2s ease-out 0.2s;
+            }
+          }
+          &:nth-of-type(3) {
+            &:before {
+              transition: width 0.2s ease-out 0s;
+            }
+          }
+          @include transition(all .7s ease);
+        }
+        &:hover {
+          span {
+            &:nth-of-type(1) {
+              &:before {
+                transition: width 0.2s ease-out 0s;
+                width: 80%;
+              }
+            }
+            &:nth-of-type(2) {
+              &:before {
+                transition: width 0.2s ease-out 0.2s;
+                width: 60%;
+              }
+            }
+            &:nth-of-type(3) {
+              &:before {
+                transition: width 0.2s ease-out 0.4s;
+                width: 40%;
+              }
+            }
+          }
+        }
+        &.active {
+          span {
+            background-color: #dd3154;
+            &:before {
+              width: 0;
+            }
+            &:nth-of-type(1) {
+              -webkit-transform: translateY(10px) rotateZ(45deg);
+              -moz-transform: translateY(10px) rotateZ(45deg);
+              -ms-transform: translateY(10px) rotateZ(45deg);
+              -o-transform: translateY(10px) rotateZ(45deg);
+              transform: translateY(10px) rotateZ(45deg);
+            }
+            &:nth-of-type(2) {
+              width: 0;
+            }
+            &:nth-of-type(3) {
+              -webkit-transform: translateY(-10px) rotateZ(-45deg);
+              -moz-transform: translateY(-10px) rotateZ(-45deg);
+              -ms-transform: translateY(-10px) rotateZ(-45deg);
+              -o-transform: translateY(-10px) rotateZ(-45deg);
+              transform: translateY(-10px) rotateZ(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .sidebar {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: -100%;
+      background-color: #1b1c27;
+      z-index: 2002;
+      @include transition(all .7s ease);
+      &.move-to-right {
+        @include translateX(100%);
+      }
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      .sidebar-list {
+        padding: 0;
+        display: grid;
+        grid-template-rows: 100px 100px 100px 100px;
+        @include bp-tablet-vertical {
+          grid-template-rows: 120px 120px 120px 120px;
+        }
+        justify-items: center;
+        align-items: center;
+        .sidebar-item {
+          font-family: 'Montserrat', sans-serif;
+          list-style-type: none;
+          font-size: 2.5rem;
+          @include bp-tablet-vertical {
+            font-size: 3.5rem;
+          }
+          a {
+            color: #dd3154;
+            text-decoration: none;
+            &:before {
+              content: "";
+              width: 0;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #ffffff;
+              @include transition(all .7s ease-in-out);
+            }
+            &:hover {
+              @include animation(change-color .7s ease-in-out forwards);
+              &:before {
+                width: 100%;
+              }
+            }
+          }
+          opacity: 0;
+          @include translateY(-20px);
+          &:first-child {
+            @include transition(all .7s .2s ease-in-out);
+          }
+          &:nth-child(2) {
+            @include transition(all .7s .4s ease-in-out);
+          }
+          &:nth-child(3) {
+            @include transition(all .7s .6s ease-in-out);
+          }
+          &:last-child {
+            @include transition(all .7s .8s ease-in-out);
+          }
+          &.active {
+            opacity: 1;
+            @include translateY(0);
+          }
+        }
+      }
+    }
     .home {
       width: calc(100% + 50px);
       overflow: hidden;
@@ -90,6 +260,7 @@ body {
         width: calc(100% + 400px);
         margin-left: -200px;
       }
+
       .home--background {
         img {
           display: block;
@@ -101,7 +272,6 @@ body {
             display: none;
           }
         }
-
         video {
           display: none;
           @include bp-desktop-sm {
@@ -132,20 +302,20 @@ body {
             text {
               font-size: 7rem;
               stroke: #000000;
-              stroke-width: 8;
-              letter-spacing: 8;
+              stroke-width: 8px;
+              letter-spacing: 8px;
               @include bp-tablet-vertical {
                 font-size: 10rem;
-                stroke-width: 12;
+                stroke-width: 12px;
               }
               @include bp-desktop-sm {
                 letter-spacing: 12px;
               }
               @include bp-desktop-md {
-                stroke-width: 15;
+                stroke-width: 15px;
               }
               @include bp-desktop-ultra {
-                stroke-width: 15;
+                stroke-width: 15px;
                 font-size: 12rem;
               }
             }
@@ -160,99 +330,9 @@ body {
         width: 100%;
         opacity: 0;
         @include animation(scale .5s .3s ease-in forwards);
-        .navigation {
+        .header {
           padding: 30px;
-          @include flexbox();
-          @include align-items(center);
-          #nav-icon {
-            width: 30px;
-            height: 30px;
-            position: relative;
-            cursor: pointer;
-            span {
-              display: block;
-              position: relative;
-              height: 3px;
-              width: 100%;
-              background: #ffffff;
-              left: 0;
-              margin-top: 7px;
-              &:nth-of-type(1) {
-                margin-top: 0;
-              }
-              &:before {
-                content: '';
-                position: absolute;
-                height: 3px;
-                width: 0;
-                background-color: #dd3154;
-              }
-              &:nth-of-type(1) {
-                &:before {
-                  transition: width 0.2s ease-out 0.4s;
-                }
-              }
-              &:nth-of-type(2) {
-                &:before {
-                  transition: width 0.2s ease-out 0.2s;
-                }
-              }
-              &:nth-of-type(3) {
-                &:before {
-                  transition: width 0.2s ease-out 0s;
-                }
-              }
-              @include transition(all .7s ease);
-            }
-            &:hover {
-              span {
-                &:nth-of-type(1) {
-                  &:before {
-                    transition: width 0.2s ease-out 0s;
-                    width: 80%;
-                  }
-                }
-                &:nth-of-type(2) {
-                  &:before {
-                    transition: width 0.2s ease-out 0.2s;
-                    width: 60%;
-                  }
-                }
-                &:nth-of-type(3) {
-                  &:before {
-                    transition: width 0.2s ease-out 0.4s;
-                    width: 40%;
-                  }
-                }
-              }
-            }
-            &.active {
-              span {
-                background-color: #dd3154;
-                &:before {
-                  width: 0;
-                }
-                &:nth-of-type(1) {
-                  -webkit-transform: translateY(10px) rotateZ(45deg);
-                  -moz-transform: translateY(10px) rotateZ(45deg);
-                  -ms-transform: translateY(10px) rotateZ(45deg);
-                  -o-transform: translateY(10px) rotateZ(45deg);
-                  transform: translateY(10px) rotateZ(45deg);
-                }
-                &:nth-of-type(2) {
-                  width: 0;
-                }
-                &:nth-of-type(3) {
-                  -webkit-transform: translateY(-10px) rotateZ(-45deg);
-                  -moz-transform: translateY(-10px) rotateZ(-45deg);
-                  -ms-transform: translateY(-10px) rotateZ(-45deg);
-                  -o-transform: translateY(-10px) rotateZ(-45deg);
-                  transform: translateY(-10px) rotateZ(-45deg);
-                }
-              }
-            }
-          }
-          .nav-logo {
+          .header-logo {
             width: 100px;
             margin-left: auto;
           }
@@ -298,28 +378,11 @@ body {
               line {
                 animation: scroll-down 2s linear infinite;
                 stroke: #000000;
-                stroke-width: 5;
+                stroke-width: 5px;
               }
             }
           }
         }
-      }
-
-    }
-    .sidebar {
-      height: 100%;
-      width: 400px;
-      position: fixed;
-      margin-top: 200px;
-      z-index: 2003;
-      left: 0;
-      background-color: #ffffff;
-      &.move-to-right {
-        -webkit-transform: translateX(400px);
-        -moz-transform: translateX(400px);
-        -ms-transform: translateX(400px);
-        -o-transform: translateX(400px);
-        transform: translateX(400px);
       }
     }
     .greeting {
@@ -1154,5 +1217,20 @@ body {
   to {
     opacity: 0.1;
     @include transform(scale(1.5));
+  }
+}
+
+@include keyframes(hidden) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@include keyframes(change-color) {
+  to {
+    color: #ffffff;
   }
 }
