@@ -2943,6 +2943,10 @@ body {
           position: absolute;
           border-top: 10px solid #808080;
           border-left: 10px solid transparent; }
+          @media only screen and (min-width: 768px) {
+            .__portfolio-wrapper .main-content .introduce .introduce--image:after {
+              border-top: 15px solid #808080;
+              border-left: 20px solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .introduce .introduce--image:after {
               border-top: 25px solid #808080;
@@ -3088,7 +3092,7 @@ body {
       .__portfolio-wrapper .main-content .addition .addition--image {
         height: 45vh;
         width: calc(100% + 40px);
-        right: -20px;
+        left: -20px;
         background-color: #444444;
         position: absolute;
         bottom: 52vh;
@@ -3332,6 +3336,10 @@ body {
           position: absolute;
           border-top: 10px solid #3e4c5d;
           border-right: 10px solid transparent; }
+          @media only screen and (min-width: 768px) {
+            .__portfolio-wrapper .main-content .footer .footer--content:before {
+              border-top: 15px solid #3e4c5d;
+              border-right: 20px solid transparent; } }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--content:before {
               border-top: 25px solid #3e4c5d;
@@ -3380,6 +3388,9 @@ body {
               right: 40%; }
     .__portfolio-wrapper .main-content .no-content {
       padding-top: 10px; }
+      @media only screen and (min-width: 768px) {
+        .__portfolio-wrapper .main-content .no-content {
+          padding-top: calc(5vh + 15px); } }
       @media only screen and (min-width: 1024px) {
         .__portfolio-wrapper .main-content .no-content {
           padding-top: calc(5vh + 25px); } }
