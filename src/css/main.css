@@ -3245,19 +3245,36 @@ body {
               .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
                 line-height: 2; } }
             .__portfolio-wrapper .main-content .addition .addition--text .content h6 span {
-              padding: 10px;
+              padding: 8px;
               -webkit-transition: all 0.7s ease;
               -khtml-transition: all 0.7s ease;
               -moz-transition: all 0.7s ease;
               -ms-transition: all 0.7s ease;
               -o-transition: all 0.7s ease;
               transition: all 0.7s ease;
-              background: linear-gradient(to right, #dd3154 50%, white 50%);
-              background-size: 200% 100%;
-              background-position: right bottom; }
+              position: relative; }
+              @media only screen and (min-width: 768px) {
+                .__portfolio-wrapper .main-content .addition .addition--text .content h6 span {
+                  padding: 10px; } }
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 span:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0;
+                background: #dd3154;
+                bottom: 0;
+                left: 0;
+                z-index: -1; }
               .__portfolio-wrapper .main-content .addition .addition--text .content h6 span:hover {
-                color: #ffffff;
-                background-position: left bottom; }
+                color: #ffffff; }
+                .__portfolio-wrapper .main-content .addition .addition--text .content h6 span:hover:before {
+                  -webkit-transition: all 0.7s ease;
+                  -khtml-transition: all 0.7s ease;
+                  -moz-transition: all 0.7s ease;
+                  -ms-transition: all 0.7s ease;
+                  -o-transition: all 0.7s ease;
+                  transition: all 0.7s ease;
+                  width: 100%; }
               .__portfolio-wrapper .main-content .addition .addition--text .content h6 span.social-network-logo {
                 padding: 0;
                 margin-left: 10px;
@@ -3787,33 +3804,3 @@ body {
 @keyframes change-color {
   to {
     color: #ffffff; } }
-
-@-webkit-keyframes background-position {
-  from {
-    background-position: 0; }
-  to {
-    background-position: 100%; } }
-
-@-moz-keyframes background-position {
-  from {
-    background-position: 0; }
-  to {
-    background-position: 100%; } }
-
-@-ms-keyframes background-position {
-  from {
-    background-position: 0; }
-  to {
-    background-position: 100%; } }
-
-@-o-keyframes background-position {
-  from {
-    background-position: 0; }
-  to {
-    background-position: 100%; } }
-
-@keyframes background-position {
-  from {
-    background-position: 0; }
-  to {
-    background-position: 100%; } }
