@@ -2341,7 +2341,6 @@ body {
           .__portfolio-wrapper .main-content .sidebar .sidebar-list {
             grid-template-rows: 120px 120px 120px 120px; } }
         .__portfolio-wrapper .main-content .sidebar .sidebar-list .sidebar-item {
-          font-family: 'Montserrat', sans-serif;
           list-style-type: none;
           font-size: 2.5rem;
           opacity: 0;
@@ -2510,6 +2509,12 @@ body {
           .__portfolio-wrapper .main-content .home .home--content .header .header-logo {
             width: 100px;
             margin-left: auto; }
+            @media only screen and (min-width: 768px) {
+              .__portfolio-wrapper .main-content .home .home--content .header .header-logo {
+                width: 120px; } }
+            @media only screen and (min-width: 1024px) {
+              .__portfolio-wrapper .main-content .home .home--content .header .header-logo {
+                width: 130px; } }
         .__portfolio-wrapper .main-content .home .home--content .description {
           position: absolute;
           left: 0;
@@ -2614,7 +2619,6 @@ body {
           height: 100%;
           background-color: #1a1e2ce6; }
       .__portfolio-wrapper .main-content .greeting .greeting--box {
-        font-family: 'Montserrat', sans-serif;
         background-color: #ffffffe0;
         position: absolute;
         z-index: 1;
@@ -2652,16 +2656,13 @@ body {
             font-weight: 600;
             color: #3d506e;
             padding-bottom: 5px;
-            font-size: 1.5rem; }
-            @media only screen and (min-width: 321px) {
-              .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text h2 {
-                font-size: 1.7rem; } }
+            font-size: 1.7rem; }
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text h2 {
-                font-size: 2rem; } }
+                font-size: 2.2rem; } }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text h2 {
-                font-size: 2.2rem; } }
+                font-size: 2.5rem; } }
           .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text .seperater {
             height: 2px;
             background-color: #db324f;
@@ -2671,20 +2672,24 @@ body {
                 margin-left: 50px; } }
           .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text p {
             padding-top: 10px;
-            padding-right: 5px;
-            font-size: 14px; }
-            @media only screen and (min-width: 321px) {
-              .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text p {
-                font-size: 18px; } }
+            padding-right: 20px;
+            font-size: 16px;
+            font-family: 'Noe-Display', serif;
+            line-height: 1.6;
+            text-align: left; }
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text p {
                 padding-top: 20px;
                 line-height: 1.8;
-                font-size: 24px;
-                padding-right: 10vw; } }
+                font-size: 20px;
+                padding-right: 50px; } }
+            @media only screen and (min-width: 1280px) {
+              .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text p {
+                font-size: 22px; } }
             @media only screen and (min-width: 1440px) {
               .__portfolio-wrapper .main-content .greeting .greeting--box .greeting-text p {
-                padding-right: 20vw; } }
+                font-size: 24px;
+                padding-right: 50px; } }
         .__portfolio-wrapper .main-content .greeting .greeting--box:before {
           content: '';
           left: 0;
@@ -3010,7 +3015,7 @@ body {
           padding: 15px; }
           @media only screen and (min-width: 768px) {
             .__portfolio-wrapper .main-content .introduce .introduce--text .content {
-              padding-top: 12vh;
+              padding-top: 8vh;
               padding-left: 15vw; } }
           .__portfolio-wrapper .main-content .introduce .introduce--text .content h1 {
             font-weight: 900; }
@@ -3031,11 +3036,12 @@ body {
                 margin-left: 50px; } }
           .__portfolio-wrapper .main-content .introduce .introduce--text .content p {
             text-align: justify;
-            font-family: 'Cormorant', serif; }
+            font-family: 'Noe-Display', serif;
+            line-height: 1.6; }
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .introduce .introduce--text .content p {
                 padding-right: 5vw;
-                text-align: left; } }
+                line-height: 1.8; } }
             @media only screen and (min-width: 1024px) {
               .__portfolio-wrapper .main-content .introduce .introduce--text .content p {
                 font-size: 18px; } }
@@ -3167,7 +3173,7 @@ body {
           .__portfolio-wrapper .main-content .addition .addition--text {
             bottom: 25vh;
             height: 35vh;
-            width: 35vh; } }
+            width: 38vh; } }
         @media only screen and (min-width: 1024px) {
           .__portfolio-wrapper .main-content .addition .addition--text {
             bottom: 15vh;
@@ -3231,19 +3237,61 @@ body {
             @media only screen and (min-width: 768px) {
               .__portfolio-wrapper .main-content .addition .addition--text .content .content--seperater {
                 margin-left: 50px; } }
-          .__portfolio-wrapper .main-content .addition .addition--text .content p {
-            color: #212121;
-            text-align: justify;
-            font-family: 'Cormorant', serif; }
+          .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
+            color: #000000;
+            font-family: 'Noe-Display', serif;
+            line-height: 1.8; }
             @media only screen and (min-width: 768px) {
-              .__portfolio-wrapper .main-content .addition .addition--text .content p {
-                padding-right: 5vw;
-                text-align: left; } }
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
+                line-height: 2; } }
+            .__portfolio-wrapper .main-content .addition .addition--text .content h6 span {
+              padding: 10px;
+              -webkit-transition: all 0.7s ease;
+              -khtml-transition: all 0.7s ease;
+              -moz-transition: all 0.7s ease;
+              -ms-transition: all 0.7s ease;
+              -o-transition: all 0.7s ease;
+              transition: all 0.7s ease;
+              background: linear-gradient(to right, #dd3154 50%, white 50%);
+              background-size: 200% 100%;
+              background-position: right bottom; }
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 span:hover {
+                color: #ffffff;
+                background-position: left bottom; }
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 span.social-network-logo {
+                padding: 0;
+                margin-left: 10px;
+                background: none; }
+                .__portfolio-wrapper .main-content .addition .addition--text .content h6 span.social-network-logo a {
+                  text-decoration: none; }
+                .__portfolio-wrapper .main-content .addition .addition--text .content h6 span.social-network-logo:hover img {
+                  -webkit-transition: all 0.7s ease;
+                  -khtml-transition: all 0.7s ease;
+                  -moz-transition: all 0.7s ease;
+                  -ms-transition: all 0.7s ease;
+                  -o-transition: all 0.7s ease;
+                  transition: all 0.7s ease;
+                  -webkit-transform: scale(1.2);
+                  -khtml-transform: scale(1.2);
+                  -moz-transform: scale(1.2);
+                  -ms-transform: scale(1.2);
+                  -o-transform: scale(1.2);
+                  transform: scale(1.2); }
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 span img {
+                width: 35px;
+                height: 35px; }
+                @media only screen and (min-width: 768px) {
+                  .__portfolio-wrapper .main-content .addition .addition--text .content h6 span img {
+                    width: 40px;
+                    height: 40px; } }
+            @media only screen and (min-width: 768px) {
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
+                padding-right: 20px; } }
             @media only screen and (min-width: 1024px) {
-              .__portfolio-wrapper .main-content .addition .addition--text .content p {
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
                 font-size: 18px; } }
             @media only screen and (min-width: 1280px) {
-              .__portfolio-wrapper .main-content .addition .addition--text .content p {
+              .__portfolio-wrapper .main-content .addition .addition--text .content h6 {
                 font-size: 20px; } }
     .__portfolio-wrapper .main-content .footer {
       padding-top: 30vh;
@@ -3346,10 +3394,11 @@ body {
               border-right: 50px solid transparent; } }
         .__portfolio-wrapper .main-content .footer .footer--content li {
           list-style-type: none;
-          font-family: 'Cormorant', serif; }
+          font-family: 'Noe Display', serif;
+          padding-top: 5px; }
           @media only screen and (min-width: 1024px) {
             .__portfolio-wrapper .main-content .footer .footer--content li {
-              font-size: 18px; } }
+              font-size: 20px; } }
         .__portfolio-wrapper .main-content .footer .footer--content .content-box {
           display: -webkit-box;
           display: -moz-box;
@@ -3365,16 +3414,40 @@ body {
           -ms-justify-content: space-evenly;
           justify-content: space-evenly;
           -ms-flex-pack: space-evenly;
+          -webkit-flex-flow: wrap-reverse;
+          -moz-flex-flow: wrap-reverse;
+          -ms-flex-flow: wrap-reverse;
+          flex-flow: wrap-reverse;
           padding: 0 20px; }
+          @media only screen and (min-width: 768px) {
+            .__portfolio-wrapper .main-content .footer .footer--content .content-box {
+              -webkit-align-items: flex-start;
+              -moz-align-items: flex-start;
+              -ms-align-items: flex-start;
+              align-items: flex-start;
+              -webkit-flex-flow: nowrap;
+              -moz-flex-flow: nowrap;
+              -ms-flex-flow: nowrap;
+              flex-flow: nowrap; } }
           .__portfolio-wrapper .main-content .footer .footer--content .content-box .logo {
-            width: 50px; }
+            width: 40%;
+            margin-left: 60%;
+            margin-top: 20%; }
+            @media only screen and (min-width: 768px) {
+              .__portfolio-wrapper .main-content .footer .footer--content .content-box .logo {
+                margin-left: 0;
+                margin-top: 0;
+                width: 20%; } }
             @media only screen and (min-width: 1280px) {
               .__portfolio-wrapper .main-content .footer .footer--content .content-box .logo {
-                width: 80px; } }
+                width: 150px; } }
           .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text {
             text-align: right; }
             .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text h6 {
               position: relative; }
+              @media only screen and (min-width: 1024px) {
+                .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text h6 {
+                  font-size: 1.5rem; } }
               .__portfolio-wrapper .main-content .footer .footer--content .content-box .list-text h6:before {
                 position: absolute;
                 content: '';
@@ -3714,3 +3787,33 @@ body {
 @keyframes change-color {
   to {
     color: #ffffff; } }
+
+@-webkit-keyframes background-position {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 100%; } }
+
+@-moz-keyframes background-position {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 100%; } }
+
+@-ms-keyframes background-position {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 100%; } }
+
+@-o-keyframes background-position {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 100%; } }
+
+@keyframes background-position {
+  from {
+    background-position: 0; }
+  to {
+    background-position: 100%; } }

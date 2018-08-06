@@ -197,7 +197,6 @@ body {
         justify-items: center;
         align-items: center;
         .sidebar-item {
-          font-family: 'Montserrat', sans-serif;
           list-style-type: none;
           font-size: 2.5rem;
           @include bp-tablet-vertical {
@@ -335,6 +334,12 @@ body {
           .header-logo {
             width: 100px;
             margin-left: auto;
+            @include bp-tablet-vertical {
+              width: 120px;
+            }
+            @include bp-desktop-sm {
+              width: 130px;
+            }
           }
         }
         .description {
@@ -429,7 +434,6 @@ body {
         }
       }
       .greeting--box {
-        font-family: 'Montserrat', sans-serif;
         background-color: #ffffffe0;
         position: absolute;
         z-index: 1;
@@ -462,15 +466,12 @@ body {
             font-weight: 600;
             color: #3d506e;
             padding-bottom: 5px;
-            font-size: 1.5rem;
-            @include bp-ip6 {
-              font-size: 1.7rem;
-            }
+            font-size: 1.7rem;
             @include bp-tablet-vertical {
-              font-size: 2rem;
+              font-size: 2.2rem;
             }
             @include bp-desktop-sm {
-              font-size: 2.2rem;
+              font-size: 2.5rem;
             }
           }
           .seperater {
@@ -483,19 +484,23 @@ body {
           }
           p {
             padding-top: 10px;
-            padding-right: 5px;
-            font-size: 14px;
-            @include bp-ip6 {
-              font-size: 18px;
-            }
+            padding-right: 20px;
+            font-size: 16px;
+            font-family: 'Noe-Display', serif;
+            line-height: 1.6;     
+            text-align: left;
             @include bp-tablet-vertical {
               padding-top: 20px;
               line-height: 1.8;
-              font-size: 24px;
-              padding-right: 10vw;
+              font-size: 20px;
+              padding-right: 50px;
+            }
+            @include bp-desktop-md {
+              font-size: 22px;
             }
             @include bp-desktop-lg {
-              padding-right: 20vw;
+              font-size: 24px;
+              padding-right: 50px;
             }
           }
         }
@@ -797,7 +802,7 @@ body {
           color: #c0c7d1;
           padding: 15px;
           @include bp-tablet-vertical {
-            padding-top: 12vh;
+            padding-top: 8vh;
             padding-left: 15vw;
           }
           h1 {
@@ -821,10 +826,11 @@ body {
           }
           p {
             text-align: justify;
-            font-family: 'Cormorant', serif;
+            font-family: 'Noe-Display', serif;     
+            line-height: 1.6;   
             @include bp-tablet-vertical {
               padding-right: 5vw;
-              text-align: left;
+              line-height: 1.8;   
             }
             @include bp-desktop-sm {
               font-size: 18px;
@@ -940,7 +946,7 @@ body {
         @include bp-tablet-vertical {
           bottom: 25vh;
           height: 35vh;
-          width: 35vh;
+          width: 38vh;
         }
         @include bp-desktop-sm {
           bottom: 15vh;
@@ -1009,13 +1015,48 @@ body {
               margin-left: 50px;
             }
           }
-          p {
-            color: #212121;
-            text-align: justify;
-            font-family: 'Cormorant', serif;
+          h6 {
+            color: #000000;
+            font-family: 'Noe-Display', serif;
+            line-height: 1.8;
             @include bp-tablet-vertical {
-              padding-right: 5vw;
-              text-align: left;
+              line-height: 2;
+            }
+            span {
+              padding: 10px;
+              @include transition(all .7s ease);
+              background: linear-gradient(to right, #dd3154 50%, white 50%);
+              background-size: 200% 100%;
+              background-position: right bottom;
+              &:hover {
+                color: #ffffff;
+                background-position: left bottom;
+              }
+              &.social-network-logo {
+                padding: 0;
+                margin-left: 10px;
+                background: none;
+                a {
+                  text-decoration: none;
+                }
+                &:hover {
+                  img {
+                    @include transition(all .7s ease);
+                    @include transform(scale(1.2));
+                  }
+                }
+              }
+              img {
+                width: 35px;
+                height: 35px;
+                @include bp-tablet-vertical {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+            }
+            @include bp-tablet-vertical {
+              padding-right: 20px;
             }
             @include bp-desktop-sm {
               font-size: 18px;
@@ -1123,26 +1164,42 @@ body {
         }
         li {
           list-style-type: none;
-          font-family: 'Cormorant', serif;
+          font-family: 'Noe Display', serif;
+          padding-top: 5px;
           @include bp-desktop-sm {
-            font-size: 18px;
+            font-size: 20px;
           }
         }
         .content-box {
           @include flexbox();
           @include align-items(baseline);
           @include justify-content(space-evenly);
+          @include flex-flow(wrap-reverse);
           padding: 0 20px;
+          @include bp-tablet-vertical {
+            @include align-items(flex-start);
+            @include flex-flow(nowrap);
+          }
           .logo {
-            width: 50px;
+            width: 40%;
+            margin-left: 60%;
+            margin-top: 20%;
+            @include bp-tablet-vertical {
+              margin-left: 0;
+              margin-top: 0;
+              width: 20%;
+            }
             @include bp-desktop-md {
-              width: 80px;
+              width: 150px;
             }
           }
           .list-text {
             text-align: right;
             h6 {
               position: relative;
+              @include bp-desktop-sm {
+                font-size: 1.5rem;
+              }
               &:before {
                 position: absolute;
                 content: '';
@@ -1243,5 +1300,14 @@ body {
 @include keyframes(change-color) {
   to {
     color: #ffffff;
+  }
+}
+
+@include keyframes(background-position) {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
   }
 }

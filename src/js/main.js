@@ -78,7 +78,7 @@ $(function() {
 
     new ScrollMagic.Scene({ triggerElement: '#banner', offset: 80 })
       .setTween(bannerBelowTimeline)
-      .duration(600)
+      .duration(800)
       .setClassToggle('#banner-dot', 'active')
       .addTo(controller);
 
@@ -88,7 +88,7 @@ $(function() {
 
     new ScrollMagic.Scene({ triggerElement: '#banner', offset: 100 })
       .setTween(bannerContentTimeline)
-      .duration(600)
+      .duration(800)
       .addTo(controller);
 
     // Introduce
