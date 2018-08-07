@@ -757,32 +757,10 @@ body {
           }
         }
         .image-circle {
-          width: 45vh;
-          height: 45vh;
-          position: relative;
-          @include bp-tablet-vertical {
-            height: 30vh;
-            width: 30vh;
-          }
-          @include bp-desktop-sm {
-            height: 30vh;
-            width: 30vh;
-          }
-          @include bp-desktop-md {
-            height: 35vh;
-            width: 35vh;
-          }
-          @media only screen and (min-width : 1366px) {
-            height: 45vh;
-            width: 45vh;
-          }
-          @include bp-desktop-lg {
-            height: 45vh;
-            width: 45vh;
-          }
-          img {
-            border-radius: 50%;
-            position: absolute;
+          border-radius: 50%;
+          position: absolute;
+          &.active {
+            z-index: 1;
           }
         }
       }

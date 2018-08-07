@@ -1,4 +1,31 @@
+var mouseX;
+var mouseY;
+var imageTop;
+var imageBottom;
+var imageLeft;
+var imageRight;
+
+$('#introduce--image').load(init);
+function init(){
+  mouseX = 0;
+  mouseY = 0;
+  imageTop = $('.image-circle').offset().top;
+  imageBottom = imageTop + $('.image-circle').height;
+  imageLeft = $('.image-circle').offset().left;
+  imageRight = imageLeft + $('.image-circle').width();
+}
 $(function() {
+  // Image Rotate
+  $('#introduce--image').mousemove(getMousePosition);
+
+  function getMousePosition(event){
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+    $('.image-circle').removeClass('active');
+    if(mouseX > imageLeft && mouseX < imageRight && mouseY < imageTop) {
+      $('.top').addClass('active');
+    }
+  }
   // Toggle sidebar
   function toggleSidebar() {
     $('#nav-icon').toggleClass('active');

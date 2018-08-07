@@ -2967,32 +2967,10 @@ body {
             .__portfolio-wrapper .main-content .introduce .introduce--image::before {
               visibility: hidden; } }
         .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-          width: 45vh;
-          height: 45vh;
-          position: relative; }
-          @media only screen and (min-width: 768px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-              height: 30vh;
-              width: 30vh; } }
-          @media only screen and (min-width: 1024px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-              height: 30vh;
-              width: 30vh; } }
-          @media only screen and (min-width: 1280px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-              height: 35vh;
-              width: 35vh; } }
-          @media only screen and (min-width: 1366px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-              height: 45vh;
-              width: 45vh; } }
-          @media only screen and (min-width: 1440px) {
-            .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle {
-              height: 45vh;
-              width: 45vh; } }
-          .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle img {
-            border-radius: 50%;
-            position: absolute; }
+          border-radius: 50%;
+          position: absolute; }
+          .__portfolio-wrapper .main-content .introduce .introduce--image .image-circle.active {
+            z-index: 1; }
       .__portfolio-wrapper .main-content .introduce .introduce--text {
         height: 45vh;
         width: calc(100% + 40px);
