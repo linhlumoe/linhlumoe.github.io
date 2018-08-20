@@ -1,39 +1,48 @@
 $(function() {
-  // setTimeout(function(){
-  //   var mouseX = 0;
-  //   var mouseY = 0;
-  //   var imageTop = $('.image-circle').offset().top;
-  //   var imageBottom = imageTop + $('.image-circle').height();
-  //   var imageLeft = $('.image-circle').offset().left;
-  //   var imageRight = imageLeft + $('.image-circle').width();
-  //   $('#introduce--image').mousemove(getMousePosition);
-  //   function getMousePosition(event){
-  //     mouseX = event.pageX;
-  //     mouseY = event.pageY;
-  //   console.log(imageBottom, imageLeft, imageRight, imageTop, mouseX, mouseY);
+  setTimeout(function(){
+    var mouseX = 0;
+    var mouseY = 0;
+    var imageTop = $('.image-circle').offset().top;
+    var imageBottom = imageTop + $('.image-circle').height();
+    var imageLeft = $('.image-circle').offset().left;
+    var imageRight = imageLeft + $('.image-circle').width();
 
-  //     $('.image-circle').removeClass('active');
-  //     if(mouseX >= imageLeft && mouseX <= imageRight && mouseY <= imageTop){
-  //       $('.top').addClass('active');
-  //     } else if(mouseX < imageLeft && mouseY < imageTop){
-  //       $('.top-left').addClass('active');
-  //     } else if(mouseX <= imageLeft && mouseY >= imageTop && mouseY <= imageBottom){
-  //       $('.left').addClass('active');
-  //     } else if(mouseX < imageLeft && mouseY > imageBottom){
-  //       $('.bottom-left').addClass('active');
-  //     } else if(mouseX >= imageLeft && mouseX <= imageRight && mouseY >= imageBottom){
-  //       $('.bottom').addClass('active');
-  //     } else if(mouseX > imageRight && mouseY > imageBottom){
-  //       $('.bottom-right').addClass('active');
-  //     } else if(mouseX >= imageRight && mouseY >= imageTop && mouseY <= imageBottom){
-  //       $('.right').addClass('active');
-  //     } else if(mouseX > imageRight && mouseY < imageTop){
-  //       $('.top-right').addClass('active');
-  //     } else {
-  //       $('.center').addClass('active');
-  //     }
-  //   }
-  // }, 1000);
+    $('#introduce').mousemove(getMousePosition);
+    function getMousePosition(event){
+      mouseX = event.pageX;
+      mouseY = event.pageY + 1000;
+
+      $('.image-circle').removeClass('active');
+      if(mouseX >= imageLeft && mouseX <= imageRight && mouseY <= imageTop){
+        $('.top').addClass('active');
+      } else if(mouseX < imageLeft && mouseY < imageTop){
+        $('.left-top').addClass('active');
+      } else if(mouseX <= imageLeft && mouseY >= imageTop && mouseY <= imageBottom){
+        $('.left').addClass('active');
+      } else if(mouseX < imageLeft && mouseY > imageBottom){
+        $('.left-bottom').addClass('active');
+      } else if(mouseX >= imageLeft && mouseX <= imageRight && mouseY >= imageBottom){
+        $('.bottom').addClass('active');
+      } else if(mouseX > imageRight && mouseY > imageBottom){
+        $('.right-bottom').addClass('active');
+      } else if(mouseX >= imageRight && mouseY >= imageTop && mouseY <= imageBottom){
+        $('.right').addClass('active');
+      } else if(mouseX > imageRight && mouseY < imageTop){
+        $('.right-top').addClass('active');
+      } else {
+        $('.center').addClass('active');
+      }
+    }
+    $('.image-circle').click(function () {
+      $('#introduce').off();
+      $('.image-circle').removeClass('active');
+      $('.center-click').addClass('active');
+    });
+    $('#introduce').mouseout(function () {
+      $('.image-circle').removeClass('active');
+      $('.bottom').addClass('active');
+    });
+  }, 1000);
   // Toggle sidebar
   function toggleSidebar() {
     $('#nav-icon').toggleClass('active');
@@ -144,6 +153,14 @@ $(function() {
     new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 250 })
       .setTween(introduceImageTimeline)
       .duration(windowWidth >= 1920 ? 1500 : 900)
+      .addTo(controller);
+
+    var introduceImageContainerTimeline = new TimelineMax()
+      .add(TweenMax.from('#introduce-container', 1, { opacity: 0 }))
+      .add(TweenMax.to('#introduce-container', 1, { opacity: 1  }));
+
+    new ScrollMagic.Scene({ triggerElement: '#introduce--image', delay: 200 })
+      .setTween(introduceImageContainerTimeline)
       .addTo(controller);
 
     var introduceTextTimeline = new TimelineMax()
