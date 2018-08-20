@@ -1,31 +1,39 @@
-var mouseX;
-var mouseY;
-var imageTop;
-var imageBottom;
-var imageLeft;
-var imageRight;
-
-$('#introduce--image').load(init);
-function init(){
-  mouseX = 0;
-  mouseY = 0;
-  imageTop = $('.image-circle').offset().top;
-  imageBottom = imageTop + $('.image-circle').height;
-  imageLeft = $('.image-circle').offset().left;
-  imageRight = imageLeft + $('.image-circle').width();
-}
 $(function() {
-  // Image Rotate
-  $('#introduce--image').mousemove(getMousePosition);
+  // setTimeout(function(){
+  //   var mouseX = 0;
+  //   var mouseY = 0;
+  //   var imageTop = $('.image-circle').offset().top;
+  //   var imageBottom = imageTop + $('.image-circle').height();
+  //   var imageLeft = $('.image-circle').offset().left;
+  //   var imageRight = imageLeft + $('.image-circle').width();
+  //   $('#introduce--image').mousemove(getMousePosition);
+  //   function getMousePosition(event){
+  //     mouseX = event.pageX;
+  //     mouseY = event.pageY;
+  //   console.log(imageBottom, imageLeft, imageRight, imageTop, mouseX, mouseY);
 
-  function getMousePosition(event){
-    mouseX = event.pageX;
-    mouseY = event.pageY;
-    $('.image-circle').removeClass('active');
-    if(mouseX > imageLeft && mouseX < imageRight && mouseY < imageTop) {
-      $('.top').addClass('active');
-    }
-  }
+  //     $('.image-circle').removeClass('active');
+  //     if(mouseX >= imageLeft && mouseX <= imageRight && mouseY <= imageTop){
+  //       $('.top').addClass('active');
+  //     } else if(mouseX < imageLeft && mouseY < imageTop){
+  //       $('.top-left').addClass('active');
+  //     } else if(mouseX <= imageLeft && mouseY >= imageTop && mouseY <= imageBottom){
+  //       $('.left').addClass('active');
+  //     } else if(mouseX < imageLeft && mouseY > imageBottom){
+  //       $('.bottom-left').addClass('active');
+  //     } else if(mouseX >= imageLeft && mouseX <= imageRight && mouseY >= imageBottom){
+  //       $('.bottom').addClass('active');
+  //     } else if(mouseX > imageRight && mouseY > imageBottom){
+  //       $('.bottom-right').addClass('active');
+  //     } else if(mouseX >= imageRight && mouseY >= imageTop && mouseY <= imageBottom){
+  //       $('.right').addClass('active');
+  //     } else if(mouseX > imageRight && mouseY < imageTop){
+  //       $('.top-right').addClass('active');
+  //     } else {
+  //       $('.center').addClass('active');
+  //     }
+  //   }
+  // }, 1000);
   // Toggle sidebar
   function toggleSidebar() {
     $('#nav-icon').toggleClass('active');
