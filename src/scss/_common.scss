@@ -699,12 +699,17 @@ body {
         height: 45vh;
         width: calc(100% + 40px);
         left: -20px;
-        background-color: #959595;
+        background: url(../img/center-click.jpg) center center;
+        background-size: cover;
         position: absolute;
         bottom: 52vh;
         z-index: 1;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
         @include box-shadow(1px, 5px, 95px, 0px, rgba(0,0,0,0.3));
         @include bp-tablet-vertical {
+          background: #959595;
           height: 35vh;
           width: 35vh;
           bottom: -5vh;
@@ -753,18 +758,45 @@ body {
             visibility: hidden;
           }
         }
-        .image-container {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          .image-circle {
+        #image-container {
+          visibility: hidden;
+          @include bp-tablet-vertical {
+            visibility: visible;
+            width: 60%;
+            height: 60%;
             border-radius: 50%;
-            left: 50%;
-            top: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            &.active {
-              z-index: 1;
+            background: url(../img/list-image.jpg);
+            background-position-x: 100%;
+            background-size: cover;
+            &.top {
+              background-position-x: 0;
+            }
+            &.left-top {
+              background-position-x: 11%;
+            }
+            &.left {
+              background-position-x: 22%;
+            }
+            &.left-bottom {
+              background-position-x: 33%;
+            }
+            &.bottom {
+              background-position-x: 44.5%;
+            }
+            &.right-bottom {
+              background-position-x: 55.5%;
+            }
+            &.right {
+              background-position-x: 66.5%;
+            }
+            &.right-top {
+              background-position-x: 77.5%;
+            }
+            &.center {
+              background-position-x: 89%;
+            }
+            &.center-smile {
+              background-position-x: 100%;
             }
           }
         }
@@ -821,9 +853,12 @@ body {
           h1 {
             font-weight: 900;
             @include bp-tablet-vertical {
-              font-size: 3rem;
+              font-size: 2rem;
             }
             @include bp-desktop-sm {
+              font-size: 2.5rem;
+            }
+            @include bp-desktop-md {
               font-size: 3.5rem;
             }
           }
@@ -904,9 +939,10 @@ body {
         height: 45vh;
         width: calc(100% + 40px);
         left: -20px;
-        background-color: #444444;
         position: absolute;
         bottom: 52vh;
+        background: url(../img/horizal.jpg) center center;
+        background-size: cover;
         @include flexbox();
         @include align-items(center);
         @include justify-content(center);
@@ -968,8 +1004,8 @@ body {
           right: -70px;
         }
         @include bp-desktop-md {
-          height: 55vh;
-          width: 55vh;
+          height: 60vh;
+          width: 60vh;
         }
         @media only screen and (min-width : 1366px) {
           height: 65vh;
@@ -1015,6 +1051,9 @@ body {
               font-size: 3rem;
             }
             @include bp-desktop-sm {
+              font-size: 2.5rem;
+            }
+            @include bp-desktop-md {
               font-size: 3.5rem;
             }
           }
@@ -1061,7 +1100,7 @@ body {
               }
               &.social-network-logo {
                 padding: 0;
-                margin-left: 10px;
+                margin-left: 8px;
                 background: none;
                 a {
                   text-decoration: none;
@@ -1286,24 +1325,6 @@ body {
   }
 }
 
-@include keyframes(line-appearance) {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0.15;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @include keyframes(scale) {
   from {
     opacity: 0;
@@ -1333,7 +1354,7 @@ body {
   to {
     opacity: 0;
   }
-}
+} 
 
 @include keyframes(change-color) {
   to {
