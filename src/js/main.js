@@ -9,8 +9,12 @@ $(function() {
 
     $('#introduce').on('mousemove', getMousePosition);
     function getMousePosition(event){
+      imageTop = $('#image-container').offset().top;
+      imageBottom = imageTop + $('#image-container').height();
+      imageLeft = $('#image-container').offset().left;
+      imageRight = imageLeft + $('#image-container').width();
       mouseX = event.pageX;
-      mouseY = event.pageY + 1000;
+      mouseY = event.pageY;
 
       if(mouseX >= imageLeft && mouseX <= imageRight && mouseY <= imageTop){
         $('#image-container').attr('class','top');
@@ -78,94 +82,98 @@ $(function() {
       .setClassToggle('#home-dot', 'active')
       .addTo(controller);
 
-    new ScrollMagic.Scene({ triggerElement: '#home', triggerHook: 'onLeave', offset: '400' })
-      .duration(800)
-      .setTween(TweenMax.to('#home', 2, { scaleX: 0.85, ease: Power3.easeOut, opacity: 0 }))
+    new ScrollMagic.Scene({ triggerElement: '#home', triggerHook: 'onLeave', offset: '650' })
+      // .duration(800)
+      .setTween(TweenMax.to('#home', 0.6, { scaleX: 0.85, ease: Power3.easeInOut, opacity: 0 }))
       .addTo(controller);
 
     // Greeting
     var greetingBackgroundTimeline = new TimelineMax()
-      .add(TweenMax.from('#greeting--background', 1, { y: 400, ease: Power0.easeInOut }))
-      .add(TweenMax.to('#greeting--background', 1, { y: 0, ease: Power0.easeInOut }));
-    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 20 })
+      .add(TweenMax.from('#greeting--background', 1.2 , { y: 1200, ease: Power0.easeOut }))
+      .add(TweenMax.to('#greeting--background', 1.2, { y: 0, ease: Power0.easeOut }));
+    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 300 })
       .setTween(greetingBackgroundTimeline)
+      .addTo(controller);
+
+    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 300 })
       .duration(600)
       .setClassToggle('#greeting-dot', 'active')
       .addTo(controller);
 
     var greetingBoxTimeline = new TimelineMax()
-      .add(TweenMax.from('#greeting--box', 1, { y: 800, ease: Power0.easeIn }))
-      .add(TweenMax.to('#greeting--box', 1, { y: 0, ease: Power0.easeIn }));
+      .add(TweenMax.from('#greeting--box', 1.5, { y: 1500, ease: Power2.easeIn }))
+      .add(TweenMax.to('#greeting--box', 1.5, { y: 0, ease: Power2.easeIn }));
 
-    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 70 })
+    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 350 })
       .setTween(greetingBoxTimeline)
-      .duration(windowWidth >= 1920 ? 1100 : 700)
       .addTo(controller);
 
     var greetingOverlayTextTimeline = new TimelineMax()
-      .add(TweenMax.from('#overlay--text', 1, { y: 800, ease: Power0.easeIn }))
-      .add(TweenMax.to('#overlay-text', 1, { y: 0, ease: Power0.easeIn }));
+      .add(TweenMax.from('#overlay--text', 1.5, { y: 1500, ease: Bounce.easeOut }))
+      .add(TweenMax.to('#overlay-text', 1.5, { y: 0, ease: Bounce.easeOut }));
 
-    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 140 })
+    new ScrollMagic.Scene({ triggerElement: '#greeting', offset: 400 })
       .setTween(greetingOverlayTextTimeline)
-      .duration(windowWidth >= 1920 ? 1000 : 600)
       .addTo(controller);
 
     // Banner
     var bannerBelowTimeline = new TimelineMax()
-      .add(TweenMax.from('#banner--below-layer', 1, { y: 400, ease: Power0.easeIn }))
-      .add(TweenMax.to('#banner--below-layer', 1, { y: 0, ease: Power0.easeIn }));
+      .add(TweenMax.from('#banner--below-layer', 1.5, { y: 1000, ease: Power2.easeIn }))
+      .add(TweenMax.to('#banner--below-layer', 1.5, { y: 0, ease: Power2.easeIn }));
 
     new ScrollMagic.Scene({ triggerElement: '#banner', offset: 80 })
-      .setTween(bannerBelowTimeline)
-      .duration(800)
+      .duration(600)
       .setClassToggle('#banner-dot', 'active')
       .addTo(controller);
 
-    var bannerContentTimeline = new TimelineMax()
-      .add(TweenMax.from('#banner--content', 2, { y: 600, ease: Power1.easeIn }))
-      .add(TweenMax.to('#banner--content', 2, { y: 0, ease: Power1.easeIn }));
+    new ScrollMagic.Scene({ triggerElement: '#banner', offset: 200 })
+      .setTween(bannerBelowTimeline)
+      .addTo(controller);
 
-    new ScrollMagic.Scene({ triggerElement: '#banner', offset: 100 })
+    var bannerContentTimeline = new TimelineMax()
+      .add(TweenMax.from('#banner--content', 1.2, { y: 1000, ease: Power3.easeIn }))
+      .add(TweenMax.to('#banner--content', 1.2, { y: 0, ease: Power3.easeIn }));
+
+    new ScrollMagic.Scene({ triggerElement: '#banner', offset: 200 })
       .setTween(bannerContentTimeline)
-      .duration(800)
       .addTo(controller);
 
     // Introduce
     var introduceBelowTimeline = new TimelineMax()
-      .add(TweenMax.from('#introduce--below-layer', 1, { opacity: 0 }))
-      .add(TweenMax.to('#introduce--below-layer', 1, { opacity: 1 }));
+      .add(TweenMax.from('#introduce--below-layer', 1.2, { opacity: 0 }))
+      .add(TweenMax.to('#introduce--below-layer', 1.2, { opacity: 1 }));
 
     new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 100 })
-      .setTween(introduceBelowTimeline)
-      .duration(1000)
+      .duration(600)
       .setClassToggle('#introduce-dot', 'active')
       .addTo(controller);
 
-    var introduceImageTimeline = new TimelineMax()
-      .add(TweenMax.from('#introduce--image', 1, { y: 1000, ease: Power1.easeIn }))
-      .add(TweenMax.to('#introduce--image', 1, { y: 0, ease: Power1.easeIn }));
+    new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 360 })
+      .setTween(introduceBelowTimeline)
+      .addTo(controller);
 
-    new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 250 })
+    var introduceImageTimeline = new TimelineMax()
+      .add(TweenMax.from('#introduce--image', 1.5, { y: 1000, ease: Power1.easeIn }))
+      .add(TweenMax.to('#introduce--image', 1.5, { y: 0, ease: Power1.easeIn }));
+
+    new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 450, delay: 500 })
       .setTween(introduceImageTimeline)
-      .duration(windowWidth >= 1920 ? 1500 : 900)
       .addTo(controller);
 
     var introduceImageContainerTimeline = new TimelineMax()
-      .add(TweenMax.from('#image-container', 3, { opacity: 0 }))
-      .add(TweenMax.to('#image-container', 3, { opacity: 1 }));
+      .add(TweenMax.from('#image-container', 0.7, { x: 500, y: 700, ease: Power4.easeIn }))
+      .add(TweenMax.to('#image-container', 0.7, { x: 0, y: 0, ease: Power4.easeIn }));
 
-    new ScrollMagic.Scene({ triggerElement: '#introduce--image', delay: 500 })
+    new ScrollMagic.Scene({ triggerElement: '#introduce--image' })
       .setTween(introduceImageContainerTimeline)
       .addTo(controller);
 
     var introduceTextTimeline = new TimelineMax()
-      .add(TweenMax.from('#introduce--text', 1, { y: 1000, ease: Power0.easeIn }))
-      .add(TweenMax.to('#introduce--text', 1, { y: 0, ease: Power0.easeIn }));
+      .add(TweenMax.from('#introduce--text', 1.4, { y: 1200, ease: Power2.easeIn }))
+      .add(TweenMax.to('#introduce--text', 1.4, { y: 0, ease: Power2.easeIn }));
 
-    new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 130 })
+    new ScrollMagic.Scene({ triggerElement: '#introduce', offset: 450, delay: 500 })
       .setTween(introduceTextTimeline)
-      .duration(windowWidth >= 1920 ? 1500 : 900)
       .addTo(controller);
 
     // Addition
